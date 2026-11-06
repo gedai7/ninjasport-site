@@ -25,7 +25,11 @@ const ICON = {
   whatsapp: '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1a16 16 0 0 1-1.6-.6 12.8 12.8 0 0 1-4.9-4.3 5.6 5.6 0 0 1-1.2-3 3.2 3.2 0 0 1 1-2.4 1 1 0 0 1 .8-.3h.5c.2 0 .4 0 .6.5l.9 2.1a.5.5 0 0 1 0 .5 2 2 0 0 1-.3.5l-.4.5c-.2.1-.3.3-.1.6a9.4 9.4 0 0 0 1.7 2.1 8.3 8.3 0 0 0 2.5 1.5c.3.2.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.5.4a2.4 2.4 0 0 1-.2 1.4z"/></svg>',
 };
 
+// Titluri centrate: învelim conținutul fiecărui h1.page-title / h2 într-un span, ca liniuțele din CSS să stea stânga-dreapta.
+const wrapTitles = (html) => html.replace(/<(h1|h2)([^>]*)>([\s\S]*?)<\/\1>/g, (m, t, a, inner) => inner.includes('class="tt"') ? m : `<${t}${a}><span class="tt">${inner}</span></${t}>`);
+
 function layout({ title, active, body, desc = '', scripts = [] }) {
+  body = wrapTitles(body);
   const nav = site.nav.map(([t, h]) => `<a href="${h}"${h === active ? ' class="on" aria-current="page"' : ''}>${esc(t)}</a>`).join('');
   const soc = Object.entries(site.social).map(([k, u]) => `<a href="${u}" target="_blank" rel="noopener" aria-label="${k}">${ICON[k] || ''}</a>`).join('');
   return `<!doctype html>
