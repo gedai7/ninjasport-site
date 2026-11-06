@@ -1,0 +1,12 @@
+{
+  "name": "ninjasport-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "import-media": "node scripts/import-media.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

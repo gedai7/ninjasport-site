@@ -1,0 +1,55 @@
+{
+  "name": "Ninja Sport",
+  "tagline": "Obstacles & Climbing Center",
+  "url": "https://ninjasport.ro",
+  "address": "Splaiul Unirii 160, București",
+  "phone": "0721.012.130",
+  "phone_href": "tel:+40721012130",
+  "email": "ninjasport.ro@gmail.com",
+  "whatsapp": "https://wa.me/40721012130",
+  "social": {
+    "facebook": "https://www.facebook.com/NinjaSportRomania",
+    "instagram": "https://www.instagram.com/ninjasport.ro/",
+    "tiktok": "https://www.tiktok.com/@ninjasport.ro"
+  },
+  "map": "https://maps.google.com/maps?t=m&output=embed&iwloc=near&z=16&q=Ninja+Sport+Rom%C3%A2nia%2C+Splaiul+Unirii+160",
+  "logo": "https://ninjasport.ro/wp-content/uploads/2022/06/Ninja_Sport_center_logo.png",
+  "favicon": "https://ninjasport.ro/wp-content/uploads/2022/04/cropped-NinjaSport_Head-32x32.png",
+  "booking_portal": "https://portal.gym-management-app.com",
+  "gma_schedule": "https://ninjasport.gym-management-app.com/calendars/schedules",
+  "waiver_form_url": "",
+  "nav": [
+    [
+      "Acasă",
+      "/"
+    ],
+    [
+      "Contribuții",
+      "/prices/"
+    ],
+    [
+      "Program",
+      "/schedule/"
+    ],
+    [
+      "Ninja Kids",
+      "/ninja-kids/"
+    ],
+    [
+      "Waiver",
+      "/waiver/"
+    ],
+    [
+      "Galerie",
+      "/gallery/"
+    ],
+    [
+      "Sponsorizare",
+      "/sponsorizare/"
+    ],
+    [
+      "Coaches",
+      "/coaches/"
+    ]
+  ]
+}

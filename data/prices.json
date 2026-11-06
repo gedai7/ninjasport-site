@@ -1,0 +1,132 @@
+{
+  "title": "Listă contribuții membri",
+  "subtitle": "Member contributions",
+  "sections": [
+    {
+      "title": "Kids & Teens",
+      "ro": "Copii & adolescenți",
+      "rows": [
+        [
+          "Kids Class",
+          "1 antrenament",
+          90
+        ],
+        [
+          "Kids 4 Classes",
+          "4 antrenamente",
+          300
+        ],
+        [
+          "Kids 8 Classes",
+          "8 antrenamente",
+          550
+        ],
+        [
+          "Kids 12 Classes",
+          "12 antrenamente",
+          690
+        ],
+        [
+          "Full Access 1 Month",
+          "antrenamente nelimitate toată luna",
+          900
+        ]
+      ]
+    },
+    {
+      "title": "Adults",
+      "ro": "Adulți",
+      "rows": [
+        [
+          "Adult Class",
+          "1 antrenament",
+          120
+        ],
+        [
+          "Adult 4 Classes",
+          "4 antrenamente",
+          400
+        ],
+        [
+          "Adult 8 Classes",
+          "8 antrenamente",
+          720
+        ],
+        [
+          "Adult 12 Classes",
+          "12 antrenamente",
+          1000
+        ],
+        [
+          "Full Access 1 Month",
+          "antrenamente nelimitate toată luna",
+          1200
+        ]
+      ]
+    },
+    {
+      "title": "Open Gym",
+      "ro": "Sesiuni la liber în zona de obstacole",
+      "rows": [
+        [
+          "1 Session",
+          "1 sesiune la liber (max 2h)",
+          75
+        ],
+        [
+          "4 Sessions",
+          "4 sesiuni la liber (max 2h)",
+          250
+        ],
+        [
+          "1 Month Unlimited",
+          "sesiuni nelimitate la liber, 1 lună",
+          700
+        ]
+      ]
+    },
+    {
+      "title": "Privates",
+      "ro": "Antrenamente private",
+      "rows": [
+        [
+          "Kids & Teens Individual 1:1",
+          "antrenament privat individual",
+          350
+        ],
+        [
+          "Kids & Teens Group (2-3)",
+          "antrenament privat grup (2-3 copii)",
+          275
+        ],
+        null,
+        [
+          "Adults Individual 1:1",
+          "antrenament privat individual",
+          450
+        ],
+        [
+          "Adults Group (2-3)",
+          "antrenament privat grup (2-3 adulți)",
+          375
+        ]
+      ]
+    },
+    {
+      "title": "Arrow / Javelin / Shuriken Class",
+      "ro": "Tir cu arcul / suliță / shuriken",
+      "rows": [
+        [
+          "Arrow 1 Class",
+          "1 antrenament",
+          500
+        ],
+        [
+          "Arrow 3 Classes",
+          "3 antrenamente",
+          1200
+        ]
+      ]
+    }
+  ]
+}
