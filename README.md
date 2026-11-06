@@ -9,10 +9,9 @@ Site static pentru Ninja Sport (fără WordPress). Găzduit pe Cloudflare Pages.
 - `functions/api/program.js` – programul live din Gym Management App (`/api/program`, cache 10 minute).
 - `build.mjs` – generează site-ul în `dist/` (`npm run build`, fără dependențe).
 
-## Cloudflare Pages
-- Build command: `npm run build` (sau `node build.mjs`)
-- Build output directory: `dist`
-- Functions: detectate automat din folderul `functions/`.
+## Cloudflare (Workers)
+- Build command: `node build.mjs`
+- Deploy command: `npx wrangler deploy` (folosește `wrangler.jsonc`: fișiere statice din `dist/`, plus `worker.js` pentru `/api/program`).
 
 ## Imagini
 Imaginile sunt încă luate de pe vechiul site. Rulează o dată workflow-ul **Actions → Import media → Run workflow**:
