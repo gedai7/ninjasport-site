@@ -13,7 +13,7 @@
     "tiktok": "https://www.tiktok.com/@ninjasport.ro"
   },
   "map": "https://maps.google.com/maps?t=m&output=embed&iwloc=near&z=16&q=Ninja+Sport+Rom%C3%A2nia%2C+Splaiul+Unirii+160",
-  "logo": "https://ninjasport.ro/wp-content/uploads/2022/06/Ninja_Sport_center_logo.png",
+  "logo": "/assets/logo.png",
   "favicon": "https://ninjasport.ro/wp-content/uploads/2022/04/cropped-NinjaSport_Head-32x32.png",
   "booking_portal": "https://portal.gym-management-app.com",
   "gma_schedule": "https://ninjasport.gym-management-app.com/calendars/schedules",

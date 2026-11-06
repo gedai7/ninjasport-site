@@ -41,7 +41,7 @@ function layout({ title, active, body, desc = '', scripts = [] }) {
 </head>
 <body>
 <header class="site-head"><div class="wrap">
-  <div class="head-top"><a class="logo" href="/"><img src="${media(site.logo)}" alt="${esc(site.name)}" width="180" height="64"></a><div class="head-social">${soc}</div></div>
+  <div class="head-top"><a class="logo" href="/"><img src="${media(site.logo)}" alt="${esc(site.name)}" width="156" height="64"></a><div class="head-social">${soc}</div></div>
   <nav class="nav" aria-label="Meniu principal">${nav}</nav>
 </div></header>
 <main><div class="wrap">
