@@ -35,7 +35,10 @@ function layout({ title, active, body, desc = '', scripts = [] }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title ? title + ' – ' + site.name : site.name + ' – ' + site.tagline)}</title>
 <meta name="description" content="${esc(desc || 'Ninja Sport – sală de sport cu obstacole și cățărare, Splaiul Unirii 160, București.')}">
-<link rel="icon" href="${media(site.favicon)}">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/assets/favicon-48.png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
 <link rel="preload" href="/assets/fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="/assets/style.css">
 </head>
