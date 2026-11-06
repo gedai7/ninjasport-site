@@ -34,7 +34,7 @@ function layout({ title, active, body, desc = '', scripts = [] }) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title ? title + ' – ' + site.name : site.name + ' – ' + site.tagline)}</title>
-<meta name="description" content="${esc(desc || 'Ninja Sport – sală de sport cu obstacole și cățărare, Splaiul Unirii 160, București.')}">
+<meta name="description" content="${esc(desc || 'Ninja Sport – sală de sporturi cu obstacole, Splaiul Unirii 160, București.')}">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/assets/favicon-48.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -52,7 +52,7 @@ ${body}
 </div></main>
 <footer class="site-foot"><div class="wrap">
   <div class="foot-grid">
-    <div><h4>Ninja Sport</h4><p>Sală de sport cu obstacole &amp; cățărare</p><p>Asociația Club Sportiv Ninja Sport</p></div>
+    <div><h4>Ninja Sport</h4><p>Sală de sporturi cu obstacole</p><p>Asociația Club Sportiv Ninja Sport</p></div>
     <div><h4>Contact</h4><p>${esc(site.address)}</p><p><a href="${site.phone_href}">${esc(site.phone)}</a></p><p><a href="mailto:${site.email}">${esc(site.email)}</a></p></div>
     <div><h4>Social</h4><div class="head-social">${soc}</div></div>
   </div>
@@ -102,23 +102,26 @@ const pages = {};
 
 pages['index.html'] = layout({
   title: '', active: '/', body: `
-</div><section class="hero"><div class="wrap">
-  <h1>Sală de sport cu <span>obstacole</span><br>&amp; cățărare</h1>
+</div><section class="hero" style="--hero:url('${media(site.hero_image)}')"><div class="wrap">
+  <h1>Sală de sporturi<br>cu <span>obstacole</span></h1>
   <p>Ninja Sport face parte din familia sporturilor cu obstacole, alături de OCR și Adventure Race. Antrenamente pentru copii, adolescenți și adulți, Open Gym și petreceri aniversare, în Splaiul Unirii 160, București.</p>
   <a class="btn" href="/schedule/">Program</a><a class="btn btn-dark" href="/prices/">Contribuții</a><a class="btn btn-dark" href="/waiver/">Waiver</a>
 </div></section><div class="wrap" style="padding-top:28px">
 ${events.length ? `<section><h2 class="page-title">Urmează<span class="en">Next event</span></h2>${events.map((e) => `<div class="event"><img src="${media(e.image)}" alt="" loading="lazy"><div><div class="date">${e.date.split('-').reverse().join('.')}</div><h3>${esc(e.title)}</h3><p style="font-weight:400">${esc(e.text)}</p>${e.link ? `<a class="btn" href="${e.link}">Înscrie-te</a>` : `<a class="btn" href="${site.phone_href}">Înscrieri: ${esc(site.phone)}</a>`}</div></div>`).join('')}</section>` : ''}
+<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
 <section class="quick">
   <a href="/schedule/">Program<span>Clase și Open Gym, live din aplicație</span></a>
   <a href="/prices/">Contribuții<span>Abonamente copii, adulți, privates</span></a>
   <a href="/ninja-kids/">Ninja Kids<span>Cursuri și petreceri pentru copii</span></a>
   <a href="/gallery/">Galerie<span>Poze și video de la competiții</span></a>
 </section>
+<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
 <section class="split"><div class="prose">
   <h2>Ce este Ninja Sport?<span class="en">What is Ninja Sport?</span></h2>
   <p>Ninja Sport este activitatea sportivă cu obstacole derivată din show-ul TV Ninja Warrior și face parte din familia sporturilor cu obstacole, reglementate de <b>FISO</b> – Federația Internațională de Sport cu Obstacole.</p>
   <p>Începând cu 2024, o ramură a Ninja Sport a devenit disciplină în sportul olimpic <b>Pentatlon Modern</b>, alături de scrimă, înot și Laser Run. ACS Ninja Sport a organizat, în parteneriat cu Federația Română de Natație și Pentatlon Modern, prima ediție în noul format (cu obstacole) a Campionatului Național de Pentatlon Modern.</p>
 </div><img src="${media('https://ninjasport.ro/wp-content/uploads/2022/06/P5081487-1024x683.jpg')}" alt="Sala Ninja Sport" loading="lazy"></section>
+<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
 <section class="prose" style="max-width:none">
   <h2>Beneficii<span class="en">Benefits</span></h2>
   <div class="quick">
@@ -128,9 +131,11 @@ ${events.length ? `<section><h2 class="page-title">Urmează<span class="en">Next
     <a href="/ninja-kids/">Școala căderii<span>Învățăm să cădem în siguranță</span></a>
   </div>
 </section>
+<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
 <section><h2 class="page-title">Parteneri<span class="en">Partners</span></h2><div class="partners">
 ${['2024/04/BOS_Logo_WO-400x193-1.png', '2024/04/Atlas_arena_logo.png', '2024/04/UNAA-sm-e1712915222600.png', '2024/04/frnpm_logo_square.png'].map((p) => `<img src="${media(MEDIA_PREFIX + p)}" alt="Partener" loading="lazy">`).join('')}
 </div></section>
+<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
 <section><h2 class="page-title">Cum ajungi la Ninja Sport?<span class="en">How to get here</span></h2>
 <p style="font-weight:400">${esc(site.address)} · <a href="${site.phone_href}">${esc(site.phone)}</a></p>
 <iframe class="map" src="${site.map}" loading="lazy" title="Hartă Ninja Sport"></iframe></section>` });
@@ -139,9 +144,9 @@ pages['prices/index.html'] = layout({ title: 'Contribuții', active: '/prices/',
 
 pages['schedule/index.html'] = layout({
   title: 'Program', active: '/schedule/', scripts: ['/assets/live.js'], body: title2(sched.title, sched.subtitle) + `
-<div class="tabs"><button class="on" data-t="live">Săptămâna aceasta (live)</button><button data-t="std">Program standard</button></div>
-<div data-tab="live"><div id="live" data-portal="${site.booking_portal}" data-fallback="${site.gma_schedule}"><p class="live-msg">Se încarcă programul…</p></div></div>
-<div data-tab="std" hidden>${scheduleHTML()}</div>` });
+<div class="tabs"><button class="on" data-t="std">Program standard</button><button data-t="live">Săptămâna aceasta (live)</button></div>
+<div data-tab="std">${scheduleHTML()}</div>
+<div data-tab="live" hidden><div id="live" data-portal="${site.booking_portal}" data-fallback="${site.gma_schedule}"><p class="live-msg">Se încarcă programul…</p></div></div>` });
 
 pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-kids/', body: title2('Ninja Kids', 'Kids classes & parties') + content('ninja-kids.html') });
 pages['scoala-altfel-saptamana-verde/index.html'] = layout({ title: 'Școala Altfel & Săptămâna Verde', active: '/ninja-kids/', body: title2('Școala Altfel & Săptămâna Verde', 'School groups') + content('scoala-altfel.html') });
