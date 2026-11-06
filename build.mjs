@@ -154,7 +154,8 @@ pages['schedule/index.html'] = layout({
 
 pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-kids/', body: title2('Ninja Kids', 'Kids classes & parties') + content('ninja-kids.html') });
 pages['scoala-altfel-saptamana-verde/index.html'] = layout({ title: 'Școala Altfel & Săptămâna Verde', active: '/ninja-kids/', body: title2('Școala Altfel & Săptămâna Verde', 'School groups') + content('scoala-altfel.html') });
-pages['sponsorizare/index.html'] = layout({ title: 'Sponsorizare', active: '/sponsorizare/', body: title2('Sponsorizare', 'Sponsorship') + content('sponsorizare.html') });
+const CONTRACT = fs.existsSync('public/documente/Contract_Sponsor_NINJA_SPORT_177.docx') ? '/documente/Contract_Sponsor_NINJA_SPORT_177.docx' : 'https://ninjasport.ro/documente/Contract_Sponsor_NINJA_SPORT_177.docx';
+pages['sponsorizare/index.html'] = layout({ title: 'Sponsorizare', active: '/sponsorizare/', desc: 'Sponsorizează ACS Ninja Sport cu până la 20% din impozitul pe profit, fără cost pentru firma ta: plată directă sau Formularul 177.', body: title2('Sponsorizează Ninja Sport', 'Fără cost pentru firma ta · Company sponsorship') + content('sponsorizare.html').replaceAll('%%CONTRACT%%', CONTRACT) });
 pages['waiver/index.html'] = layout({
   title: 'Waiver', active: '/waiver/', body: content('waiver.html').replace('<!--WAIVER_BUTTON-->',
     site.waiver_form_url ? `<a class="btn" href="${site.waiver_form_url}" target="_blank" rel="noopener">Completează online</a>` : '<span class="btn btn-dark" style="opacity:.6;cursor:default">Formular online – în curând</span>') });

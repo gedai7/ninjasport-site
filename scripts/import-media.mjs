@@ -31,4 +31,11 @@ for (const u of urls) {
   else await img.resize({ width: isThumb ? 800 : 1920, height: isThumb ? 800 : 1920, fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 80, mozjpeg: true }).toFile(out);
   ok++; console.log('✓', rel);
 }
+// documente (ex. contractul de sponsorizare) – copiate ca atare
+for (const d of ['Contract_Sponsor_NINJA_SPORT_177.docx']) {
+  const out = path.join('public/documente', d);
+  if (fs.existsSync(out)) continue;
+  const r = await fetch('https://ninjasport.ro/documente/' + d);
+  if (r.ok) { fs.mkdirSync('public/documente', { recursive: true }); fs.writeFileSync(out, Buffer.from(await r.arrayBuffer())); console.log('✓', d); }
+}
 console.log(`Gata: ${ok} imagini, ${skip} clipuri sărite.`);
