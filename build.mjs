@@ -109,7 +109,6 @@ pages['index.html'] = layout({
 </div><section class="hero" style="--hero:url('${media(site.hero_image)}')"><div class="wrap">
   <h1>Sală de sporturi<br>cu <span class="accent">obstacole</span></h1>
   <p>Ninja Sport face parte din familia sporturilor cu obstacole, alături de OCR și Adventure Race. Antrenamente pentru copii, adolescenți și adulți, Open Gym și petreceri aniversare, în Splaiul Unirii 160, București.</p>
-  <a class="btn" href="/schedule/">Program</a><a class="btn btn-dark" href="/prices/">Contribuții</a><a class="btn btn-dark" href="/waiver/">Waiver</a>
 </div></section><div class="wrap" style="padding-top:28px">
 ${events.length ? `<section><h2 class="page-title">Urmează<span class="en">Next event</span></h2>${events.map((e) => `<div class="event"><img src="${media(e.image)}" alt="" loading="lazy"><div><div class="date">${e.date.split('-').reverse().join('.')}</div><h3>${esc(e.title)}</h3><p style="font-weight:400">${esc(e.text)}</p>${e.link ? `<a class="btn" href="${e.link}">Înscrie-te</a>` : `<a class="btn" href="${site.phone_href}">Înscrieri: ${esc(site.phone)}</a>`}</div></div>`).join('')}</section>` : ''}
 ${events.length ? '<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>' : ''}
