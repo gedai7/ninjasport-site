@@ -120,6 +120,28 @@ section{margin:0 0 32px}
 .chips.free{justify-content:center}
 .chips.free span{background:#2b2b2b;border-left:3px solid var(--green)}
 @media (max-width:640px){.party-price{grid-template-columns:1fr}}
+.party-intro p{text-align:center}
+.party-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.party-photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line);border-radius:4px;background:#1c1c1c}
+@media (max-width:640px){.party-photos{grid-template-columns:1fr 1fr}.party-photos img:first-child{grid-column:1/-1;aspect-ratio:4/3}}
+.party-tag{text-align:center;font-size:1.15em;font-weight:700 !important;color:#fff;border-top:2px solid var(--btn);border-bottom:2px solid var(--btn);padding:14px 10px}
+.party-form{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--red);padding:18px;margin-top:10px}
+.party-form label{display:block;font-size:.85em;text-transform:uppercase;letter-spacing:.03em;margin-bottom:12px}
+.party-form input,.party-form select{display:block;width:100%;margin-top:5px;padding:10px 12px;background:#000;border:1px solid #444;border-radius:4px;color:#fff;font:inherit;font-weight:400;text-transform:none;letter-spacing:0}
+.party-form input:focus,.party-form select:focus{outline:2px solid var(--red);border-color:var(--red)}
+.party-form input[type=date]{color-scheme:dark}
+.party-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.party-form .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 12px}
+.party-form .chk{display:flex;gap:10px;align-items:flex-start;text-transform:none;letter-spacing:0;font-weight:400;font-size:.9em}
+.party-form .chk input{width:auto;margin:3px 0 0}
+.party-form .hp{display:none}
+.form-btns{display:flex;flex-wrap:wrap;gap:6px}
+.btn-wa{background:#1fa855;box-shadow:0 2px 0 #0d6b33}
+.btn-wa:hover{background:#25d366}
+.form-msg{min-height:1.2em;margin:4px 0 10px;font-weight:700 !important}
+.form-msg.err{color:var(--red)} .form-msg.ok{color:var(--green)}
+.form-note{font-size:.8em;color:var(--muted);margin:10px 0 0}
+@media (max-width:640px){.party-form .row2,.party-form .row3{grid-template-columns:1fr}}
 
 /* prices */
 .pret .sec{margin-bottom:20px}

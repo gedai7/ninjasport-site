@@ -152,7 +152,7 @@ pages['schedule/index.html'] = layout({
 <div data-tab="std">${scheduleHTML()}</div>
 <div data-tab="live" hidden><div id="live" data-portal="${site.booking_portal}" data-fallback="${site.gma_schedule}"><p class="live-msg">Se încarcă programul…</p></div></div>` });
 
-pages['party/index.html'] = layout({ title: 'Party', active: '/party/', desc: 'Petreceri aniversare la Ninja Sport: 3 ore Full Access Gym, obstacole Ninja și bouldering, pentru copii și adulți.', body: title2('Party · Birthday Party · Adult Party', 'Petreceri la Ninja Sport') + content('party.html') });
+pages['party/index.html'] = layout({ title: 'Party', active: '/party/', scripts: ['/assets/party.js'], desc: 'Petreceri aniversare la Ninja Sport: 3 ore de distracție ninja pe obstacole, pachet pentru 15 invitați, rezervare online.', body: title2('Party · Birthday Party · Adult Party', 'Petreceri aniversare la Ninja Sport') + content('party.html').replace('<form class="party-form" id="party-form" novalidate>', `<form class="party-form" id="party-form" novalidate data-key="${esc(site.form_key || '')}">`) });
 pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-kids/', body: title2('Ninja Kids', 'Kids classes & parties') + content('ninja-kids.html') });
 pages['scoala-altfel-saptamana-verde/index.html'] = layout({ title: 'Școala Altfel & Săptămâna Verde', active: '/ninja-kids/', body: title2('Școala Altfel & Săptămâna Verde', 'School groups') + content('scoala-altfel.html') });
 const CONTRACT = fs.existsSync('public/documente/Contract_Sponsor_NINJA_SPORT_177.docx') ? '/documente/Contract_Sponsor_NINJA_SPORT_177.docx' : 'https://ninjasport.ro/documente/Contract_Sponsor_NINJA_SPORT_177.docx';
