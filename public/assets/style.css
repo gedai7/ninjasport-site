@@ -85,6 +85,12 @@ section{margin:0 0 32px}
 .page-title .tt,.prose h2 .tt{min-width:0}
 @media (max-width:560px){.page-title,.prose h2{gap:10px}.page-title::before,.page-title::after,.prose h2::before,.prose h2::after{flex-basis:22px}.page-title{font-size:1.35em}}
 
+/* fotografii */
+.photo-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.photo-strip img{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line);border-radius:4px}
+@media (max-width:640px){.photo-strip{grid-template-columns:1fr 1fr}}
+.wide-photo{width:100%;max-height:440px;object-fit:cover;object-position:center 40%;border:1px solid var(--line);border-radius:4px;margin-top:16px}
+
 /* separator între secțiuni */
 .sep{display:flex;align-items:center;gap:16px;margin:8px 0 34px}
 .sep span{flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--btn) 30%,var(--red))}

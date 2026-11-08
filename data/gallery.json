@@ -1,5 +1,41 @@
 [
  {
+  "slug": "antrenamente",
+  "title": "Antrenamente",
+  "items": [
+   {
+    "type": "image",
+    "src": "/media/site/lavinia-copii-obstacole.jpg",
+    "thumb": "/media/site/lavinia-copii-obstacole-thumb.jpg"
+   },
+   {
+    "type": "image",
+    "src": "/media/site/traseu-copii.jpg",
+    "thumb": "/media/site/traseu-copii-thumb.jpg"
+   },
+   {
+    "type": "image",
+    "src": "/media/site/bouldering-copii.jpg",
+    "thumb": "/media/site/bouldering-copii-thumb.jpg"
+   },
+   {
+    "type": "image",
+    "src": "/media/site/grup-copii.jpg",
+    "thumb": "/media/site/grup-copii-thumb.jpg"
+   },
+   {
+    "type": "image",
+    "src": "/media/site/copii-truss.jpg",
+    "thumb": "/media/site/copii-truss-thumb.jpg"
+   },
+   {
+    "type": "image",
+    "src": "/media/site/competitie-halloween-premiere.jpg",
+    "thumb": "/media/site/competitie-halloween-premiere-thumb.jpg"
+   }
+  ]
+ },
+ {
   "slug": "ocr-ec-400m-mantova-italy-2026",
   "title": "OCR EC 400m Mantova Italy 2026",
   "items": [
