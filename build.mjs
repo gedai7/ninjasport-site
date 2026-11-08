@@ -116,7 +116,7 @@ ${events.length ? `<section><h2 class="page-title">Urmează<span class="en">Next
 <section class="quick">
   <a href="/schedule/">Program<span>Clase și Open Gym, live din aplicație</span></a>
   <a href="/prices/">Contribuții<span>Abonamente copii, adulți, privates</span></a>
-  <a href="/ninja-kids/">Ninja Kids<span>Cursuri și petreceri pentru copii</span></a>
+  <a href="/party/">Party<span>Petreceri aniversare pentru copii și adulți</span></a>
   <a href="/gallery/">Galerie<span>Poze și video de la competiții</span></a>
 </section>
 <div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
@@ -152,6 +152,7 @@ pages['schedule/index.html'] = layout({
 <div data-tab="std">${scheduleHTML()}</div>
 <div data-tab="live" hidden><div id="live" data-portal="${site.booking_portal}" data-fallback="${site.gma_schedule}"><p class="live-msg">Se încarcă programul…</p></div></div>` });
 
+pages['party/index.html'] = layout({ title: 'Party', active: '/party/', desc: 'Petreceri aniversare la Ninja Sport: 3 ore Full Access Gym, obstacole Ninja și bouldering, pentru copii și adulți.', body: title2('Party · Birthday Party · Adult Party', 'Petreceri la Ninja Sport') + content('party.html') });
 pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-kids/', body: title2('Ninja Kids', 'Kids classes & parties') + content('ninja-kids.html') });
 pages['scoala-altfel-saptamana-verde/index.html'] = layout({ title: 'Școala Altfel & Săptămâna Verde', active: '/ninja-kids/', body: title2('Școala Altfel & Săptămâna Verde', 'School groups') + content('scoala-altfel.html') });
 const CONTRACT = fs.existsSync('public/documente/Contract_Sponsor_NINJA_SPORT_177.docx') ? '/documente/Contract_Sponsor_NINJA_SPORT_177.docx' : 'https://ninjasport.ro/documente/Contract_Sponsor_NINJA_SPORT_177.docx';
@@ -178,6 +179,6 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.cpSync('public', OUT, { recursive: true });
 for (const [f, html] of Object.entries(pages)) { const p = path.join(OUT, f); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
 // redirecturi pentru adresele vechi WordPress
-fs.writeFileSync(path.join(OUT, '_redirects'), ['/team/* /coaches/ 301', '/programare-ninja-kids-class/ /schedule/ 301', '/category/* / 302'].join('\n') + '\n');
+fs.writeFileSync(path.join(OUT, '_redirects'), ['/team/* /coaches/ 301', '/birthday-party/ /party/ 301', '/programare-ninja-kids-class/ /schedule/ 301', '/category/* / 302'].join('\n') + '\n');
 fs.writeFileSync(path.join(OUT, '404.html'), layout({ title: 'Pagina nu există', body: title2('Pagina nu există', 'Page not found') + '<p><a class="btn" href="/">Înapoi la prima pagină</a></p>' }));
 console.log('Built', Object.keys(pages).length, 'pages →', OUT);
