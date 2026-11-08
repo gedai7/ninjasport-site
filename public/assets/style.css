@@ -322,3 +322,6 @@ section{margin:0 0 32px}
 .pp-red .pp-red-main{font-size:1.2em;text-align:center;margin-bottom:12px}
 .pp-red a{color:#fff;text-decoration:underline}
 @media (max-width:640px){.pp-red{font-size:.95em;padding:14px}.pp-red .pp-red-main{font-size:1.1em}}
+.pp-red{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--red);border-radius:0;box-shadow:none}
+.pp-red .pp-red-main{color:var(--red)}
+.pp-red a{color:#fff}
