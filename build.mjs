@@ -169,11 +169,11 @@ pages['coaches/index.html'] = layout({
 
 pages['gallery/index.html'] = layout({
   title: 'Galerie', active: '/gallery/', scripts: ['/assets/gallery.js'], body: title2('Galerie', 'Gallery') + `<div class="gal">
-<div class="gal-filters"><button class="on" data-f="*">Toate</button>${gallery.map((a) => `<button data-f="${a.slug}">${esc(a.title)}</button>`).join('')}</div>
+<div class="gal-filters">${gallery.map((a, i) => `<button data-f="${a.slug}"${i === 0 ? ' class="on"' : ''}>${esc(a.title)}</button>`).join('')}</div>
 <div class="gal-grid">${gallery.flatMap((a) => a.items.map((it) => {
     const src = it.type === 'youtube' ? `https://www.youtube-nocookie.com/embed/${it.id}?autoplay=1&rel=0` : media(it.src);
     const thumb = it.type === 'youtube' ? `https://i.ytimg.com/vi/${it.id}/hqdefault.jpg` : media(it.thumb || '');
-    return `<a class="gal-item" href="${src}" data-album="${a.slug}" data-type="${it.type === 'image' ? 'image' : it.type === 'video' ? 'video' : 'embed'}" data-src="${src}">${thumb ? `<img src="${thumb}" alt="${esc(a.title)}" loading="lazy" decoding="async">` : '<span class="gal-vph">VIDEO</span>'}${it.type !== 'image' ? '<span class="gal-play"></span>' : ''}</a>`;
+    return `<a class="gal-item" href="${src}" data-album="${a.slug}"${a !== gallery[0] ? ' hidden' : ''} data-type="${it.type === 'image' ? 'image' : it.type === 'video' ? 'video' : 'embed'}" data-src="${src}">${thumb ? `<img src="${thumb}" alt="${esc(a.title)}" loading="lazy" decoding="async">` : '<span class="gal-vph">VIDEO</span>'}${it.type !== 'image' ? '<span class="gal-play"></span>' : ''}</a>`;
   })).join('')}</div></div>` });
 
 /* ---------- scriere ---------- */

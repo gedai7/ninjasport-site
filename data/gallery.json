@@ -36,6 +36,122 @@
   ]
  },
  {
+  "slug": "party",
+  "title": "Party",
+  "items": [
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5871-768x1360.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5871-768x1360.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5870-768x1360.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5870-768x1360.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5881-768x1351.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5881-768x1351.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5872-768x1354.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5872-768x1354.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5874-768x1354.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5874-768x1354.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5867-768x1364.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5867-768x1364.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5876-768x1350.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5876-768x1350.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5878-768x1359.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5878-768x1359.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5885-768x1315.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5885-768x1315.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5883-768x1366.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5883-768x1366.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5886-768x1356.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5886-768x1356.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5884-768x1349.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5884-768x1349.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5887-768x1609.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5887-768x1609.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5880-768x1249.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5880-768x1249.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5879-768x1346.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5879-768x1346.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5865-768x1381.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5865-768x1381.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5869-768x1536.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5869-768x1536.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5882-768x1353.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5882-768x1353.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5877-768x1389.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5877-768x1389.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5875-768x1403.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5875-768x1403.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5868-768x1359.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5868-768x1359.jpeg"
+   },
+   {
+    "type": "image",
+    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5873-768x1244.jpeg",
+    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5873-768x1244.jpeg"
+   }
+  ]
+ },
+ {
   "slug": "ocr-ec-400m-mantova-italy-2026",
   "title": "OCR EC 400m Mantova Italy 2026",
   "items": [
