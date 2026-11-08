@@ -21,7 +21,7 @@
     if (!SLOTS[day()]) { say('Petrecerile au loc doar sâmbăta și duminica.', true); return null; }
     if (dIn.value < dIn.min) { say('Te rugăm să rezervi cu cel puțin 2 săptămâni înainte. Pentru o dată mai apropiată, sună-ne.', true); return null; }
     if (+d.varsta < 5) { say('Vârsta minimă pentru participanți este 5 ani.', true); return null; }
-    if (+d.participanti > 25) { say('Numărul maxim de participanți este 25.', true); return null; }
+    if (+d.participanti > 50) { say('Numărul maxim de participanți este 50.', true); return null; }
     return d;
   }
   function text(d) {
