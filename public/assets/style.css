@@ -149,10 +149,11 @@ section{margin:0 0 32px}
 .pp-main{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--red);padding:16px;text-align:center}
 .pp-h{display:block;font-size:2em;color:var(--red);line-height:1.1}
 .pp-sub{display:block;font-size:.85em;margin-top:6px}
-.chips.free{justify-content:center}
+.chips.free{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chips.free span{font-size:1.6em;line-height:1.15;text-align:center;display:flex;align-items:center;justify-content:center;padding:12px 10px}
 .pp-note{text-align:center;font-size:.9em;margin:4px 0 10px}
 .chips.free span{background:#2b2b2b;border-left:3px solid var(--green)}
-@media (max-width:640px){.party-price{grid-template-columns:1fr}}
+@media (max-width:640px){.party-price,.chips.free{grid-template-columns:1fr}.chips.free span{font-size:1.3em}}
 .party-intro p{text-align:center}
 .party-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .party-photos img{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line);border-radius:4px;background:#1c1c1c}
