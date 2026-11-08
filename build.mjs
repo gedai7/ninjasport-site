@@ -138,7 +138,7 @@ ${events.length ? '<div class="sep" aria-hidden="true"><span></span><img src="/a
 <section class="photo-strip"><img src="/media/site/traseu-copii-thumb.jpg" alt="Traseu cu obstacole" loading="lazy"><img src="/media/site/bouldering-copii-thumb.jpg" alt="Bouldering" loading="lazy"><img src="/media/site/grup-copii-thumb.jpg" alt="Copii la Ninja Sport" loading="lazy"><img src="/media/site/competitie-halloween-premiere-thumb.jpg" alt="Competiție Ninja Sport" loading="lazy"></section>
 <div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
 <section><h2 class="page-title">Parteneri<span class="en">Partners</span></h2><div class="partners">
-${['2024/04/BOS_Logo_WO-400x193-1.png', '2024/04/Atlas_arena_logo.png', '2024/04/UNAA-sm-e1712915222600.png', '2024/04/frnpm_logo_square.png'].map((p) => `<img src="${media(MEDIA_PREFIX + p)}" alt="Partener" loading="lazy">`).join('')}
+${['2024/04/frnpm_logo_square.png', '2024/04/UNAA-sm-e1712915222600.png', '2024/04/Atlas_arena_logo.png', '2024/04/BOS_Logo_WO-400x193-1.png'].map((p) => `<img src="${media(MEDIA_PREFIX + p)}" alt="Partener" loading="lazy">`).join('')}
 </div></section>
 <div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
 <section><h2 class="page-title">Cum ajungi la Ninja Sport?<span class="en">How to get here</span></h2>

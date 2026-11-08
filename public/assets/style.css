@@ -68,7 +68,7 @@ section{margin:0 0 32px}
 .event .date{color:var(--red);font-size:1.1em}
 .event h3{margin:4px 0 8px;font-size:1.4em;text-transform:uppercase}
 @media (max-width:600px){.event{grid-template-columns:1fr}.event img{aspect-ratio:16/9}}
-.partners{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+.partners{display:flex;flex-wrap:wrap;gap:22px 36px;align-items:center;justify-content:center}
 .partners img{height:56px;width:auto;filter:grayscale(1) brightness(1.6);opacity:.85}
 .quick{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .quick a{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--red);padding:16px;text-decoration:none;text-transform:uppercase}
