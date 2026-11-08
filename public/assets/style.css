@@ -90,6 +90,7 @@ section{margin:0 0 32px}
 .photo-strip img{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line);border-radius:4px}
 @media (max-width:640px){.photo-strip{grid-template-columns:1fr 1fr}}
 .wide-photo{width:100%;max-height:440px;object-fit:cover;object-position:center 40%;border:1px solid var(--line);border-radius:4px;margin-top:16px}
+.wide-photo.sq{max-height:540px;object-position:center 30%}
 
 /* carusel */
 .carousel{position:relative}
