@@ -1,0 +1,36 @@
+# Urcă automat saitul pe hostingul ninjasport.ro prin FTP la fiecare modificare.
+# Activare: Settings → Secrets and variables → Actions
+#   Secrets:   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+#   Variables: FTP_ENABLED = true
+#              FTP_DIR = ./public_html/   (folderul rădăcină al saitului pe FTP, cu / la final)
+#              FTP_PROTOCOL = ftps        (opțional; pune ftp dacă hostingul nu acceptă ftps)
+# Trimite doar fișierele schimbate și NU șterge nimic ce nu a urcat el (wp-content rămâne).
+name: Deploy FTP
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency: deploy-ftp
+jobs:
+  deploy:
+    if: ${{ vars.FTP_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node build.mjs
+      - uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+          local-dir: ./dist/
+          server-dir: ${{ vars.FTP_DIR || './' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .assetsignore
+            _redirects

@@ -4,7 +4,7 @@
   var LUNI = {Ianuarie:1,Februarie:2,Martie:3,Aprilie:4,Mai:5,Iunie:6,Iulie:7,August:8,Septembrie:9,Octombrie:10,Noiembrie:11,Decembrie:12};
   var portal = box.dataset.portal, now = new Date(), today = now.getDate() + '-' + (now.getMonth() + 1);
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
-  fetch('/api/program').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
+  fetch('https://ninjasport-site.gedai7.workers.dev/api/program').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
     if (!d.days || !d.days.length) throw 0;
     box.innerHTML = '<div class="live-grid">' + d.days.map(function (day) {
       var p = day.date.split(' '), isT = p.length === 2 && LUNI[p[1]] && (parseInt(p[0], 10) + '-' + LUNI[p[1]]) === today;

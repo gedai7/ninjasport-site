@@ -14,7 +14,7 @@ async function program(request, ctx) {
     if (!r.ok) throw new Error('upstream ' + r.status);
     body = JSON.stringify({ updated: new Date().toISOString(), days: parse(await r.text()) });
   } catch (e) { body = JSON.stringify({ error: 'unavailable', days: [] }); status = 502; }
-  const res = new Response(body, { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'public, max-age=600' } });
+  const res = new Response(body, { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'public, max-age=600', 'access-control-allow-origin': '*' } });
   if (status === 200) ctx.waitUntil(cache.put(key, res.clone()));
   return res;
 }

@@ -181,5 +181,30 @@ fs.cpSync('public', OUT, { recursive: true });
 for (const [f, html] of Object.entries(pages)) { const p = path.join(OUT, f); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
 // redirecturi pentru adresele vechi WordPress
 fs.writeFileSync(path.join(OUT, '_redirects'), ['/team/* /coaches/ 301', '/birthday-party/ /party/ 301', '/programare-ninja-kids-class/ /schedule/ 301', '/category/* / 302'].join('\n') + '\n');
-fs.writeFileSync(path.join(OUT, '404.html'), layout({ title: 'Pagina nu există', body: title2('Pagina nu există', 'Page not found') + '<p><a class="btn" href="/">Înapoi la prima pagină</a></p>' }));
-console.log('Built', Object.keys(pages).length, 'pages →', OUT);
+// .htaccess pentru hosting clasic (Apache), ignorat de Cloudflare
+fs.writeFileSync(path.join(OUT, '.htaccess'), `# Ninja Sport – site static
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+Options -Indexes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^team(/.*)?$ /coaches/ [R=301,L]
+RewriteRule ^birthday-party/?$ /party/ [R=301,L]
+RewriteRule ^programare-ninja-kids-class/?$ /schedule/ [R=301,L]
+RewriteRule ^category/ / [R=302,L]
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType text/css "access plus 1 day"
+ExpiresByType application/javascript "access plus 1 day"
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType image/webp "access plus 30 days"
+ExpiresByType font/ttf "access plus 1 year"
+</IfModule>
+`);
+fs.writeFileSync(path.join(OUT, '.assetsignore'), '.htaccess\n');
