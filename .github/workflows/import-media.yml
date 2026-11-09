@@ -16,4 +16,5 @@ jobs:
           git config user.email "github-actions@users.noreply.github.com"
           git add public/media public/documente || true
           git commit -m "Import imagini din vechiul site" || echo "Nimic nou"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
