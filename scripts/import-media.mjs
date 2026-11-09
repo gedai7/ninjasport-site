@@ -16,26 +16,38 @@ for (const f of fs.readdirSync('content')) {
 }
 for (const m of fs.readFileSync('build.mjs', 'utf8').matchAll(/'(20\d\d\/\d\d\/[^']+\.(?:png|jpe?g))'/g)) urls.add(PREFIX + m[1]);
 
-let ok = 0, skip = 0;
+let ok = 0, skip = 0; const fail = [];
+const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', Accept: 'image/avif,image/webp,image/*,*/*;q=0.8', Referer: 'https://ninjasport.ro/' };
+async function get(u) {
+  let last;
+  for (let i = 0; i < 3; i++) {
+    try { const r = await fetch(u, { headers: UA }); if (!r.ok) throw new Error('HTTP ' + r.status); return Buffer.from(await r.arrayBuffer()); }
+    catch (e) { last = e; await new Promise((res) => setTimeout(res, 1500 * (i + 1))); }
+  }
+  throw last;
+}
+console.log('Imagini de importat:', urls.size);
 for (const u of urls) {
   const rel = u.slice(PREFIX.length), out = path.join('public/media', rel);
   if (/\.(mov|mp4|m4v)$/i.test(rel)) { skip++; continue; }          // clipurile merg pe YouTube
   if (fs.existsSync(out)) { ok++; continue; }
-  const r = await fetch(u);
-  if (!r.ok) { console.warn('lipsă', r.status, u); continue; }
-  const buf = Buffer.from(await r.arrayBuffer());
-  fs.mkdirSync(path.dirname(out), { recursive: true });
-  const isThumb = /-\d+x\d+\.(jpe?g|png)$/i.test(rel) || /\.png$/i.test(rel);
-  const img = sharp(buf).rotate();
-  if (/\.png$/i.test(rel)) await img.png({ compressionLevel: 9 }).toFile(out);
-  else await img.resize({ width: isThumb ? 800 : 1920, height: isThumb ? 800 : 1920, fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 80, mozjpeg: true }).toFile(out);
-  ok++; console.log('✓', rel);
+  try {
+    const buf = await get(u);
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    const isThumb = /-\d+x\d+\.(jpe?g|png)$/i.test(rel) || /\.png$/i.test(rel);
+    const img = sharp(buf).rotate();
+    if (/\.png$/i.test(rel)) await img.png({ compressionLevel: 9 }).toFile(out);
+    else await img.resize({ width: isThumb ? 800 : 1920, height: isThumb ? 800 : 1920, fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 80, mozjpeg: true }).toFile(out);
+    ok++; console.log('✓', rel);
+  } catch (e) { fail.push(rel + ' → ' + (e.message || e)); console.warn('✗', rel, e.message || e); }
 }
 // documente (ex. contractul de sponsorizare) – copiate ca atare
-for (const d of ['Contract_Sponsor_NINJA_SPORT_177.docx']) {
+for (const d of ['Contract_Sponsorizare_NINJA_SPORT_2026.docx']) {
   const out = path.join('public/documente', d);
   if (fs.existsSync(out)) continue;
-  const r = await fetch('https://ninjasport.ro/documente/' + d);
-  if (r.ok) { fs.mkdirSync('public/documente', { recursive: true }); fs.writeFileSync(out, Buffer.from(await r.arrayBuffer())); console.log('✓', d); }
+  try { const b = await get('https://ninjasport.ro/documente/' + d); fs.mkdirSync('public/documente', { recursive: true }); fs.writeFileSync(out, b); console.log('✓', d); }
+  catch (e) { console.warn('✗', d, e.message || e); }
 }
-console.log(`Gata: ${ok} imagini, ${skip} clipuri sărite.`);
+console.log(`Gata: ${ok} imagini, ${skip} clipuri sărite, ${fail.length} erori.`);
+if (fail.length) console.log('Erori:\n' + fail.join('\n'));
+if (!ok && fail.length) { console.error('Nicio imagine descărcată – probabil hostingul blochează serverele GitHub.'); process.exit(1); }
