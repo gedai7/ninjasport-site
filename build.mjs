@@ -8,6 +8,9 @@ const site = R('data/site.json'), prices = R('data/prices.json'), sched = R('dat
 const coaches = R('data/coaches.json'), events = R('data/events.json'), gallery = R('data/gallery.json');
 const content = (f) => fs.readFileSync(path.join('content', f), 'utf8');
 const OUT = 'dist';
+// versiune în URL (?v=hash) ca browserele să ia mereu fișierul nou după o modificare
+import { createHash as _ch } from 'node:crypto';
+const ver = (u) => { try { return u + '?v=' + _ch('md5').update(fs.readFileSync('public' + u)).digest('hex').slice(0, 8); } catch { return u; } };
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 // Imagini: dacă fișierul a fost importat local în public/media, folosim copia locală.
@@ -44,7 +47,7 @@ function layout({ title, active, body, desc = '', scripts = [] }) {
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#000000">
 <link rel="preload" href="/assets/fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="${ver('/assets/style.css')}">
 </head>
 <body>
 <header class="site-head"><div class="wrap">
@@ -63,7 +66,7 @@ ${body}
   <p class="copy">© ${new Date().getFullYear()} ACS Ninja Sport</p>
 </div></footer>
 <a class="float-wa" href="${site.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">${ICON.whatsapp}</a>
-${scripts.map((s) => `<script src="${s}" defer></script>`).join('\n')}
+${scripts.map((s) => `<script src="${ver(s)}" defer></script>`).join('\n')}
 </body>
 </html>`;
 }
