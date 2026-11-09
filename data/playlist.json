@@ -1,65 +1,101 @@
 {
-  "title": "Ninja Junior Power",
-  "songs": [
+  "playlists": [
     {
-      "sectiune": "🚀 Încălzire & Coordonare",
-      "artist": "Sabrina Carpenter",
-      "title": "Espresso (Clean)"
+      "title": "Ninja Junior Power",
+      "descriere": "Pentru clase și petreceri cu copii – versiuni clean / instrumentale.",
+      "songs": [
+        {
+          "sectiune": "🚀 Încălzire & Coordonare",
+          "artist": "Sabrina Carpenter",
+          "title": "Espresso (Clean)"
+        },
+        {
+          "sectiune": "🚀 Încălzire & Coordonare",
+          "artist": "Dua Lipa",
+          "title": "Dance The Night"
+        },
+        {
+          "sectiune": "🚀 Încălzire & Coordonare",
+          "artist": "The Weeknd",
+          "title": "Blinding Lights"
+        },
+        {
+          "sectiune": "🚀 Încălzire & Coordonare",
+          "artist": "OneRepublic",
+          "title": "I Ain't Worried"
+        },
+        {
+          "sectiune": "🚀 Încălzire & Coordonare",
+          "artist": "Peggy Gou",
+          "title": "(It Goes Like) Nanana"
+        },
+        {
+          "sectiune": "⚡ Obstacole – energie maximă",
+          "artist": "Marshmello & Imanbek",
+          "title": "Too Much"
+        },
+        {
+          "sectiune": "⚡ Obstacole – energie maximă",
+          "artist": "KORDHELL",
+          "title": "Murder In My Mind (Instrumental)"
+        },
+        {
+          "sectiune": "⚡ Obstacole – energie maximă",
+          "artist": "DVRST",
+          "title": "Close Eyes (Instrumental)"
+        },
+        {
+          "sectiune": "⚡ Obstacole – energie maximă",
+          "artist": "David Guetta & Bebe Rexha",
+          "title": "I'm Good (Blue)"
+        },
+        {
+          "sectiune": "⚡ Obstacole – energie maximă",
+          "artist": "Tiësto",
+          "title": "The Business"
+        },
+        {
+          "sectiune": "🦖 Forță pe final (Warped Wall)",
+          "artist": "Imagine Dragons",
+          "title": "Bones"
+        },
+        {
+          "sectiune": "🦖 Forță pe final (Warped Wall)",
+          "artist": "Alan Walker",
+          "title": "Faded"
+        }
+      ]
     },
     {
-      "sectiune": "🚀 Încălzire & Coordonare",
-      "artist": "Dua Lipa",
-      "title": "Dance The Night"
-    },
-    {
-      "sectiune": "🚀 Încălzire & Coordonare",
-      "artist": "The Weeknd",
-      "title": "Blinding Lights"
-    },
-    {
-      "sectiune": "🚀 Încălzire & Coordonare",
-      "artist": "OneRepublic",
-      "title": "I Ain't Worried"
-    },
-    {
-      "sectiune": "🚀 Încălzire & Coordonare",
-      "artist": "Peggy Gou",
-      "title": "(It Goes Like) Nanana"
-    },
-    {
-      "sectiune": "⚡ Obstacole – energie maximă",
-      "artist": "Marshmello & Imanbek",
-      "title": "Too Much"
-    },
-    {
-      "sectiune": "⚡ Obstacole – energie maximă",
-      "artist": "KORDHELL",
-      "title": "Murder In My Mind (Instrumental)"
-    },
-    {
-      "sectiune": "⚡ Obstacole – energie maximă",
-      "artist": "DVRST",
-      "title": "Close Eyes (Instrumental)"
-    },
-    {
-      "sectiune": "⚡ Obstacole – energie maximă",
-      "artist": "David Guetta & Bebe Rexha",
-      "title": "I'm Good (Blue)"
-    },
-    {
-      "sectiune": "⚡ Obstacole – energie maximă",
-      "artist": "Tiësto",
-      "title": "The Business"
-    },
-    {
-      "sectiune": "🦖 Forță pe final (Warped Wall)",
-      "artist": "Imagine Dragons",
-      "title": "Bones"
-    },
-    {
-      "sectiune": "🦖 Forță pe final (Warped Wall)",
-      "artist": "Alan Walker",
-      "title": "Faded"
+      "title": "Ninja Adults",
+      "descriere": "Doar pentru adulți (Open Gym 16+) – versiuni originale, conțin limbaj explicit.",
+      "songs": [
+        {
+          "sectiune": "🔥 Open Gym – adulți",
+          "artist": "Travis Scott ft. Playboi Carti",
+          "title": "FE!N"
+        },
+        {
+          "sectiune": "🔥 Open Gym – adulți",
+          "artist": "KORDHELL",
+          "title": "Murder In My Mind"
+        },
+        {
+          "sectiune": "🔥 Open Gym – adulți",
+          "artist": "Bring Me The Horizon",
+          "title": "Kool-Aid"
+        },
+        {
+          "sectiune": "🔥 Open Gym – adulți",
+          "artist": "Bring Me The Horizon",
+          "title": "LosT"
+        },
+        {
+          "sectiune": "🔥 Open Gym – adulți",
+          "artist": "Skrillex, Fred again.., Flowdan",
+          "title": "Rumble"
+        }
+      ]
     }
   ]
 }

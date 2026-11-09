@@ -200,16 +200,22 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.cpSync('public', OUT, { recursive: true });
 // pagină ascunsă (nu e în meniu / sitemap / Google)
 {
-  const songs = (playlist.songs || []).filter((x) => x && (x.title || x.artist));
+  const lists = playlist.playlists || [playlist];
   const line = (x) => [x.artist, x.title].filter(Boolean).join(' - ');
   const yt = (x) => 'https://music.youtube.com/search?q=' + encodeURIComponent(line(x));
-  pages['playlist-ninja/index.html'] = layout({ title: playlist.title || 'Playlist', noindex: true, scripts: ['/assets/playlist.js'], body: title2(playlist.title || 'Playlist', songs.length + ' melodii') + `<section class="prose narrow playlist">
-<div class="pl-actions"><button type="button" class="btn" id="pl-copy">Copiază lista</button><a class="btn" href="https://www.tunemymusic.com/transfer" target="_blank" rel="noopener">Deschide TuneMyMusic</a><button type="button" class="btn btn-dark" id="pl-dl">Descarcă .txt</button><span id="pl-msg" class="pl-msg"></span></div>
-<p class="pl-help"><b>Cum faci playlistul în YouTube Music:</b> apasă <b>Copiază lista</b> → <b>Deschide TuneMyMusic</b> → la sursă alege <b>Free text</b> (Text liber) și lipește lista → la destinație alege <b>YouTube Music</b> și conectează contul → <b>Start Transfer</b>.</p>
-<textarea id="pl-text" readonly rows="6" aria-label="Lista pentru copiere">${esc(songs.map(line).join('\n'))}</textarea>
-${(() => { let out = '', cur = null, n = 0; for (const x of songs) { if ((x.sectiune || '') !== cur) { if (cur !== null) out += '</ol>'; cur = x.sectiune || ''; out += (cur ? `<h3 class="pl-sec">${esc(cur)}</h3>` : '') + `<ol class="pl-list" start="${n + 1}">`; } n++; out += `<li><a href="${yt(x)}" target="_blank" rel="noopener"><b>${esc(x.title || '')}</b>${x.artist ? ` <span>${esc(x.artist)}</span>` : ''}</a></li>`; } return out + (cur !== null ? '</ol>' : ''); })()}
-${songs.length ? '' : '<p>Lista e goală. Adaug-o din panoul de editare → <b>Playlist</b>.</p>'}
-</section>` });
+  const TMM = 'https://www.tunemymusic.com/transfer/freetext-to-youtube-music';
+  const block = (pl, k) => {
+    const songs = (pl.songs || []).filter((x) => x && (x.title || x.artist));
+    let out = '', cur = null, n = 0;
+    for (const x of songs) { if ((x.sectiune || '') !== cur) { if (cur !== null) out += '</ol>'; cur = x.sectiune || ''; out += (cur ? `<h3 class="pl-sec">${esc(cur)}</h3>` : '') + `<ol class="pl-list" start="${n + 1}">`; } n++; out += `<li><a href="${yt(x)}" target="_blank" rel="noopener"><b>${esc(x.title || '')}</b>${x.artist ? ` <span>${esc(x.artist)}</span>` : ''}</a></li>`; }
+    if (cur !== null) out += '</ol>';
+    return `<section class="pl-block" data-pl><h3 class="pl-title">${esc(pl.title || 'Playlist')} <small>${songs.length} melodii</small></h3>${pl.descriere ? `<p class="pl-desc">${esc(pl.descriere)}</p>` : ''}
+<div class="pl-actions"><button type="button" class="btn" data-copy>Copiază lista</button><a class="btn" href="${TMM}" target="_blank" rel="noopener">Deschide TuneMyMusic</a><button type="button" class="btn btn-dark" data-dl="${esc((pl.title || 'playlist').toLowerCase().replace(/[^a-z0-9]+/g, '-'))}">Descarcă .txt</button><span class="pl-msg"></span></div>
+<textarea readonly rows="5" aria-label="Lista pentru copiere">${esc(songs.map(line).join('\n'))}</textarea>${out}</section>`;
+  };
+  pages['playlist-ninja/index.html'] = layout({ title: 'Playlist', noindex: true, scripts: ['/assets/playlist.js'], body: title2('Playlist', 'YouTube Music') + `<div class="prose narrow playlist">
+<p class="pl-help"><b>Cum faci playlistul în YouTube Music:</b> la playlistul dorit apasă <b>Copiază lista</b> → <b>Deschide TuneMyMusic</b> → lipește lista în căsuța de text → conectează contul <b>YouTube Music</b> → <b>Start Transfer</b>.</p>
+${lists.map(block).join('<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>')}</div>` });
 }
 pages['404.html'] = layout({ title: 'Pagina nu există', noindex: true, body: title2('Pagina nu există', 'Page not found') + `<section class="prose narrow" style="text-align:center"><p>Pagina căutată nu mai există sau a fost mutată. Poate te interesează una dintre acestea:</p><div class="cta-row" style="justify-content:center;display:flex;flex-wrap:wrap;gap:10px;margin:20px 0"><a class="btn" href="/">Acasă</a><a class="btn" href="/schedule/">Program</a><a class="btn" href="/prices/">Contribuții</a><a class="btn" href="/party/">Party</a></div></section>` });
 const pathOf = (f) => '/' + f.replace(/index\.html$/, '');

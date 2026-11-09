@@ -340,3 +340,6 @@ section{margin:0 0 32px}
 .pl-list a span{color:#aaa;font-weight:400}
 .pl-list a:hover b{color:var(--red)}
 .pl-sec{margin:22px 0 6px;color:var(--red);font-size:1.05em}
+.pl-title{margin:10px 0 4px;font-size:1.35em;text-transform:uppercase}.pl-title small{font-size:.6em;color:#aaa;font-weight:400}
+.pl-desc{color:#ccc;margin:0 0 10px}
+.pl-title{color:#fff;margin-top:16px}

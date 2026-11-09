@@ -198,17 +198,23 @@ content:
 
   # ---------------- Playlist (pagină ascunsă /playlist-ninja/) ----------------
   - name: playlist
-    label: Playlist (pagină ascunsă)
+    label: Playlisturi (pagină ascunsă)
     type: file
     path: data/playlist.json
     format: json
     fields:
-      - { name: title, label: Titlu, type: string }
-      - name: songs
-        label: Melodii
+      - name: playlists
+        label: Playlisturi
         type: object
         list: true
         fields:
-          - { name: sectiune, label: Secțiune (opțional – ex. Încălzire), type: string }
-          - { name: artist, label: Artist, type: string }
-          - { name: title, label: Melodie, type: string }
+          - { name: title, label: Nume playlist, type: string }
+          - { name: descriere, label: Descriere scurtă, type: string }
+          - name: songs
+            label: Melodii
+            type: object
+            list: true
+            fields:
+              - { name: sectiune, label: Secțiune (opțional – ex. Încălzire), type: string }
+              - { name: artist, label: Artist, type: string }
+              - { name: title, label: Melodie, type: string }
