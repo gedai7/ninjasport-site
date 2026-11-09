@@ -31,7 +31,7 @@ const ICON = {
 // Titluri centrate: învelim conținutul fiecărui h1.page-title / h2 într-un span, ca liniuțele din CSS să stea stânga-dreapta.
 const wrapTitles = (html) => html.replace(/<(h1|h2)([^>]*)>([\s\S]*?)<\/\1>/g, (m, t, a, inner) => inner.includes('class="tt"') ? m : `<${t}${a}><span class="tt">${inner}</span></${t}>`);
 
-function layout({ title, active, body, desc = '', scripts = [] }) {
+function layout({ title, active, body, desc = '', scripts = [], noindex = false }) {
   body = wrapTitles(body);
   const nav = site.nav.map(([t, h]) => `<a href="${h}"${h === active ? ' class="on" aria-current="page"' : ''}>${esc(t)}</a>`).join('');
   const soc = Object.entries(site.social).map(([k, u]) => `<a href="${u}" target="_blank" rel="noopener" aria-label="${k}">${ICON[k] || ''}</a>`).join('');
@@ -46,6 +46,17 @@ function layout({ title, active, body, desc = '', scripts = [] }) {
 <link rel="icon" type="image/png" href="/assets/favicon-48.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#000000">
+<link rel="canonical" href="${site.url}%%PATH%%">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ninja Sport">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:title" content="${esc(title ? title + ' – ' + site.name : site.name + ' – ' + site.tagline)}">
+<meta property="og:description" content="${esc(desc || 'Ninja Sport – sală de sporturi cu obstacole, Splaiul Unirii 160, București.')}">
+<meta property="og:url" content="${site.url}%%PATH%%">
+<meta property="og:image" content="${site.url}/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">${noindex ? '\n<meta name="robots" content="noindex">' : ''}
 <link rel="preload" href="/assets/fonts/Play-Bold.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="${ver('/assets/style.css')}">
 </head>
@@ -181,7 +192,9 @@ pages['gallery/index.html'] = layout({
 /* ---------- scriere ---------- */
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.cpSync('public', OUT, { recursive: true });
-for (const [f, html] of Object.entries(pages)) { const p = path.join(OUT, f); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
+pages['404.html'] = layout({ title: 'Pagina nu există', noindex: true, body: title2('Pagina nu există', 'Page not found') + `<section class="prose narrow" style="text-align:center"><p>Pagina căutată nu mai există sau a fost mutată. Poate te interesează una dintre acestea:</p><div class="cta-row" style="justify-content:center;display:flex;flex-wrap:wrap;gap:10px;margin:20px 0"><a class="btn" href="/">Acasă</a><a class="btn" href="/schedule/">Program</a><a class="btn" href="/prices/">Contribuții</a><a class="btn" href="/party/">Party</a></div></section>` });
+const pathOf = (f) => '/' + f.replace(/index\.html$/, '');
+for (const [f, raw] of Object.entries(pages)) { const html = raw.replaceAll('%%PATH%%', pathOf(f)); const p = path.join(OUT, f); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
 // redirecturi pentru adresele vechi WordPress
 fs.writeFileSync(path.join(OUT, '_redirects'), ['/team/* /coaches/ 301', '/birthday-party/ /party/ 301', '/programare-ninja-kids-class/ /schedule/ 301', '/category/* / 302'].join('\n') + '\n');
 // .htaccess pentru hosting clasic (Apache), ignorat de Cloudflare
@@ -213,4 +226,9 @@ ExpiresByType image/webp "access plus 30 days"
 ExpiresByType font/ttf "access plus 1 year"
 </IfModule>
 `);
+// sitemap.xml + robots.txt
+const today = new Date().toISOString().slice(0, 10);
+fs.writeFileSync(path.join(OUT, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  Object.keys(pages).filter((f) => f !== '404.html').map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
+fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, '.assetsignore'), '.htaccess\n');
