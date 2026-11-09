@@ -189,6 +189,9 @@ fs.writeFileSync(path.join(OUT, '.htaccess'), `# Ninja Sport – site static
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
 Options -Indexes
+<Files ".ftp-deploy-sync-state.json">
+Require all denied
+</Files>
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteCond %{HTTPS} off
