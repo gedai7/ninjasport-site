@@ -329,3 +329,13 @@ section{margin:0 0 32px}
 .pp-red p:last-child{margin:0 auto}
 .waiver p,.waiver li{text-align:justify;hyphens:auto}
 .waiver .lead,.waiver .sign p{text-align:left}
+/* playlist (pagină ascunsă) */
+.pl-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0 14px}
+.pl-msg{color:var(--green);font-weight:700}
+.pl-help{font-size:.95em}
+.playlist textarea{width:100%;background:var(--panel);color:#fff;border:1px solid var(--line);font:inherit;font-size:.9em;padding:10px;resize:vertical;margin-bottom:14px}
+.pl-list{padding-left:2.2em}
+.pl-list li{padding:6px 0;border-bottom:1px solid var(--line)}
+.pl-list a{color:#fff;text-decoration:none;display:block}
+.pl-list a span{color:#aaa;font-weight:400}
+.pl-list a:hover b{color:var(--red)}

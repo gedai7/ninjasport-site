@@ -7,6 +7,7 @@ const R = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const site = R('data/site.json'), prices = R('data/prices.json'), sched = R('data/schedule.json');
 const ZILE = ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri', 'Sâmbătă', 'Duminică'];
 sched.events = sched.events.map((e) => ({ ...e, day: typeof e.day === 'number' ? e.day : ZILE.indexOf(e.zi), time: e.time || `${e.from}–${e.to}` }));
+const playlist = fs.existsSync('data/playlist.json') ? R('data/playlist.json') : { title: 'Playlist', songs: [] };
 const coaches = R('data/coaches.json'), events = R('data/events.json'), gallery = R('data/gallery.json');
 const content = (f) => fs.readFileSync(path.join('content', f), 'utf8').replace(/https:\/\/ninjasport\.ro\/wp-content\/uploads\/[^"'\s)]+/g, (u) => media(u));
 const OUT = 'dist';
@@ -197,6 +198,19 @@ pages['gallery/index.html'] = layout({
 /* ---------- scriere ---------- */
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.cpSync('public', OUT, { recursive: true });
+// pagină ascunsă (nu e în meniu / sitemap / Google)
+{
+  const songs = (playlist.songs || []).filter((x) => x && (x.title || x.artist));
+  const line = (x) => [x.artist, x.title].filter(Boolean).join(' - ');
+  const yt = (x) => 'https://music.youtube.com/search?q=' + encodeURIComponent(line(x));
+  pages['playlist-ninja/index.html'] = layout({ title: playlist.title || 'Playlist', noindex: true, scripts: ['/assets/playlist.js'], body: title2(playlist.title || 'Playlist', songs.length + ' melodii') + `<section class="prose narrow playlist">
+<div class="pl-actions"><button type="button" class="btn" id="pl-copy">Copiază lista</button><a class="btn" href="https://www.tunemymusic.com/transfer" target="_blank" rel="noopener">Deschide TuneMyMusic</a><button type="button" class="btn btn-dark" id="pl-dl">Descarcă .txt</button><span id="pl-msg" class="pl-msg"></span></div>
+<p class="pl-help"><b>Cum faci playlistul în YouTube Music:</b> apasă <b>Copiază lista</b> → <b>Deschide TuneMyMusic</b> → la sursă alege <b>Free text</b> (Text liber) și lipește lista → la destinație alege <b>YouTube Music</b> și conectează contul → <b>Start Transfer</b>.</p>
+<textarea id="pl-text" readonly rows="6" aria-label="Lista pentru copiere">${esc(songs.map(line).join('\n'))}</textarea>
+<ol class="pl-list">${songs.map((x) => `<li><a href="${yt(x)}" target="_blank" rel="noopener"><b>${esc(x.title || '')}</b>${x.artist ? ` <span>${esc(x.artist)}</span>` : ''}</a></li>`).join('')}</ol>
+${songs.length ? '' : '<p>Lista e goală. Adaug-o din panoul de editare → <b>Playlist</b>.</p>'}
+</section>` });
+}
 pages['404.html'] = layout({ title: 'Pagina nu există', noindex: true, body: title2('Pagina nu există', 'Page not found') + `<section class="prose narrow" style="text-align:center"><p>Pagina căutată nu mai există sau a fost mutată. Poate te interesează una dintre acestea:</p><div class="cta-row" style="justify-content:center;display:flex;flex-wrap:wrap;gap:10px;margin:20px 0"><a class="btn" href="/">Acasă</a><a class="btn" href="/schedule/">Program</a><a class="btn" href="/prices/">Contribuții</a><a class="btn" href="/party/">Party</a></div></section>` });
 const pathOf = (f) => '/' + f.replace(/index\.html$/, '');
 for (const [f, raw] of Object.entries(pages)) { const html = raw.replaceAll('%%PATH%%', pathOf(f)); const p = path.join(OUT, f); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
@@ -234,6 +248,6 @@ ExpiresByType font/ttf "access plus 1 year"
 // sitemap.xml + robots.txt
 const today = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  Object.keys(pages).filter((f) => f !== '404.html').map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
+  Object.keys(pages).filter((f) => f !== '404.html' && !f.startsWith('playlist-')).map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, '.assetsignore'), '.htaccess\n');

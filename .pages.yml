@@ -195,3 +195,19 @@ content:
       - { name: favicon, type: string, readonly: true }
       - { name: gma_schedule, type: string, readonly: true }
       - { name: form_key, label: Cheie Web3Forms, type: string, readonly: true }
+
+  # ---------------- Playlist (pagină ascunsă /playlist-ninja/) ----------------
+  - name: playlist
+    label: Playlist (pagină ascunsă)
+    type: file
+    path: data/playlist.json
+    format: json
+    fields:
+      - { name: title, label: Titlu, type: string }
+      - name: songs
+        label: Melodii
+        type: object
+        list: true
+        fields:
+          - { name: artist, label: Artist, type: string }
+          - { name: title, label: Melodie, type: string }
