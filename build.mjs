@@ -132,7 +132,7 @@ pages['index.html'] = layout({
 ${events.length ? `<section><h2 class="page-title">Urmează<span class="en">Next event</span></h2>${events.map((e) => `<div class="event"><img src="${media(e.image)}" alt="" loading="lazy"><div><div class="date">${e.date.split('-').reverse().join('.')}</div><h3>${esc(e.title)}</h3><p style="font-weight:400">${esc(e.text)}</p>${e.link ? `<a class="btn" href="${e.link}">Înscrie-te</a>` : `<a class="btn" href="${site.phone_href}">Înscrieri: ${esc(site.phone)}</a>`}</div></div>`).join('')}</section>` : ''}
 ${events.length ? '<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>' : ''}
 <section class="quick">
-  <a href="/schedule/">Program<span>Clase și Open Gym, live din aplicație</span></a>
+  <a href="/schedule/">Program<span>Clase, Open Gym și Birthday Party</span></a>
   <a href="/prices/">Contribuții<span>Abonamente copii, adulți, privates</span></a>
   <a href="/party/">Party<span>Petreceri aniversare pentru copii și adulți</span></a>
   <a href="/gallery/">Galerie<span>Poze și video de la competiții</span></a>
@@ -167,10 +167,8 @@ ${['2024/04/frnpm_logo_square.png', '2024/04/UNAA-sm-e1712915222600.png', '2024/
 pages['prices/index.html'] = layout({ title: 'Contribuții', active: '/prices/', desc: 'Contribuții membri Ninja Sport: abonamente copii, adulți, Open Gym, antrenamente private.', body: title2(prices.title, prices.subtitle) + pricesHTML() });
 
 pages['schedule/index.html'] = layout({
-  title: 'Program', active: '/schedule/', scripts: ['/assets/live.js'], body: title2(sched.title, sched.subtitle) + `
-<div class="tabs"><button class="on" data-t="std">Program standard</button><button data-t="live">Săptămâna aceasta (live)</button></div>
-<div data-tab="std">${scheduleHTML()}</div>
-<div data-tab="live" hidden><div id="live" data-portal="${site.booking_portal}" data-fallback="${site.gma_schedule}"><p class="live-msg">Se încarcă programul…</p></div></div>` });
+  title: 'Program', active: '/schedule/', body: title2(sched.title, sched.subtitle) + `
+${scheduleHTML()}` });
 
 pages['party/index.html'] = layout({ title: 'Party', active: '/party/', scripts: ['/assets/party.js'], desc: 'Petreceri aniversare la Ninja Sport: 3 ore de distracție ninja pe obstacole, pachet pentru 15 invitați, rezervare online.', body: title2('Birthday Party', 'Petreceri aniversare la Ninja Sport') + content('party.html').replace('<form class="party-form" id="party-form" novalidate>', `<form class="party-form" id="party-form" novalidate data-key="${esc(site.form_key || '')}">`) });
 pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-kids/', body: title2('Ninja Kids', 'Kids classes & parties') + content('ninja-kids.html') });
