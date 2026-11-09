@@ -207,7 +207,7 @@ fs.cpSync('public', OUT, { recursive: true });
 <div class="pl-actions"><button type="button" class="btn" id="pl-copy">Copiază lista</button><a class="btn" href="https://www.tunemymusic.com/transfer" target="_blank" rel="noopener">Deschide TuneMyMusic</a><button type="button" class="btn btn-dark" id="pl-dl">Descarcă .txt</button><span id="pl-msg" class="pl-msg"></span></div>
 <p class="pl-help"><b>Cum faci playlistul în YouTube Music:</b> apasă <b>Copiază lista</b> → <b>Deschide TuneMyMusic</b> → la sursă alege <b>Free text</b> (Text liber) și lipește lista → la destinație alege <b>YouTube Music</b> și conectează contul → <b>Start Transfer</b>.</p>
 <textarea id="pl-text" readonly rows="6" aria-label="Lista pentru copiere">${esc(songs.map(line).join('\n'))}</textarea>
-<ol class="pl-list">${songs.map((x) => `<li><a href="${yt(x)}" target="_blank" rel="noopener"><b>${esc(x.title || '')}</b>${x.artist ? ` <span>${esc(x.artist)}</span>` : ''}</a></li>`).join('')}</ol>
+${(() => { let out = '', cur = null, n = 0; for (const x of songs) { if ((x.sectiune || '') !== cur) { if (cur !== null) out += '</ol>'; cur = x.sectiune || ''; out += (cur ? `<h3 class="pl-sec">${esc(cur)}</h3>` : '') + `<ol class="pl-list" start="${n + 1}">`; } n++; out += `<li><a href="${yt(x)}" target="_blank" rel="noopener"><b>${esc(x.title || '')}</b>${x.artist ? ` <span>${esc(x.artist)}</span>` : ''}</a></li>`; } return out + (cur !== null ? '</ol>' : ''); })()}
 ${songs.length ? '' : '<p>Lista e goală. Adaug-o din panoul de editare → <b>Playlist</b>.</p>'}
 </section>` });
 }

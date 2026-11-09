@@ -209,5 +209,6 @@ content:
         type: object
         list: true
         fields:
+          - { name: sectiune, label: Secțiune (opțional – ex. Încălzire), type: string }
           - { name: artist, label: Artist, type: string }
           - { name: title, label: Melodie, type: string }

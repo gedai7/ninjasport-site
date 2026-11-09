@@ -1,4 +1,65 @@
 {
-  "title": "Playlist Ninja Sport",
-  "songs": []
+  "title": "Ninja Junior Power",
+  "songs": [
+    {
+      "sectiune": "🚀 Încălzire & Coordonare",
+      "artist": "Sabrina Carpenter",
+      "title": "Espresso (Clean)"
+    },
+    {
+      "sectiune": "🚀 Încălzire & Coordonare",
+      "artist": "Dua Lipa",
+      "title": "Dance The Night"
+    },
+    {
+      "sectiune": "🚀 Încălzire & Coordonare",
+      "artist": "The Weeknd",
+      "title": "Blinding Lights"
+    },
+    {
+      "sectiune": "🚀 Încălzire & Coordonare",
+      "artist": "OneRepublic",
+      "title": "I Ain't Worried"
+    },
+    {
+      "sectiune": "🚀 Încălzire & Coordonare",
+      "artist": "Peggy Gou",
+      "title": "(It Goes Like) Nanana"
+    },
+    {
+      "sectiune": "⚡ Obstacole – energie maximă",
+      "artist": "Marshmello & Imanbek",
+      "title": "Too Much"
+    },
+    {
+      "sectiune": "⚡ Obstacole – energie maximă",
+      "artist": "KORDHELL",
+      "title": "Murder In My Mind (Instrumental)"
+    },
+    {
+      "sectiune": "⚡ Obstacole – energie maximă",
+      "artist": "DVRST",
+      "title": "Close Eyes (Instrumental)"
+    },
+    {
+      "sectiune": "⚡ Obstacole – energie maximă",
+      "artist": "David Guetta & Bebe Rexha",
+      "title": "I'm Good (Blue)"
+    },
+    {
+      "sectiune": "⚡ Obstacole – energie maximă",
+      "artist": "Tiësto",
+      "title": "The Business"
+    },
+    {
+      "sectiune": "🦖 Forță pe final (Warped Wall)",
+      "artist": "Imagine Dragons",
+      "title": "Bones"
+    },
+    {
+      "sectiune": "🦖 Forță pe final (Warped Wall)",
+      "artist": "Alan Walker",
+      "title": "Faded"
+    }
+  ]
 }
