@@ -24,23 +24,17 @@
     if (+d.participanti > 50) { say('Numărul maxim de participanți este 50.', true); return null; }
     return d;
   }
+  var ZILE = ['duminică', 'luni', 'marți', 'miercuri', 'joi', 'vineri', 'sâmbătă'];
   function text(d) {
     var dt = d.data.split('-').reverse().join('.');
     return 'Rezervare petrecere Ninja Sport\n' +
       'Părinte: ' + d.parinte + '\nTelefon: ' + d.telefon + '\nEmail: ' + d.email +
-      '\nSărbătorit: ' + d.sarbatorit + ' (' + d.varsta + ' ani)\nData: ' + dt + ', ' + d.interval +
+      '\nSărbătorit: ' + d.sarbatorit + ' (' + d.varsta + ' ani)\nData: ' + ZILE[day()] + ', ' + dt + ', ' + d.interval +
       '\nParticipanți: ' + d.participanti + (d.mesaj ? '\nMesaj: ' + d.mesaj : '');
   }
-  var ZILE = ['duminică', 'luni', 'marți', 'miercuri', 'joi', 'vineri', 'sâmbătă'];
   function mail(d) {
     var dt = d.data.split('-').reverse().join('.');
-    var o = { access_key: KEY, subject: 'Rezervare petrecere – ' + d.sarbatorit + ', ' + dt, from_name: 'Site Ninja Sport', replyto: d.email,
-      'Părinte': d.parinte, 'Telefon': d.telefon, 'Email': d.email,
-      'Sărbătorit': d.sarbatorit + ' (' + d.varsta + ' ani)',
-      'Data': ZILE[day()] + ', ' + dt + ', ' + d.interval,
-      'Participanți': d.participanti };
-    if (d.mesaj) o['Mesaj'] = d.mesaj;
-    return o;
+    return { access_key: KEY, subject: 'Rezervare petrecere – ' + d.sarbatorit + ', ' + dt, from_name: 'Site Ninja Sport', replyto: d.email, 'Rezervare': text(d) };
   }
   f.querySelector('[data-wa]').addEventListener('click', function () {
     var d = check(); if (!d) return;
