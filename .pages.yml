@@ -1,0 +1,197 @@
+# Panou de editare Ninja Sport – https://app.pagescms.org
+# Fiecare „Save” face un commit pe GitHub → saitul se actualizează singur în 1–2 minute.
+
+media:
+  input: public/media
+  output: /media
+
+content:
+  # ---------------- Contribuții ----------------
+  - name: preturi
+    label: Contribuții (prețuri)
+    type: file
+    path: data/prices.json
+    format: json
+    fields:
+      - { name: title, label: Titlu pagină, type: string }
+      - { name: subtitle, label: Subtitlu (EN), type: string }
+      - name: sections
+        label: Secțiuni
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Titlu secțiune (EN), type: string }
+          - { name: ro, label: Subtitlu secțiune (RO), type: string }
+          - name: rows
+            label: Rânduri
+            type: object
+            list: true
+            fields:
+              - { name: name, label: Denumire, type: string }
+              - { name: desc, label: Descriere, type: string }
+              - { name: price, label: Preț (lei), type: number }
+              - { name: spatiu, label: Spațiu liber deasupra rândului, type: boolean }
+
+  # ---------------- Program ----------------
+  - name: program
+    label: Program (orar standard)
+    type: file
+    path: data/schedule.json
+    format: json
+    fields:
+      - { name: title, label: Titlu pagină, type: string }
+      - { name: subtitle, label: Subtitlu (EN), type: string }
+      - name: events
+        label: Clase și activități
+        description: Ora de început și de sfârșit trebuie să fie fix sau „și jumătate” (ex. 16:00, 16:30), între 11:00 și 21:00.
+        type: object
+        list: true
+        fields:
+          - name: zi
+            label: Ziua
+            type: select
+            options:
+              values: [Luni, Marți, Miercuri, Joi, Vineri, Sâmbătă, Duminică]
+          - { name: from, label: Început (în tabel), type: string, pattern: { regex: "^([01][0-9]|2[0-3]):(00|30)$", message: "Scrie ora ca 16:00 sau 16:30" } }
+          - { name: to, label: Sfârșit (în tabel), type: string, pattern: { regex: "^([01][0-9]|2[0-3]):(00|30)$", message: "Scrie ora ca 17:00 sau 17:30" } }
+          - { name: name, label: Denumire, type: string }
+          - { name: sub, label: Detaliu (ex. vârsta 6-10y), type: string }
+          - { name: time, label: Ora afișată pe telefon (ex. 16:00–16:45), type: string }
+          - { name: party, label: Este Birthday Party, type: boolean }
+      - name: notes
+        label: Note sub program
+        type: object
+        fields:
+          - name: ro
+            label: Română
+            type: object
+            list: true
+            fields:
+              - { name: titlu, label: Titlu (cu roșu), type: string }
+              - { name: text, label: Text, type: text }
+          - name: en
+            label: English
+            type: object
+            list: true
+            fields:
+              - { name: titlu, label: Title (red), type: string }
+              - { name: text, label: Text, type: text }
+      - { name: start, type: string, hidden: true }
+      - { name: end, type: string, hidden: true }
+      - name: days
+        type: object
+        list: true
+        hidden: true
+        fields:
+          - { name: ro, type: string }
+          - { name: en, type: string }
+      - name: slots
+        type: object
+        list: true
+        hidden: true
+        fields:
+          - { name: label, type: string }
+
+  # ---------------- Eveniment pe prima pagină ----------------
+  - name: evenimente
+    label: Următorul eveniment (prima pagină)
+    type: file
+    path: data/events.json
+    format: json
+    list: true
+    fields:
+      - { name: date, label: Data, type: date }
+      - { name: title, label: Titlu, type: string }
+      - { name: text, label: Text, type: text }
+      - { name: image, label: Imagine, type: image, options: { path: public/media/evenimente } }
+      - { name: link, label: Link înscriere (opțional), type: string }
+
+  # ---------------- Antrenori ----------------
+  - name: antrenori
+    label: Antrenori
+    type: file
+    path: data/coaches.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: Nume, type: string }
+      - { name: role, label: Rol, type: string }
+      - { name: photo, label: Fotografie, type: image, options: { path: public/media/antrenori } }
+      - { name: bio, label: Puncte (realizări), type: string, list: true }
+      - { name: text, label: Descriere, type: text }
+
+  # ---------------- Galerie ----------------
+  - name: galerie
+    label: Galerie foto
+    type: file
+    path: data/gallery.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: Nume album, type: string }
+      - { name: slug, label: Cod album (fără spații / diacritice, ex. halloween-2026), type: string, pattern: { regex: "^[a-z0-9-]+$", message: "Doar litere mici, cifre și cratimă" } }
+      - name: items
+        label: Poze și clipuri
+        type: object
+        list: true
+        fields:
+          - name: type
+            label: Tip
+            type: select
+            options:
+              values:
+                - { name: image, label: Poză }
+                - { name: youtube, label: Clip YouTube }
+                - { name: video, label: Clip MP4 (deja pe sait) }
+          - { name: src, label: Poza (sau fișierul MP4), type: image, options: { path: public/media/galerie } }
+          - { name: thumb, label: Miniatură (opțional), type: image, options: { path: public/media/galerie } }
+          - { name: id, label: Cod YouTube (doar pentru clip YouTube – partea de după v= din link), type: string }
+
+  # ---------------- Texte pagini ----------------
+  - name: texte
+    label: Texte pagini (HTML)
+    type: group
+    items:
+      - { name: party, label: Party, type: file, path: content/party.html, format: code }
+      - { name: ninja-kids, label: Ninja Kids, type: file, path: content/ninja-kids.html, format: code }
+      - { name: sponsorizare, label: Sponsorizare, type: file, path: content/sponsorizare.html, format: code }
+      - { name: waiver, label: Waiver, type: file, path: content/waiver.html, format: code }
+      - { name: scoala-altfel, label: Școala Altfel, type: file, path: content/scoala-altfel.html, format: code }
+
+  # ---------------- Setări sait ----------------
+  - name: setari
+    label: Setări (contact, meniu, social)
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - { name: name, label: Nume, type: string }
+      - { name: tagline, label: Slogan, type: string }
+      - { name: address, label: Adresă, type: string }
+      - { name: phone, label: Telefon (afișat), type: string }
+      - { name: phone_href, label: Telefon (link, ex. tel:+40721012130), type: string }
+      - { name: email, label: Email, type: string }
+      - { name: whatsapp, label: Link WhatsApp, type: string }
+      - name: social
+        label: Rețele sociale
+        type: object
+        fields:
+          - { name: facebook, label: Facebook, type: string }
+          - { name: instagram, label: Instagram, type: string }
+          - { name: tiktok, label: TikTok, type: string }
+      - { name: hero_image, label: Poza mare de pe prima pagină, type: image, options: { path: public/media/site } }
+      - name: nav
+        label: Meniu
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Text buton, type: string }
+          - { name: href, label: Adresă pagină (ex. /party/), type: string }
+      - { name: map, label: Link hartă Google (embed), type: string }
+      - { name: booking_portal, label: Link portal rezervări, type: string }
+      - { name: waiver_form_url, label: Link formular waiver online, type: string }
+      - { name: url, type: string, readonly: true }
+      - { name: logo, type: string, readonly: true }
+      - { name: favicon, type: string, readonly: true }
+      - { name: gma_schedule, type: string, readonly: true }
+      - { name: form_key, label: Cheie Web3Forms, type: string, readonly: true }

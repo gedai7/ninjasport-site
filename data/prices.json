@@ -6,126 +6,126 @@
       "title": "Kids & Teens",
       "ro": "Copii & adolescenți",
       "rows": [
-        [
-          "Kids Class",
-          "1 antrenament",
-          90
-        ],
-        [
-          "Kids 4 Classes",
-          "4 antrenamente",
-          300
-        ],
-        [
-          "Kids 8 Classes",
-          "8 antrenamente",
-          550
-        ],
-        [
-          "Kids 12 Classes",
-          "12 antrenamente",
-          690
-        ],
-        [
-          "Full Access 1 Month",
-          "antrenamente nelimitate toată luna",
-          900
-        ]
+        {
+          "name": "Kids Class",
+          "desc": "1 antrenament",
+          "price": 90
+        },
+        {
+          "name": "Kids 4 Classes",
+          "desc": "4 antrenamente",
+          "price": 300
+        },
+        {
+          "name": "Kids 8 Classes",
+          "desc": "8 antrenamente",
+          "price": 550
+        },
+        {
+          "name": "Kids 12 Classes",
+          "desc": "12 antrenamente",
+          "price": 690
+        },
+        {
+          "name": "Full Access 1 Month",
+          "desc": "antrenamente nelimitate toată luna",
+          "price": 900
+        }
       ]
     },
     {
       "title": "Adults",
       "ro": "Adulți",
       "rows": [
-        [
-          "Adult Class",
-          "1 antrenament",
-          120
-        ],
-        [
-          "Adult 4 Classes",
-          "4 antrenamente",
-          400
-        ],
-        [
-          "Adult 8 Classes",
-          "8 antrenamente",
-          720
-        ],
-        [
-          "Adult 12 Classes",
-          "12 antrenamente",
-          1000
-        ],
-        [
-          "Full Access 1 Month",
-          "antrenamente nelimitate toată luna",
-          1200
-        ]
+        {
+          "name": "Adult Class",
+          "desc": "1 antrenament",
+          "price": 120
+        },
+        {
+          "name": "Adult 4 Classes",
+          "desc": "4 antrenamente",
+          "price": 400
+        },
+        {
+          "name": "Adult 8 Classes",
+          "desc": "8 antrenamente",
+          "price": 720
+        },
+        {
+          "name": "Adult 12 Classes",
+          "desc": "12 antrenamente",
+          "price": 1000
+        },
+        {
+          "name": "Full Access 1 Month",
+          "desc": "antrenamente nelimitate toată luna",
+          "price": 1200
+        }
       ]
     },
     {
       "title": "Open Gym",
       "ro": "Sesiuni la liber în zona de obstacole",
       "rows": [
-        [
-          "1 Session",
-          "1 sesiune la liber (max 2h)",
-          75
-        ],
-        [
-          "4 Sessions",
-          "4 sesiuni la liber (max 2h)",
-          250
-        ],
-        [
-          "1 Month Unlimited",
-          "sesiuni nelimitate la liber, 1 lună",
-          700
-        ]
+        {
+          "name": "1 Session",
+          "desc": "1 sesiune la liber (max 2h)",
+          "price": 75
+        },
+        {
+          "name": "4 Sessions",
+          "desc": "4 sesiuni la liber (max 2h)",
+          "price": 250
+        },
+        {
+          "name": "1 Month Unlimited",
+          "desc": "sesiuni nelimitate la liber, 1 lună",
+          "price": 700
+        }
       ]
     },
     {
       "title": "Privates",
       "ro": "Antrenamente private",
       "rows": [
-        [
-          "Kids & Teens Individual 1:1",
-          "antrenament privat individual",
-          350
-        ],
-        [
-          "Kids & Teens Group (2-3)",
-          "antrenament privat grup (2-3 copii)",
-          275
-        ],
-        null,
-        [
-          "Adults Individual 1:1",
-          "antrenament privat individual",
-          450
-        ],
-        [
-          "Adults Group (2-3)",
-          "antrenament privat grup (2-3 adulți)",
-          375
-        ]
+        {
+          "name": "Kids & Teens Individual 1:1",
+          "desc": "antrenament privat individual",
+          "price": 350
+        },
+        {
+          "name": "Kids & Teens Group (2-3)",
+          "desc": "antrenament privat grup (2-3 copii)",
+          "price": 275
+        },
+        {
+          "name": "Adults Individual 1:1",
+          "desc": "antrenament privat individual",
+          "price": 450,
+          "spatiu": true
+        },
+        {
+          "name": "Adults Group (2-3)",
+          "desc": "antrenament privat grup (2-3 adulți)",
+          "price": 375
+        }
       ]
     },
     {
       "title": "Arrow / Javelin / Shuriken Class",
       "ro": "Tir cu arcul / suliță / shuriken",
       "rows": [
-        [
-          "Arrow 1 Class",
-          "1 antrenament",
-          500
-        ],
-        [
-          "Arrow 3 Classes",
-          "3 antrenamente",
-          1200
-        ]
+        {
+          "name": "Arrow 1 Class",
+          "desc": "1 antrenament",
+          "price": 500
+        },
+        {
+          "name": "Arrow 3 Classes",
+          "desc": "3 antrenamente",
+          "price": 1200
+        }
       ]
     }
   ]

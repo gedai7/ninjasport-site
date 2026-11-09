@@ -2,7 +2,7 @@
   {
     "name": "Lavinia Filip",
     "role": "Certified Ninja Coach Level 2",
-    "photo": "https://ninjasport.ro/wp-content/uploads/2015/12/Lavinia-740x680.png",
+    "photo": "/media/2015/12/Lavinia-740x680.png",
     "bio": [
       "Multilingual Ninja Coach for Kids & Adults",
       "Black Belt Karate, Shotokan style",
@@ -15,7 +15,7 @@
   {
     "name": "George Tudor",
     "role": "Certified Ninja Coach Level 2",
-    "photo": "https://ninjasport.ro/wp-content/uploads/2015/12/Gedai-740x680.png",
+    "photo": "/media/2015/12/Gedai-740x680.png",
     "bio": [
       "Nidan Nihon JuJutsu",
       "Ninja Sport trainer",
@@ -27,7 +27,7 @@
   {
     "name": "Dacian Tudor",
     "role": "Certified Ninja Coach Level 1",
-    "photo": "https://ninjasport.ro/wp-content/uploads/2026/02/Dacian-740x680.png",
+    "photo": "/media/2026/02/Dacian-740x680.png",
     "bio": [
       "Athlete & Coach",
       "Coach Mini Ninja Kids (4-6y)"

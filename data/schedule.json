@@ -4,34 +4,34 @@
   "start": "11:00",
   "end": "21:00",
   "days": [
-    [
-      "Luni",
-      "Monday"
-    ],
-    [
-      "Marți",
-      "Tuesday"
-    ],
-    [
-      "Miercuri",
-      "Wednesday"
-    ],
-    [
-      "Joi",
-      "Thursday"
-    ],
-    [
-      "Vineri",
-      "Friday"
-    ],
-    [
-      "Sâmbătă",
-      "Saturday"
-    ],
-    [
-      "Duminică",
-      "Sunday"
-    ]
+    {
+      "ro": "Luni",
+      "en": "Monday"
+    },
+    {
+      "ro": "Marți",
+      "en": "Tuesday"
+    },
+    {
+      "ro": "Miercuri",
+      "en": "Wednesday"
+    },
+    {
+      "ro": "Joi",
+      "en": "Thursday"
+    },
+    {
+      "ro": "Vineri",
+      "en": "Friday"
+    },
+    {
+      "ro": "Sâmbătă",
+      "en": "Saturday"
+    },
+    {
+      "ro": "Duminică",
+      "en": "Sunday"
+    }
   ],
   "slots": [
     {
@@ -67,151 +67,169 @@
   ],
   "events": [
     {
-      "day": 0,
+      "zi": "Luni",
       "from": "16:00",
       "to": "17:00",
       "name": "Ninja Kids",
       "sub": "4-6y",
-      "time": "16:00–16:45"
+      "time": "16:00–16:45",
+      "party": false
     },
     {
-      "day": 0,
+      "zi": "Luni",
       "from": "17:00",
       "to": "18:00",
       "name": "Ninja Kids",
       "sub": "6-10y",
-      "time": "17:00–17:55"
+      "time": "17:00–17:55",
+      "party": false
     },
     {
-      "day": 0,
+      "zi": "Luni",
       "from": "18:00",
       "to": "19:00",
       "name": "Ninja Teens",
       "sub": "12-16y",
-      "time": "18:00–18:55"
+      "time": "18:00–18:55",
+      "party": false
     },
     {
-      "day": 0,
+      "zi": "Luni",
       "from": "19:00",
       "to": "21:00",
       "name": "Open Gym",
       "sub": "All Ages",
-      "time": "19:00–20:55"
+      "time": "19:00–20:55",
+      "party": false
     },
     {
-      "day": 1,
+      "zi": "Marți",
       "from": "17:00",
       "to": "18:00",
       "name": "Ninja Kids",
       "sub": "6-10y",
-      "time": "17:00–17:55"
+      "time": "17:00–17:55",
+      "party": false
     },
     {
-      "day": 1,
+      "zi": "Marți",
       "from": "18:00",
       "to": "19:00",
       "name": "Ninja Teens",
       "sub": "12-16y",
-      "time": "18:00–18:55"
+      "time": "18:00–18:55",
+      "party": false
     },
     {
-      "day": 1,
+      "zi": "Marți",
       "from": "19:00",
       "to": "20:00",
       "name": "Adults & Teens",
       "sub": "16y+",
-      "time": "19:00–19:55"
+      "time": "19:00–19:55",
+      "party": false
     },
     {
-      "day": 2,
+      "zi": "Miercuri",
       "from": "17:00",
       "to": "18:00",
       "name": "Ninja Kids",
       "sub": "6-10y",
-      "time": "17:00–17:55"
+      "time": "17:00–17:55",
+      "party": false
     },
     {
-      "day": 2,
+      "zi": "Miercuri",
       "from": "18:00",
       "to": "19:00",
       "name": "Ninja Teens",
       "sub": "12-16y",
-      "time": "18:00–18:55"
+      "time": "18:00–18:55",
+      "party": false
     },
     {
-      "day": 2,
+      "zi": "Miercuri",
       "from": "19:00",
       "to": "20:00",
       "name": "Adults & Teens",
       "sub": "16y+",
-      "time": "19:00–19:55"
+      "time": "19:00–19:55",
+      "party": false
     },
     {
-      "day": 3,
+      "zi": "Joi",
       "from": "17:00",
       "to": "18:00",
       "name": "Ninja Kids",
       "sub": "6-10y",
-      "time": "17:00–17:55"
+      "time": "17:00–17:55",
+      "party": false
     },
     {
-      "day": 3,
+      "zi": "Joi",
       "from": "18:00",
       "to": "19:00",
       "name": "Advanced",
       "sub": "All Ages",
-      "time": "18:00–18:55"
+      "time": "18:00–18:55",
+      "party": false
     },
     {
-      "day": 3,
+      "zi": "Joi",
       "from": "19:00",
       "to": "21:00",
       "name": "Open Gym",
       "sub": "All Ages",
-      "time": "19:00–20:55"
+      "time": "19:00–20:55",
+      "party": false
     },
     {
-      "day": 4,
+      "zi": "Vineri",
       "from": "14:00",
       "to": "16:00",
       "name": "Open Gym",
       "sub": "All Ages",
-      "time": "14:00–15:45"
+      "time": "14:00–15:45",
+      "party": false
     },
     {
-      "day": 4,
+      "zi": "Vineri",
       "from": "16:00",
       "to": "17:00",
       "name": "Ninja Kids",
       "sub": "4-6y",
-      "time": "16:00–16:45"
+      "time": "16:00–16:45",
+      "party": false
     },
     {
-      "day": 4,
+      "zi": "Vineri",
       "from": "17:00",
       "to": "18:00",
       "name": "Ninja Kids",
       "sub": "6-10y",
-      "time": "17:00–17:55"
+      "time": "17:00–17:55",
+      "party": false
     },
     {
-      "day": 4,
+      "zi": "Vineri",
       "from": "18:00",
       "to": "19:00",
       "name": "Ninja Teens",
       "sub": "12-16y",
-      "time": "18:00–18:55"
+      "time": "18:00–18:55",
+      "party": false
     },
     {
-      "day": 4,
+      "zi": "Vineri",
       "from": "19:00",
       "to": "20:00",
       "name": "Adults & Teens",
       "sub": "16y+",
-      "time": "19:00–19:55"
+      "time": "19:00–19:55",
+      "party": false
     },
     {
-      "day": 5,
+      "zi": "Sâmbătă",
       "from": "12:00",
       "to": "15:00",
       "name": "Birthday Party",
@@ -220,7 +238,7 @@
       "party": true
     },
     {
-      "day": 5,
+      "zi": "Sâmbătă",
       "from": "15:30",
       "to": "18:30",
       "name": "Birthday Party",
@@ -229,7 +247,7 @@
       "party": true
     },
     {
-      "day": 6,
+      "zi": "Duminică",
       "from": "11:00",
       "to": "14:00",
       "name": "Birthday Party",
@@ -238,7 +256,7 @@
       "party": true
     },
     {
-      "day": 6,
+      "zi": "Duminică",
       "from": "14:30",
       "to": "17:30",
       "name": "Birthday Party",
@@ -249,40 +267,40 @@
   ],
   "notes": {
     "ro": [
-      [
-        "Open Gym All Ages",
-        "Părinții pot sta alături de copiii lor ca participanți (CU PLATĂ) sau ca asistenți (GRATUIT).<br>Toți membrii vor primi o brățară (<span class=\"g\">VERDE</span> pentru participanți, <span class=\"k\">ROȘIE</span> doar pentru asistență)."
-      ],
-      [
-        "",
-        "În timpul claselor, accesul la Open Gym nu este permis!"
-      ],
-      [
-        "Birthday Party",
-        "Sâmbătă și duminică, doar cu rezervare în avans."
-      ],
-      [
-        "Waiver",
-        "Toți participanții trebuie să semneze declarația pe proprie răspundere (waiver) înainte de a intra în sală sau de a participa la clase. Semnarea este obligatorie pentru toți participanții."
-      ]
+      {
+        "titlu": "Open Gym All Ages",
+        "text": "Părinții pot sta alături de copiii lor ca participanți (CU PLATĂ) sau ca asistenți (GRATUIT).<br>Toți membrii vor primi o brățară (<span class=\"g\">VERDE</span> pentru participanți, <span class=\"k\">ROȘIE</span> doar pentru asistență)."
+      },
+      {
+        "titlu": "",
+        "text": "În timpul claselor, accesul la Open Gym nu este permis!"
+      },
+      {
+        "titlu": "Birthday Party",
+        "text": "Sâmbătă și duminică, doar cu rezervare în avans."
+      },
+      {
+        "titlu": "Waiver",
+        "text": "Toți participanții trebuie să semneze declarația pe proprie răspundere (waiver) înainte de a intra în sală sau de a participa la clase. Semnarea este obligatorie pentru toți participanții."
+      }
     ],
     "en": [
-      [
-        "Open Gym All Ages",
-        "Parents are allowed to stay next to their kids as participant (PAID) or spotter (FREE).<br>All members will receive a wristband (<span class=\"g\">GREEN</span> for participant, <span class=\"k\">RED</span> for spotting only)."
-      ],
-      [
-        "",
-        "During all classes, Open Gym access is not allowed!"
-      ],
-      [
-        "Birthday Party",
-        "Saturday &amp; Sunday, booking in advance required."
-      ],
-      [
-        "Waiver",
-        "All participants must sign a waiver before entering the gym or joining class. Signing the waiver is mandatory for all participants before taking part."
-      ]
+      {
+        "titlu": "Open Gym All Ages",
+        "text": "Parents are allowed to stay next to their kids as participant (PAID) or spotter (FREE).<br>All members will receive a wristband (<span class=\"g\">GREEN</span> for participant, <span class=\"k\">RED</span> for spotting only)."
+      },
+      {
+        "titlu": "",
+        "text": "During all classes, Open Gym access is not allowed!"
+      },
+      {
+        "titlu": "Birthday Party",
+        "text": "Saturday &amp; Sunday, booking in advance required."
+      },
+      {
+        "titlu": "Waiver",
+        "text": "All participants must sign a waiver before entering the gym or joining class. Signing the waiver is mandatory for all participants before taking part."
+      }
     ]
   }
 }

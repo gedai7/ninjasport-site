@@ -19,15 +19,42 @@
   "gma_schedule": "https://ninjasport.gym-management-app.com/calendars/schedules",
   "waiver_form_url": "",
   "nav": [
-    ["Acasă", "/"],
-    ["Waiver", "/waiver/"],
-    ["Ninja Kids", "/ninja-kids/"],
-    ["Sponsorizare", "/sponsorizare/"],
-    ["Galerie foto", "/gallery/"],
-    ["Party", "/party/"],
-    ["Contribuții", "/prices/"],
-    ["Program", "/schedule/"],
-    ["Coaches", "/coaches/"]
+    {
+      "label": "Acasă",
+      "href": "/"
+    },
+    {
+      "label": "Waiver",
+      "href": "/waiver/"
+    },
+    {
+      "label": "Ninja Kids",
+      "href": "/ninja-kids/"
+    },
+    {
+      "label": "Sponsorizare",
+      "href": "/sponsorizare/"
+    },
+    {
+      "label": "Galerie foto",
+      "href": "/gallery/"
+    },
+    {
+      "label": "Party",
+      "href": "/party/"
+    },
+    {
+      "label": "Contribuții",
+      "href": "/prices/"
+    },
+    {
+      "label": "Program",
+      "href": "/schedule/"
+    },
+    {
+      "label": "Coaches",
+      "href": "/coaches/"
+    }
   ],
   "hero_image": "/media/site/lavinia-copii-obstacole.jpg",
   "form_key": "8ff349fe-d3ad-48fb-bf89-a656421ec0c5"

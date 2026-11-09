@@ -1,0 +1,26 @@
+# Când se încarcă poze noi (ex. din panoul de editare), le micșorează automat pentru web.
+name: Optimize images
+on:
+  push:
+    branches: [main]
+    paths: ['public/media/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm install --no-audit --no-fund
+      - run: node scripts/optimize-images.mjs
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add public/media
+          git diff --cached --quiet && { echo "Nimic de optimizat"; exit 0; }
+          git commit -m "Poze optimizate automat"
+          git pull --rebase origin main
+          git push origin HEAD:main

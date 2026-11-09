@@ -11,7 +11,7 @@ on:
     branches: [main]
   workflow_dispatch:
   workflow_run:
-    workflows: ["Import media"]
+    workflows: ["Import media", "Optimize images"]
     types: [completed]
 concurrency: deploy-ftp
 jobs:

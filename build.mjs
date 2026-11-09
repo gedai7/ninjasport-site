@@ -5,6 +5,8 @@ import path from 'node:path';
 
 const R = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const site = R('data/site.json'), prices = R('data/prices.json'), sched = R('data/schedule.json');
+const ZILE = ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri', 'Sâmbătă', 'Duminică'];
+sched.events = sched.events.map((e) => ({ ...e, day: typeof e.day === 'number' ? e.day : ZILE.indexOf(e.zi), time: e.time || `${e.from}–${e.to}` }));
 const coaches = R('data/coaches.json'), events = R('data/events.json'), gallery = R('data/gallery.json');
 const content = (f) => fs.readFileSync(path.join('content', f), 'utf8').replace(/https:\/\/ninjasport\.ro\/wp-content\/uploads\/[^"'\s)]+/g, (u) => media(u));
 const OUT = 'dist';
@@ -34,7 +36,7 @@ const wrapTitles = (html) => html.replace(/<(h1|h2)([^>]*)>([\s\S]*?)<\/\1>/g, (
 
 function layout({ title, active, body, desc = '', scripts = [], noindex = false }) {
   body = wrapTitles(body);
-  const nav = site.nav.map(([t, h]) => `<a href="${h}"${h === active ? ' class="on" aria-current="page"' : ''}>${esc(t)}</a>`).join('');
+  const nav = site.nav.map(({ label: t, href: h }) => `<a href="${h}"${h === active ? ' class="on" aria-current="page"' : ''}>${esc(t)}</a>`).join('');
   const soc = Object.entries(site.social).map(([k, u]) => `<a href="${u}" target="_blank" rel="noopener" aria-label="${k}">${ICON[k] || ''}</a>`).join('');
   return `<!doctype html>
 <html lang="ro">
@@ -89,7 +91,7 @@ const title2 = (ro, en, tag = 'h1') => `<${tag} class="page-title">${esc(ro)}<sp
 function pricesHTML() {
   return `<div class="pret">` + prices.sections.map((s) => `
 <div class="sec"><div class="sec-h"><span><b>${esc(s.title)}</b><span class="en">${esc(s.ro)}</span></span><span class="p"><b>Contribuție</b><span class="en">Price</span></span></div>
-<table><tbody>${s.rows.map((r) => r ? `<tr><td class="n">${esc(r[0])}</td><td class="d">${esc(r[1])}</td><td class="v">${r[2]}<small>lei</small></td></tr>` : '<tr class="gap"><td colspan="3"></td></tr>').join('')}</tbody></table></div>`).join('') + `</div>`;
+<table><tbody>${s.rows.map((r) => (r.spatiu ? '<tr class="gap"><td colspan="3"></td></tr>' : '') + `<tr><td class="n">${esc(r.name)}</td><td class="d">${esc(r.desc || '')}</td><td class="v">${esc(String(r.price))}<small>lei</small></td></tr>`).join('')}</tbody></table></div>`).join('') + `</div>`;
 }
 
 function scheduleHTML() {
@@ -97,7 +99,8 @@ function scheduleHTML() {
   const N = sched.slots.length * 2, grid = Array.from({ length: N }, () => Array(7).fill(null));
   for (const e of sched.events) {
     const s = toSlot(e.from), span = toSlot(e.to) - s;
-    grid[s][e.day] = { e, span }; for (let k = s + 1; k < s + span; k++) grid[k][e.day] = 'x';
+    if (s < 0 || s >= N || span < 1 || e.day < 0) continue;
+    grid[s][e.day] = { e, span }; for (let k = s + 1; k < s + span && k < N; k++) grid[k][e.day] = 'x';
   }
   let rows = '';
   for (let i = 0; i < N; i++) {
@@ -108,12 +111,12 @@ function scheduleHTML() {
     }
     rows += '</tr>';
   }
-  const head = sched.days.map(([ro, en]) => `<th><div class="btnd">${ro}<span class="en">${en}</span></div></th>`).join('');
-  const cards = sched.days.map(([ro, en], d) => {
+  const head = sched.days.map(({ ro, en }) => `<th><div class="btnd">${ro}<span class="en">${en}</span></div></th>`).join('');
+  const cards = sched.days.map(({ ro, en }, d) => {
     const evs = sched.events.filter((e) => e.day === d);
     return `<div class="day"><h3>${ro}<span class="en">${en}</span></h3><ul>${evs.map((e) => `<li><span class="t">${e.time}</span><span>${esc(e.name)}<small>${esc(e.party ? 'Booking required' : e.sub)}</small></span></li>`).join('')}</ul></div>`;
   }).join('');
-  const notes = ['ro', 'en'].map((l) => `<div><div class="lang">${l.toUpperCase()}</div>${sched.notes[l].map(([k, t]) => `<p>${k ? `<span class="k">${k}</span> – ` : ''}${t}</p>`).join('')}</div>`).join('');
+  const notes = ['ro', 'en'].map((l) => `<div><div class="lang">${l.toUpperCase()}</div>${sched.notes[l].map(({ titlu: k, text: t }) => `<p>${k ? `<span class="k">${k}</span> – ` : ''}${t}</p>`).join('')}</div>`).join('');
   return `<div class="orar"><div class="tw"><table><thead><tr><th></th>${head}</tr></thead><tbody>${rows}</tbody></table></div><div class="cards">${cards}</div></div><div class="notes">${notes}</div>`;
 }
 

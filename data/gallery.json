@@ -1,545 +1,548 @@
 [
- {
-  "slug": "antrenamente",
-  "title": "Antrenamente",
-  "items": [
-   {
-    "type": "image",
-    "src": "/media/site/lavinia-copii-obstacole.jpg",
-    "thumb": "/media/site/lavinia-copii-obstacole-thumb.jpg"
-   },
-   {
-    "type": "image",
-    "src": "/media/site/traseu-copii.jpg",
-    "thumb": "/media/site/traseu-copii-thumb.jpg"
-   },
-   {
-    "type": "image",
-    "src": "/media/site/bouldering-copii.jpg",
-    "thumb": "/media/site/bouldering-copii-thumb.jpg"
-   },
-   {
-    "type": "image",
-    "src": "/media/site/grup-copii.jpg",
-    "thumb": "/media/site/grup-copii-thumb.jpg"
-   }
-  ]
- },
- {
-  "slug": "party",
-  "title": "Birthday Parties",
-  "items": [
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5871-768x1360.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5871-768x1360.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5870-768x1360.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5870-768x1360.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5881-768x1351.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5881-768x1351.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5872-768x1354.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5872-768x1354.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5874-768x1354.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5874-768x1354.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5867-768x1364.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5867-768x1364.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5876-768x1350.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5876-768x1350.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5878-768x1359.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5878-768x1359.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5885-768x1315.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5885-768x1315.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5883-768x1366.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5883-768x1366.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5886-768x1356.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5886-768x1356.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5884-768x1349.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5884-768x1349.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5887-768x1609.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5887-768x1609.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5880-768x1249.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5880-768x1249.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5879-768x1346.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5879-768x1346.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5865-768x1381.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5865-768x1381.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5869-768x1536.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5869-768x1536.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5882-768x1353.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5882-768x1353.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5877-768x1389.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5877-768x1389.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5875-768x1403.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5875-768x1403.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5868-768x1359.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5868-768x1359.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5873-768x1244.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/IMG_5873-768x1244.jpeg"
-   }
-  ]
- },
- {
-  "slug": "ocr-ec-400m-mantova-italy-2026",
-  "title": "OCR EC 400m Mantova Italy 2026",
-  "items": [
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00001-3.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00001-3-768x1430.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00002-3.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00002-3-768x1489.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00003-3.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00003-3-768x1374.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00004-3.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00004-3-768x1411.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00005-3.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00005-3-768x1356.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00006-3.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00006-3-768x1464.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00007-3.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00007-3-768x1350.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00008-3.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00008-3-768x1385.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00009-3.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00009-3-768x1417.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00010-3-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00010-3-768x1669.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00011-3-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00011-3-768x1562.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00012-3-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00012-3-768x1669.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00013-3-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00013-3-768x1586.jpeg"
-   }
-  ]
- },
- {
-  "slug": "halloween-party-ninja-2026",
-  "title": "Halloween Party Ninja 2026",
-  "items": [
-   {
-    "type": "video",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/copy_C27E2904-0324-487C-9973-902187035744.mov"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00001-2-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00001-2-768x1024.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00002-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00002-2-768x1354.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00003-2-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00003-2-768x1669.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00004-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00004-2-768x1436.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00005-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00005-2-768x1562.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00006-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00006-2-768x1356.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00007-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00007-2-768x1370.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00008-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00008-2-768x1350.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00009-2-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00009-2-768x1024.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00010-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00010-2-768x1364.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00011-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00011-2-768x1343.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00012-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00012-2-768x1360.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00013-2-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00013-2-768x1669.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00014-2.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00014-2-768x1366.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00015-2-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00015-2-768x1365.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00016-2-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00016-2-768x1024.jpeg"
-   }
-  ]
- },
- {
-  "slug": "run-for-heroes",
-  "title": "Event Run for Heroes",
-  "items": [
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00001-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00001-1-768x1356.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00002-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00002-1-768x1368.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00003-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00003-1-768x1345.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00004-1-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00004-1-768x1182.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00005-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00005-1-768x1330.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00006-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00006-1-768x1229.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00007-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00007-1-768x1209.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00008-1-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00008-1-768x1024.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00009-1-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00009-1-768x1599.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00010-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00010-1-768x1354.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00011-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00011-1-768x1231.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00012-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00012-1-768x1285.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00013-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00013-1-768x1361.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00014-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00014-1-768x1357.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00015-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00015-1-768x1364.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00016-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00016-1-768x1365.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00017-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00017-1-768x1352.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00018-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00018-1-768x1356.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00019-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00019-1-768x1352.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00020-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00020-1-768x1235.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00021-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00021-1-768x1359.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00022-1.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00022-1-768x1357.jpeg"
-   }
-  ]
- },
- {
-  "slug": "ninja-warrior-greece-2026",
-  "title": "Ninja Warrior Greece 2026",
-  "items": [
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00017-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00017-768x1024.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00019.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00019-768x1356.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00021.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00021-768x1357.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00022-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00022-768x1024.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00023-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00023-768x1669.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00024.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00024-768x1361.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00025.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00025-768x1334.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00026.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00026-768x1365.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00027.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00027-768x1356.jpeg"
-   },
-   {
-    "type": "video",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/copy_A48323A3-6F40-4600-8F35-F58959649EDC.mov"
-   },
-   {
-    "type": "video",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/copy_ADCEA2FA-1126-4189-9FB2-CA971CA84ACF.mov"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00001-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00001-768x1024.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00002.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00002-768x1359.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00003.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00003-768x1366.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00004.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00004-768x1345.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00005-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00005-768x1669.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00006.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00006-768x1363.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00007.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00007-768x1406.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00008.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00008-768x1357.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00009.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00009-768x1359.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00010-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00010-768x1078.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00012-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00012-768x1024.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00014-scaled.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00014-768x1107.jpeg"
-   },
-   {
-    "type": "image",
-    "src": "https://ninjasport.ro/wp-content/uploads/2026/11/image00015.jpeg",
-    "thumb": "https://ninjasport.ro/wp-content/uploads/2026/11/image00015-768x1537.jpeg"
-   }
-  ]
- }
+  {
+    "slug": "antrenamente",
+    "title": "Antrenamente",
+    "items": [
+      {
+        "type": "image",
+        "src": "/media/site/lavinia-copii-obstacole.jpg",
+        "thumb": "/media/site/lavinia-copii-obstacole-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/site/traseu-copii.jpg",
+        "thumb": "/media/site/traseu-copii-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/site/bouldering-copii.jpg",
+        "thumb": "/media/site/bouldering-copii-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/site/grup-copii.jpg",
+        "thumb": "/media/site/grup-copii-thumb.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "party",
+    "title": "Birthday Parties",
+    "items": [
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5871-768x1360.jpeg",
+        "thumb": "/media/2026/11/IMG_5871-768x1360.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5870-768x1360.jpeg",
+        "thumb": "/media/2026/11/IMG_5870-768x1360.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5881-768x1351.jpeg",
+        "thumb": "/media/2026/11/IMG_5881-768x1351.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5872-768x1354.jpeg",
+        "thumb": "/media/2026/11/IMG_5872-768x1354.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5874-768x1354.jpeg",
+        "thumb": "/media/2026/11/IMG_5874-768x1354.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5867-768x1364.jpeg",
+        "thumb": "/media/2026/11/IMG_5867-768x1364.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5876-768x1350.jpeg",
+        "thumb": "/media/2026/11/IMG_5876-768x1350.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5878-768x1359.jpeg",
+        "thumb": "/media/2026/11/IMG_5878-768x1359.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5885-768x1315.jpeg",
+        "thumb": "/media/2026/11/IMG_5885-768x1315.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5883-768x1366.jpeg",
+        "thumb": "/media/2026/11/IMG_5883-768x1366.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5886-768x1356.jpeg",
+        "thumb": "/media/2026/11/IMG_5886-768x1356.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5884-768x1349.jpeg",
+        "thumb": "/media/2026/11/IMG_5884-768x1349.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5887-768x1609.jpeg",
+        "thumb": "/media/2026/11/IMG_5887-768x1609.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5880-768x1249.jpeg",
+        "thumb": "/media/2026/11/IMG_5880-768x1249.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5879-768x1346.jpeg",
+        "thumb": "/media/2026/11/IMG_5879-768x1346.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5865-768x1381.jpeg",
+        "thumb": "/media/2026/11/IMG_5865-768x1381.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5869-768x1536.jpeg",
+        "thumb": "/media/2026/11/IMG_5869-768x1536.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5882-768x1353.jpeg",
+        "thumb": "/media/2026/11/IMG_5882-768x1353.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5877-768x1389.jpeg",
+        "thumb": "/media/2026/11/IMG_5877-768x1389.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5875-768x1403.jpeg",
+        "thumb": "/media/2026/11/IMG_5875-768x1403.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5868-768x1359.jpeg",
+        "thumb": "/media/2026/11/IMG_5868-768x1359.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/IMG_5873-768x1244.jpeg",
+        "thumb": "/media/2026/11/IMG_5873-768x1244.jpeg"
+      }
+    ]
+  },
+  {
+    "slug": "ocr-ec-400m-mantova-italy-2026",
+    "title": "OCR EC 400m Mantova Italy 2026",
+    "items": [
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00001-3.jpeg",
+        "thumb": "/media/2026/11/image00001-3-768x1430.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00002-3.jpeg",
+        "thumb": "/media/2026/11/image00002-3-768x1489.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00003-3.jpeg",
+        "thumb": "/media/2026/11/image00003-3-768x1374.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00004-3.jpeg",
+        "thumb": "/media/2026/11/image00004-3-768x1411.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00005-3.jpeg",
+        "thumb": "/media/2026/11/image00005-3-768x1356.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00006-3.jpeg",
+        "thumb": "/media/2026/11/image00006-3-768x1464.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00007-3.jpeg",
+        "thumb": "/media/2026/11/image00007-3-768x1350.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00008-3.jpeg",
+        "thumb": "/media/2026/11/image00008-3-768x1385.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00009-3.jpeg",
+        "thumb": "/media/2026/11/image00009-3-768x1417.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00010-3-scaled.jpeg",
+        "thumb": "/media/2026/11/image00010-3-768x1669.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00011-3-scaled.jpeg",
+        "thumb": "/media/2026/11/image00011-3-768x1562.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00012-3-scaled.jpeg",
+        "thumb": "/media/2026/11/image00012-3-768x1669.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00013-3-scaled.jpeg",
+        "thumb": "/media/2026/11/image00013-3-768x1586.jpeg"
+      }
+    ]
+  },
+  {
+    "slug": "halloween-party-ninja-2026",
+    "title": "Halloween Party Ninja 2026",
+    "items": [
+      {
+        "type": "video",
+        "src": "/media/video/copy_C27E2904-0324-487C-9973-902187035744.mp4",
+        "thumb": "/media/video/copy_C27E2904-0324-487C-9973-902187035744.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00001-2-scaled.jpeg",
+        "thumb": "/media/2026/11/image00001-2-768x1024.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00002-2.jpeg",
+        "thumb": "/media/2026/11/image00002-2-768x1354.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00003-2-scaled.jpeg",
+        "thumb": "/media/2026/11/image00003-2-768x1669.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00004-2.jpeg",
+        "thumb": "/media/2026/11/image00004-2-768x1436.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00005-2.jpeg",
+        "thumb": "/media/2026/11/image00005-2-768x1562.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00006-2.jpeg",
+        "thumb": "/media/2026/11/image00006-2-768x1356.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00007-2.jpeg",
+        "thumb": "/media/2026/11/image00007-2-768x1370.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00008-2.jpeg",
+        "thumb": "/media/2026/11/image00008-2-768x1350.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00009-2-scaled.jpeg",
+        "thumb": "/media/2026/11/image00009-2-768x1024.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00010-2.jpeg",
+        "thumb": "/media/2026/11/image00010-2-768x1364.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00011-2.jpeg",
+        "thumb": "/media/2026/11/image00011-2-768x1343.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00012-2.jpeg",
+        "thumb": "/media/2026/11/image00012-2-768x1360.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00013-2-scaled.jpeg",
+        "thumb": "/media/2026/11/image00013-2-768x1669.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00014-2.jpeg",
+        "thumb": "/media/2026/11/image00014-2-768x1366.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00015-2-scaled.jpeg",
+        "thumb": "/media/2026/11/image00015-2-768x1365.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00016-2-scaled.jpeg",
+        "thumb": "/media/2026/11/image00016-2-768x1024.jpeg"
+      }
+    ]
+  },
+  {
+    "slug": "run-for-heroes",
+    "title": "Event Run for Heroes",
+    "items": [
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00001-1.jpeg",
+        "thumb": "/media/2026/11/image00001-1-768x1356.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00002-1.jpeg",
+        "thumb": "/media/2026/11/image00002-1-768x1368.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00003-1.jpeg",
+        "thumb": "/media/2026/11/image00003-1-768x1345.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00004-1-scaled.jpeg",
+        "thumb": "/media/2026/11/image00004-1-768x1182.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00005-1.jpeg",
+        "thumb": "/media/2026/11/image00005-1-768x1330.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00006-1.jpeg",
+        "thumb": "/media/2026/11/image00006-1-768x1229.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00007-1.jpeg",
+        "thumb": "/media/2026/11/image00007-1-768x1209.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00008-1-scaled.jpeg",
+        "thumb": "/media/2026/11/image00008-1-768x1024.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00009-1-scaled.jpeg",
+        "thumb": "/media/2026/11/image00009-1-768x1599.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00010-1.jpeg",
+        "thumb": "/media/2026/11/image00010-1-768x1354.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00011-1.jpeg",
+        "thumb": "/media/2026/11/image00011-1-768x1231.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00012-1.jpeg",
+        "thumb": "/media/2026/11/image00012-1-768x1285.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00013-1.jpeg",
+        "thumb": "/media/2026/11/image00013-1-768x1361.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00014-1.jpeg",
+        "thumb": "/media/2026/11/image00014-1-768x1357.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00015-1.jpeg",
+        "thumb": "/media/2026/11/image00015-1-768x1364.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00016-1.jpeg",
+        "thumb": "/media/2026/11/image00016-1-768x1365.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00017-1.jpeg",
+        "thumb": "/media/2026/11/image00017-1-768x1352.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00018-1.jpeg",
+        "thumb": "/media/2026/11/image00018-1-768x1356.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00019-1.jpeg",
+        "thumb": "/media/2026/11/image00019-1-768x1352.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00020-1.jpeg",
+        "thumb": "/media/2026/11/image00020-1-768x1235.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00021-1.jpeg",
+        "thumb": "/media/2026/11/image00021-1-768x1359.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00022-1.jpeg",
+        "thumb": "/media/2026/11/image00022-1-768x1357.jpeg"
+      }
+    ]
+  },
+  {
+    "slug": "ninja-warrior-greece-2026",
+    "title": "Ninja Warrior Greece 2026",
+    "items": [
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00017-scaled.jpeg",
+        "thumb": "/media/2026/11/image00017-768x1024.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00019.jpeg",
+        "thumb": "/media/2026/11/image00019-768x1356.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00021.jpeg",
+        "thumb": "/media/2026/11/image00021-768x1357.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00022-scaled.jpeg",
+        "thumb": "/media/2026/11/image00022-768x1024.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00023-scaled.jpeg",
+        "thumb": "/media/2026/11/image00023-768x1669.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00024.jpeg",
+        "thumb": "/media/2026/11/image00024-768x1361.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00025.jpeg",
+        "thumb": "/media/2026/11/image00025-768x1334.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00026.jpeg",
+        "thumb": "/media/2026/11/image00026-768x1365.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00027.jpeg",
+        "thumb": "/media/2026/11/image00027-768x1356.jpeg"
+      },
+      {
+        "type": "video",
+        "src": "/media/video/copy_A48323A3-6F40-4600-8F35-F58959649EDC.mp4",
+        "thumb": "/media/video/copy_A48323A3-6F40-4600-8F35-F58959649EDC.jpg"
+      },
+      {
+        "type": "video",
+        "src": "/media/video/copy_ADCEA2FA-1126-4189-9FB2-CA971CA84ACF.mp4",
+        "thumb": "/media/video/copy_ADCEA2FA-1126-4189-9FB2-CA971CA84ACF.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00001-scaled.jpeg",
+        "thumb": "/media/2026/11/image00001-768x1024.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00002.jpeg",
+        "thumb": "/media/2026/11/image00002-768x1359.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00003.jpeg",
+        "thumb": "/media/2026/11/image00003-768x1366.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00004.jpeg",
+        "thumb": "/media/2026/11/image00004-768x1345.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00005-scaled.jpeg",
+        "thumb": "/media/2026/11/image00005-768x1669.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00006.jpeg",
+        "thumb": "/media/2026/11/image00006-768x1363.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00007.jpeg",
+        "thumb": "/media/2026/11/image00007-768x1406.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00008.jpeg",
+        "thumb": "/media/2026/11/image00008-768x1357.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00009.jpeg",
+        "thumb": "/media/2026/11/image00009-768x1359.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00010-scaled.jpeg",
+        "thumb": "/media/2026/11/image00010-768x1078.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00012-scaled.jpeg",
+        "thumb": "/media/2026/11/image00012-768x1024.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00014-scaled.jpeg",
+        "thumb": "/media/2026/11/image00014-768x1107.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/2026/11/image00015.jpeg",
+        "thumb": "/media/2026/11/image00015-768x1537.jpeg"
+      }
+    ]
+  }
 ]
