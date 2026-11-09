@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
+import { execFileSync } from 'node:child_process';
 
 const PREFIX = 'https://ninjasport.ro/wp-content/uploads/';
 const urls = new Set();
@@ -29,7 +30,18 @@ async function get(u) {
 console.log('Imagini de importat:', urls.size);
 for (const u of urls) {
   const rel = u.slice(PREFIX.length), out = path.join('public/media', rel);
-  if (/\.(mov|mp4|m4v)$/i.test(rel)) { skip++; continue; }          // clipurile merg pe YouTube
+  if (/\.(mov|mp4|m4v)$/i.test(rel)) {                                // clipuri → MP4 H.264 720p + poster
+    const base = path.basename(rel).replace(/\.\w+$/, ''), mp4 = path.join('public/media/video', base + '.mp4'), jpg = mp4.replace(/\.mp4$/, '.jpg');
+    if (fs.existsSync(mp4)) { ok++; continue; }
+    try {
+      fs.mkdirSync('public/media/video', { recursive: true });
+      const tmp = path.join('/tmp', base + path.extname(rel)); fs.writeFileSync(tmp, await get(u));
+      execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', tmp, '-vf', "scale='if(gt(iw,ih),-2,720)':'if(gt(iw,ih),720,-2)'", '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '27', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart', mp4]);
+      execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', '1', '-i', mp4, '-frames:v', '1', '-vf', "scale='min(800,iw)':-2", '-q:v', '4', jpg]);
+      ok++; console.log('✓ video', base, (fs.statSync(mp4).size / 1e6).toFixed(1) + 'MB');
+    } catch (e) { fail.push(rel + ' → ' + (e.message || e)); console.warn('✗', rel, e.message || e); }
+    continue;
+  }
   if (fs.existsSync(out)) { ok++; continue; }
   try {
     const buf = await get(u);

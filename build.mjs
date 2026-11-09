@@ -18,6 +18,7 @@ const MEDIA_PREFIX = 'https://ninjasport.ro/wp-content/uploads/';
 function media(url) {
   if (!url || !url.startsWith(MEDIA_PREFIX)) return url;
   const rel = url.slice(MEDIA_PREFIX.length);
+  if (/\.(mov|mp4|m4v)$/i.test(rel)) { const mp4 = 'video/' + path.basename(rel).replace(/\.\w+$/, '.mp4'); return fs.existsSync(path.join('public/media', mp4)) ? '/media/' + mp4 : url; }
   return fs.existsSync(path.join('public/media', rel)) ? '/media/' + rel : url;
 }
 
@@ -185,7 +186,8 @@ pages['gallery/index.html'] = layout({
 <div class="gal-filters">${gallery.map((a, i) => `<button data-f="${a.slug}"${i === 0 ? ' class="on"' : ''}>${esc(a.title)}</button>`).join('')}</div>
 <div class="gal-grid">${gallery.flatMap((a) => a.items.map((it) => {
     const src = it.type === 'youtube' ? `https://www.youtube-nocookie.com/embed/${it.id}?autoplay=1&rel=0` : media(it.src);
-    const thumb = it.type === 'youtube' ? `https://i.ytimg.com/vi/${it.id}/hqdefault.jpg` : media(it.thumb || '');
+    const poster = it.type === 'video' && src.startsWith('/media/video/') ? src.replace(/\.mp4$/, '.jpg') : '';
+    const thumb = it.type === 'youtube' ? `https://i.ytimg.com/vi/${it.id}/hqdefault.jpg` : (media(it.thumb || '') || poster);
     return `<a class="gal-item" href="${src}" data-album="${a.slug}"${a !== gallery[0] ? ' hidden' : ''} data-type="${it.type === 'image' ? 'image' : it.type === 'video' ? 'video' : 'embed'}" data-src="${src}">${thumb ? `<img src="${thumb}" alt="${esc(a.title)}" loading="lazy" decoding="async">` : '<span class="gal-vph">VIDEO</span>'}${it.type !== 'image' ? '<span class="gal-play"></span>' : ''}</a>`;
   })).join('')}</div></div>` });
 
