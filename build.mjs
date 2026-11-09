@@ -6,7 +6,7 @@ import path from 'node:path';
 const R = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const site = R('data/site.json'), prices = R('data/prices.json'), sched = R('data/schedule.json');
 const coaches = R('data/coaches.json'), events = R('data/events.json'), gallery = R('data/gallery.json');
-const content = (f) => fs.readFileSync(path.join('content', f), 'utf8');
+const content = (f) => fs.readFileSync(path.join('content', f), 'utf8').replace(/https:\/\/ninjasport\.ro\/wp-content\/uploads\/[^"'\s)]+/g, (u) => media(u));
 const OUT = 'dist';
 // versiune în URL (?v=hash) ca browserele să ia mereu fișierul nou după o modificare
 import { createHash as _ch } from 'node:crypto';
@@ -170,7 +170,7 @@ pages['schedule/index.html'] = layout({
 pages['party/index.html'] = layout({ title: 'Party', active: '/party/', scripts: ['/assets/party.js'], desc: 'Petreceri aniversare la Ninja Sport: 3 ore de distracție ninja pe obstacole, pachet pentru 15 invitați, rezervare online.', body: title2('Birthday Party', 'Petreceri aniversare la Ninja Sport') + content('party.html').replace('<form class="party-form" id="party-form" novalidate>', `<form class="party-form" id="party-form" novalidate data-key="${esc(site.form_key || '')}">`) });
 pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-kids/', body: title2('Ninja Kids', 'Kids classes & parties') + content('ninja-kids.html') });
 pages['scoala-altfel-saptamana-verde/index.html'] = layout({ title: 'Școala Altfel & Săptămâna Verde', active: '/ninja-kids/', body: title2('Școala Altfel & Săptămâna Verde', 'School groups') + content('scoala-altfel.html') });
-const CONTRACT = 'https://ninjasport.ro/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx';
+const CONTRACT = fs.existsSync('public/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx') ? '/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx' : 'https://ninjasport.ro/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx';
 pages['sponsorizare/index.html'] = layout({ title: 'Sponsorizare', active: '/sponsorizare/', desc: 'Sponsorizează ACS Ninja Sport cu până la 20% din impozitul pe profit, fără cost pentru firma ta: plată directă sau Formularul 177.', body: title2('Sponsorizează Ninja Sport', 'Fără cost pentru firma ta · Company sponsorship') + content('sponsorizare.html').replaceAll('%%CONTRACT%%', CONTRACT) });
 pages['waiver/index.html'] = layout({
   title: 'Waiver', active: '/waiver/', body: content('waiver.html').replace('<!--WAIVER_BUTTON-->',
