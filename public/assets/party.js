@@ -34,7 +34,13 @@
   }
   function mail(d) {
     var dt = d.data.split('-').reverse().join('.');
-    return { access_key: KEY, subject: 'Rezervare petrecere – ' + d.sarbatorit + ', ' + dt, from_name: 'Site Ninja Sport', replyto: d.email, 'Rezervare': text(d) };
+    var o = { access_key: KEY, subject: 'Rezervare petrecere – ' + d.sarbatorit + ', ' + dt, from_name: 'Site Ninja Sport', replyto: d.email,
+      'Părinte': d.parinte, 'Telefon': d.telefon, 'Email': d.email,
+      'Sărbătorit': d.sarbatorit + ' (' + d.varsta + ' ani)',
+      'Data': ZILE[day()] + ', ' + dt + ', ' + d.interval,
+      'Participanți': d.participanti };
+    if (d.mesaj) o['Mesaj'] = d.mesaj;
+    return o;
   }
   f.querySelector('[data-wa]').addEventListener('click', function () {
     var d = check(); if (!d) return;
