@@ -31,6 +31,17 @@
       '\nSărbătorit: ' + d.sarbatorit + ' (' + d.varsta + ' ani)\nData: ' + dt + ', ' + d.interval +
       '\nParticipanți: ' + d.participanti + (d.mesaj ? '\nMesaj: ' + d.mesaj : '');
   }
+  var ZILE = ['duminică', 'luni', 'marți', 'miercuri', 'joi', 'vineri', 'sâmbătă'];
+  function mail(d) {
+    var dt = d.data.split('-').reverse().join('.');
+    var o = { access_key: KEY, subject: 'Rezervare petrecere – ' + d.sarbatorit + ', ' + dt, from_name: 'Site Ninja Sport', replyto: d.email,
+      'Părinte': d.parinte, 'Telefon': d.telefon, 'Email': d.email,
+      'Sărbătorit': d.sarbatorit + ' (' + d.varsta + ' ani)',
+      'Data': ZILE[day()] + ', ' + dt + ', ' + d.interval,
+      'Participanți': d.participanti };
+    if (d.mesaj) o['Mesaj'] = d.mesaj;
+    return o;
+  }
   f.querySelector('[data-wa]').addEventListener('click', function () {
     var d = check(); if (!d) return;
     window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(text(d)), '_blank');
@@ -44,7 +55,7 @@
     }
     var btn = f.querySelector('[type=submit]'); btn.disabled = true; say('Se trimite…', false);
     fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(Object.assign({ access_key: KEY, subject: 'Rezervare petrecere – ' + d.sarbatorit + ', ' + d.data.split('-').reverse().join('.'), from_name: 'Site Ninja Sport', replyto: d.email, mesaj_complet: text(d) }, d)) })
+      body: JSON.stringify(mail(d)) })
       .then(function (r) { return r.json(); }).then(function (j) {
         if (!j.success) throw 0; f.reset(); sel.innerHTML = '<option value="">Alege întâi data</option>';
         say('Mulțumim! Am primit cererea de rezervare și te contactăm în curând pentru confirmare.', false);
