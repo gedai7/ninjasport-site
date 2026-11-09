@@ -303,6 +303,102 @@
     ]
   },
   {
+    "title": "OCR EC 2026 - IRUN SPAIN",
+    "slug": "ocr-ec-2026-irun-spain",
+    "items": [
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-01.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-01-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-02.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-02-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-03.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-03-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-04.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-04-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-05.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-05-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-06.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-06-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-07.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-07-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-08.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-08-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-09.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-09-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-10.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-10-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-11.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-11-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-12.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-12-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-13.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-13-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-14.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-14-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-15.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-15-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-16.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-16-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-17.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-17-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-18.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-18-thumb.jpg"
+      }
+    ]
+  },
+  {
     "slug": "halloween-party-ninja-2026",
     "title": "Halloween Party Ninja 2026",
     "items": [
