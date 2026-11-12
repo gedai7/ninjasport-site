@@ -297,7 +297,7 @@ section{margin:0 0 32px}
 
 /* footer */
 .site-foot{border-top:1px solid #222;background:#0a0a0a;padding:28px 0 18px;margin-top:20px}
-.foot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
 .site-foot h4{margin:0 0 8px;text-transform:uppercase;color:var(--red);letter-spacing:.04em}
 .site-foot p{margin:0 0 6px;font-weight:400}
 .site-foot a{text-decoration:none}

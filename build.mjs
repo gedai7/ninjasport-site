@@ -77,7 +77,6 @@ ${body}
     <div><h4>Ninja Sport</h4><p>Sală de sporturi cu obstacole</p><p>Asociația Club Sportiv Ninja Sport</p></div>
     <div><h4>Contact</h4><p>${esc(site.address)}</p><p><a href="${site.phone_href}">${esc(site.phone)}</a></p><p><a href="mailto:${site.email}">${esc(site.email)}</a></p></div>
     <div><h4>Social</h4><div class="head-social">${soc}</div></div>
-    <div><h4>Aplicația GMA</h4><p>Rezervări și abonamente din telefon</p>${appBtns()}</div>
   </div>
   <p class="copy">© ${new Date().getFullYear()} ACS Ninja Sport</p>
 </div></footer>
@@ -88,6 +87,7 @@ ${scripts.map((s) => `<script src="${ver(s)}" defer></script>`).join('\n')}
 }
 
 const appBtns = () => site.app_ios ? `<div class="app-btns"><a class="btn app-btn" href="${site.app_ios}" target="_blank" rel="noopener"><small>Descarcă din</small>App Store (iPhone)</a><a class="btn app-btn" href="${site.app_android}" target="_blank" rel="noopener"><small>Descarcă din</small>Google Play (Android)</a></div>` : '';
+const appBox = () => `<section class="app-box"><h3>Rezervă din aplicația GMA</h3><p>Descarcă aplicația <b>GMA – Gym Management App</b>, caută <b>Ninja Sport</b> și rezervă-ți locul la clase, Open Gym sau vezi abonamentele tale.</p>${appBtns()}</section>`;
 const title2 = (ro, en, tag = 'h1') => `<${tag} class="page-title">${esc(ro)}<span class="en">${esc(en)}</span></${tag}>`;
 
 /* ---------- pagini ---------- */
@@ -166,12 +166,12 @@ ${['2024/04/frnpm_logo_square.png', '2024/04/UNAA-sm-e1712915222600.png', '2024/
 <p style="font-weight:400">${esc(site.address)} · <a href="${site.phone_href}">${esc(site.phone)}</a></p>
 <iframe class="map" src="${site.map}" loading="lazy" title="Hartă Ninja Sport"></iframe></section>` });
 
-pages['prices/index.html'] = layout({ title: 'Contribuții', active: '/prices/', desc: 'Contribuții membri Ninja Sport: abonamente copii, adulți, Open Gym, antrenamente private.', body: title2(prices.title, prices.subtitle) + pricesHTML() });
+pages['prices/index.html'] = layout({ title: 'Contribuții', active: '/prices/', desc: 'Contribuții membri Ninja Sport: abonamente copii, adulți, Open Gym, antrenamente private.', body: title2(prices.title, prices.subtitle) + pricesHTML() + appBox() });
 
 pages['schedule/index.html'] = layout({
   title: 'Program', active: '/schedule/', body: title2(sched.title, sched.subtitle) + `
 ${scheduleHTML()}
-<section class="app-box"><h3>Rezervă din aplicația GMA</h3><p>Descarcă aplicația <b>GMA – Gym Management App</b>, caută <b>Ninja Sport</b> și rezervă-ți locul la clase, Open Gym sau vezi abonamentele tale.</p>${appBtns()}</section>` });
+${appBox()}` });
 
 pages['party/index.html'] = layout({ title: 'Party', active: '/party/', scripts: ['/assets/party.js'], desc: 'Petreceri aniversare la Ninja Sport: 3 ore de distracție ninja pe obstacole, pachet pentru 15 invitați, rezervare online.', body: title2('Birthday Party', 'Petreceri aniversare la Ninja Sport') + content('party.html').replace('<form class="party-form" id="party-form" novalidate>', `<form class="party-form" id="party-form" novalidate data-key="${esc(site.form_key || '')}">`) });
 pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-kids/', body: title2('Ninja Kids', 'Kids classes & parties') + content('ninja-kids.html') });
