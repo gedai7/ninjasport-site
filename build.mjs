@@ -218,6 +218,8 @@ fs.cpSync('public', OUT, { recursive: true });
 <p class="pl-help"><b>Cum faci playlistul în YouTube Music:</b> la playlistul dorit apasă <b>Copiază lista</b> → <b>Deschide TuneMyMusic</b> → lipește lista în căsuța de text → conectează contul <b>YouTube Music</b> → <b>Start Transfer</b>.</p>
 ${lists.map(block).join('<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>')}</div>` });
 }
+// pagină ascunsă cu oferta Școala Altfel (doar link direct: nu e în meniu / sitemap / Google)
+pages['oferta-scoala-altfel/index.html'] = layout({ title: 'Ofertă Școala Altfel', noindex: true, scripts: ['/assets/oferta.js'], body: title2('Ofertă „Școala Altfel”', 'School group offer') + content('oferta-scoala-altfel.html') });
 pages['404.html'] = layout({ title: 'Pagina nu există', noindex: true, body: title2('Pagina nu există', 'Page not found') + `<section class="prose narrow" style="text-align:center"><p>Pagina căutată nu mai există sau a fost mutată. Poate te interesează una dintre acestea:</p><div class="cta-row" style="justify-content:center;display:flex;flex-wrap:wrap;gap:10px;margin:20px 0"><a class="btn" href="/">Acasă</a><a class="btn" href="/schedule/">Program</a><a class="btn" href="/prices/">Contribuții</a><a class="btn" href="/party/">Party</a></div></section>` });
 const pathOf = (f) => '/' + f.replace(/index\.html$/, '');
 for (const [f, raw] of Object.entries(pages)) { const html = raw.replaceAll('%%PATH%%', pathOf(f)); const p = path.join(OUT, f); fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, html); }
@@ -255,6 +257,6 @@ ExpiresByType font/ttf "access plus 1 year"
 // sitemap.xml + robots.txt
 const today = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  Object.keys(pages).filter((f) => f !== '404.html' && !f.startsWith('playlist-')).map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
+  Object.keys(pages).filter((f) => f !== '404.html' && !f.startsWith('playlist-') && !f.startsWith('oferta-')).map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, '.assetsignore'), '.htaccess\n');

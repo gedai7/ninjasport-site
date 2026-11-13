@@ -1,0 +1,51 @@
+<form class="prose narrow oferta" id="oferta" autocomplete="on">
+<p class="lead oferta-sub">Ninja Sport – Sala de Sport cu Obstacole, Splaiul Unirii 160, București</p>
+
+<h3>1. Date eveniment</h3>
+<table class="of-tbl kv">
+<tr><th><label for="of-scoala">Școala / Clasa</label></th><td><input id="of-scoala" name="Școala / Clasa"></td></tr>
+<tr><th><label for="of-contact">Persoană de contact</label></th><td><input id="of-contact" name="Persoană de contact" autocomplete="name"></td></tr>
+<tr><th><label for="of-tel">Telefon / E-mail</label></th><td><input id="of-tel" name="Telefon / E-mail"></td></tr>
+<tr><th>Număr copii</th><td>25 copii (adulții însoțitori – gratuit)</td></tr>
+<tr><th>Tip eveniment</th><td>Open Gym – fără sărbătorit</td></tr>
+</table>
+
+<h3>2. Programare</h3>
+<table class="of-tbl grid">
+<thead><tr><th>Interval</th><th>Data</th><th>An</th><th>Ora</th></tr></thead>
+<tbody><tr>
+<td>Decembrie</td>
+<td><label class="inline">Ziua <input id="of-zi" name="Ziua (decembrie)" type="number" min="1" max="31" inputmode="numeric" class="short"></label> / 12</td>
+<td>2026</td>
+<td class="opts"><label><input type="radio" name="Ora" value="13:00 – 16:00"> 13:00 – 16:00</label><label><input type="radio" name="Ora" value="13:30 – 16:30"> 13:30 – 16:30</label></td>
+</tr></tbody>
+</table>
+
+<h3>3. Preț</h3>
+<table class="of-tbl grid price">
+<thead><tr><th>Descriere</th><th>Calcul</th><th class="r">Total (lei)</th></tr></thead>
+<tbody>
+<tr><td>Pachet Standard (15 copii)</td><td>15 × 150 lei</td><td class="r">2.250</td></tr>
+<tr><td>Copii extra (10 copii)</td><td>10 × 50 lei</td><td class="r">500</td></tr>
+<tr class="tot"><td>TOTAL (25 copii)</td><td></td><td class="r">2.750</td></tr>
+</tbody>
+</table>
+<p class="note">Echivalent: 110 lei / copil (25 copii × 110 lei = 2.750 lei).</p>
+
+<h3>4. Confirmare și plată</h3>
+<table class="of-tbl kv">
+<tr><th>Confirmat</th><td class="opts"><label><input type="radio" name="Confirmat" value="Da"> Da</label><label><input type="radio" name="Confirmat" value="Nu"> Nu</label><label><input type="radio" name="Confirmat" value="În așteptare"> În așteptare</label></td></tr>
+<tr><th><label for="of-avans">Contribuție anticipată (avans)</label></th><td><input id="of-avans" name="Avans (lei)" type="number" min="0" inputmode="numeric" class="short"> lei</td></tr>
+<tr><th>Rest rămas de plată</th><td><output id="of-rest">–</output> lei</td></tr>
+<tr><th>Pachet ales</th><td class="opts"><label><input type="radio" name="Pachet" value="Standard – 2.750 lei" data-total="2750"> Standard – 2.750 lei</label><label><input type="radio" name="Pachet" value="Basic – 1.550 lei" data-total="1550"> Basic – 1.550 lei</label><label><input type="radio" name="Pachet" value="Altul" data-total=""> Altul: <input name="Pachet – altul" class="short wide" aria-label="Alt pachet"></label></td></tr>
+</table>
+
+<h3>5. Alte mențiuni</h3>
+<textarea name="Alte mențiuni" rows="4" aria-label="Alte mențiuni">A rămas că ne anunță după ce vorbește cu părinții.</textarea>
+
+<div class="of-actions">
+<button type="button" class="btn" id="of-wa">Trimite pe WhatsApp</button>
+<button type="button" class="btn btn-dark" id="of-print">Printează / Salvează PDF</button>
+</div>
+<p class="note">Sau sunați-ne la <a href="tel:+40721012130">0721.012.130</a>.</p>
+</form>

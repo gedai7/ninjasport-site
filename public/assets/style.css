@@ -351,3 +351,40 @@ section{margin:0 0 32px}
 .app-box h3{margin:0 0 6px}.app-box .app-btns{justify-content:center}
 .site-foot .app-btns{flex-direction:column;align-items:flex-start}
 .site-foot .app-btn{font-size:.9em;padding:7px 12px}
+
+/* ---------- ofertă Școala Altfel (pagină ascunsă) ---------- */
+.oferta .oferta-sub{text-align:center;font-style:italic;margin-top:-6px}
+.of-tbl{width:100%;border-collapse:collapse;margin:6px 0 4px;font-weight:400}
+.of-tbl th,.of-tbl td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:middle}
+.of-tbl.kv th{width:34%;background:var(--cell);font-weight:700}
+.of-tbl thead th{background:var(--btn);font-weight:700}
+.of-tbl.grid td,.of-tbl.grid thead th{text-align:center}
+.of-tbl.price td:first-child,.of-tbl.price thead th:first-child{text-align:left}
+.of-tbl .r{text-align:right !important}
+.of-tbl tr.tot td{background:var(--cell);font-weight:700}
+.of-tbl .opts{display:flex;flex-wrap:wrap;gap:6px 18px}
+.of-tbl.grid .opts{flex-direction:column;align-items:flex-start;gap:4px}
+.oferta input:not([type=radio]),.oferta textarea{width:100%;background:#000;color:#fff;border:1px solid var(--line);border-radius:4px;padding:7px 9px;font:inherit;font-weight:400;box-sizing:border-box}
+.oferta input.short{width:5.5em}
+.oferta input.short.wide{width:9em}
+.oferta input:focus,.oferta textarea:focus{outline:2px solid var(--red);border-color:var(--red)}
+.oferta input[type=radio]{accent-color:var(--red)}
+.oferta label.inline,.of-tbl .opts label{white-space:nowrap}
+.oferta .note{color:var(--muted);font-style:italic;font-size:.95em}
+.of-actions{margin:18px 0 6px}
+@media (max-width:600px){.of-tbl.kv th{width:42%}.of-tbl th,.of-tbl td{padding:6px 5px}.of-tbl.grid{font-size:.88em}.oferta label.inline input{width:3.2em}}
+@media print{
+  body{background:#fff !important;color:#000 !important;font-size:12px}
+  header,footer,nav,.nav,.of-actions,.oferta .note:last-child{display:none !important}
+  main:has(.oferta) .page-title{display:block !important;color:#c0392b !important;margin:0 0 4px;font-size:1.6em}
+  main:has(.oferta) .page-title .en{display:none}
+  main:has(.oferta) .page-title::before,main:has(.oferta) .page-title::after{display:none}
+  .of-tbl th,.of-tbl td{border-color:#999 !important;color:#000 !important;padding:5px 8px}
+  .of-tbl.kv th,.of-tbl tr.tot td{background:#f2f2f2 !important}
+  .of-tbl thead th{background:#1f3a5f !important;color:#fff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .oferta input:not([type=radio]),.oferta textarea{background:#fff !important;color:#000 !important;border:0;border-bottom:1px dotted #999;border-radius:0;padding:2px}
+  .oferta textarea{border:1px solid #999}
+  .prose h3{color:#c0392b !important;margin:12px 0 4px}
+  .oferta .oferta-sub,.oferta .note{color:#555 !important}
+  @page{size:A4;margin:14mm}
+}
