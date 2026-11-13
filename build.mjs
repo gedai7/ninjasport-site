@@ -125,8 +125,7 @@ function scheduleHTML() {
 
 const pages = {};
 
-pages['index.html'] = layout({
-  title: '', active: '/', scripts: ['/assets/carousel.js'], body: `
+const homeBody = `
 </div><section class="hero" style="--hero:url('${media(site.hero_image)}')"><div class="wrap">
   <h1>Sală de sporturi<br>cu <span class="accent">obstacole</span></h1>
   <p>Ninja Sport face parte din familia sporturilor cu obstacole, alături de OCR și Adventure Race. Antrenamente pentru copii, adolescenți și adulți, Open Gym și petreceri aniversare, în Splaiul Unirii 160, București.</p>
@@ -164,7 +163,16 @@ ${['2024/04/frnpm_logo_square.png', '2024/04/UNAA-sm-e1712915222600.png', '2024/
 <div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
 <section><h2 class="page-title">Cum ajungi la Ninja Sport?<span class="en">How to get here</span></h2>
 <p style="font-weight:400">${esc(site.address)} · <a href="${site.phone_href}">${esc(site.phone)}</a></p>
-<iframe class="map" src="${site.map}" loading="lazy" title="Hartă Ninja Sport"></iframe></section>` });
+<iframe class="map" src="${site.map}" loading="lazy" title="Hartă Ninja Sport"></iframe></section>`;
+pages['index.html'] = layout({ title: '', active: '/', scripts: ['/assets/carousel.js'], body: homeBody });
+// SIMULARE (pagină ascunsă): Acasă cu secțiunile noi din content/acasa-simulare.html în locul „Ce este Ninja Sport?” + „Beneficii”
+{
+  const a = homeBody.indexOf('<section class="split"><div class="prose">\n  <h2>Ce este');
+  const b = homeBody.indexOf('<section class="carousel"');
+  if (a < 0 || b < 0) throw new Error('simulare: nu găsesc secțiunile de înlocuit pe Acasă');
+  const sep = '<div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>\n';
+  pages['acasa-simulare/index.html'] = layout({ title: 'Simulare Acasă', noindex: true, scripts: ['/assets/carousel.js'], body: homeBody.slice(0, a) + content('acasa-simulare.html') + sep + homeBody.slice(b) });
+}
 
 pages['prices/index.html'] = layout({ title: 'Contribuții', active: '/prices/', desc: 'Contribuții membri Ninja Sport: abonamente copii, adulți, Open Gym, antrenamente private.', body: title2(prices.title, prices.subtitle) + pricesHTML() + appBox() });
 
@@ -257,6 +265,6 @@ ExpiresByType font/ttf "access plus 1 year"
 // sitemap.xml + robots.txt
 const today = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  Object.keys(pages).filter((f) => f !== '404.html' && !f.startsWith('playlist-') && !f.startsWith('oferta-')).map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
+  Object.keys(pages).filter((f) => f !== '404.html' && !f.startsWith('playlist-') && !f.startsWith('oferta-') && !f.startsWith('acasa-simulare')).map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, '.assetsignore'), '.htaccess\n');
