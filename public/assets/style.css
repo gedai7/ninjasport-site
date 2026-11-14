@@ -379,13 +379,13 @@ section{margin:0 0 32px}
   main:has(.oferta) .page-title{display:block !important;color:#c0392b !important;margin:0 0 4px;font-size:1.6em}
   main:has(.oferta) .page-title .en{display:none}
   main:has(.oferta) .page-title::before,main:has(.oferta) .page-title::after{display:none}
-  .of-tbl th,.of-tbl td{border-color:#999 !important;color:#000 !important;padding:5px 8px}
-  .of-tbl.kv th,.of-tbl tr.tot td{background:#f2f2f2 !important}
-  .of-tbl thead th{background:#1f3a5f !important;color:#fff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .of-tbl th,.of-tbl td{border-color:#000 !important;color:#000 !important;padding:5px 8px}
+  .of-tbl.kv th,.of-tbl tr.tot td{background:#fff !important}
+  .of-tbl thead th{background:#fff !important;color:#000 !important}
   .oferta input:not([type=radio]),.oferta textarea{background:#fff !important;color:#000 !important;border:0;border-bottom:1px dotted #999;border-radius:0;padding:2px}
   .oferta textarea{border:1px solid #999}
   .prose h3{color:#c0392b !important;margin:12px 0 4px}
-  .oferta .oferta-sub,.oferta .note{color:#555 !important}
+  .oferta .oferta-sub,.oferta .note{color:#000 !important}
   @page{size:A4;margin:14mm}
 }
 
