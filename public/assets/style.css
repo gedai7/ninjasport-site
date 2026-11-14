@@ -428,3 +428,5 @@ section{margin:0 0 32px}
   .of-tbl th small,.oferta h3 .h-ex,.slot-out{color:#000 !important}
   .slot-group{border-color:#000 !important;border-left-color:#c0392b !important;padding:4px 8px}
 }
+.lb .stage{flex-direction:column}
+.lb-ig{display:inline-block;margin-top:12px;padding:8px 16px;background:var(--btn);color:#fff;text-decoration:none;font-weight:700;border-radius:4px}

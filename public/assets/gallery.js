@@ -25,7 +25,7 @@
     else if (t === 'video') { el = document.createElement('video'); el.controls = true; el.autoplay = true; el.playsInline = true;
       el.onerror = function () { stage.innerHTML = '<div class="msg">Acest video nu poate fi redat în browserul tău.<br><a href="' + s + '" target="_blank" rel="noopener">Deschide video</a></div>'; }; el.src = s; }
     else { el = document.createElement('iframe'); el.src = s; el.allow = 'autoplay; fullscreen'; el.allowFullscreen = true; }
-    stage.appendChild(el); cnt.textContent = (cur + 1) + ' / ' + list.length;
+    stage.appendChild(el); if (it.dataset.link) { var l = document.createElement('a'); l.className = 'lb-ig'; l.href = it.dataset.link; l.target = '_blank'; l.rel = 'noopener'; l.textContent = 'Vezi pe Instagram'; stage.appendChild(l); } cnt.textContent = (cur + 1) + ' / ' + list.length;
   }
   function open(i) { if (!lb) build(); list = items.filter(function (x) { return !x.hidden; }); cur = list.indexOf(items[i]); lb.hidden = false; document.documentElement.style.overflow = 'hidden'; show(); }
   function close() { lb.hidden = true; stage.innerHTML = ''; document.documentElement.style.overflow = ''; }

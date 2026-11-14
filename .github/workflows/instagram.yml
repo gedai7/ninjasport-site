@@ -1,0 +1,42 @@
+# Album „Instagram” în galerie: preia zilnic ultimele postări de pe @ninjasport.ro.
+# Activare: Settings → Secrets and variables → Actions → Secrets
+#   IG_TOKEN – cheia de acces din developers.facebook.com (Instagram API with Instagram Login)
+#   GH_PAT   – (opțional) token GitHub cu drept „Secrets: write” pe acest repo,
+#              ca workflow-ul să salveze singur cheia Instagram prelungită
+name: Instagram
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: instagram
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm install --no-audit --no-fund
+      - name: Preia postările
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_NEW_TOKEN_FILE: ${{ runner.temp }}/ig_token
+        run: node scripts/instagram.mjs
+      - name: Salvează cheia prelungită
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          f="${{ runner.temp }}/ig_token"
+          if [ -s "$f" ] && [ -n "$GH_TOKEN" ]; then gh secret set IG_TOKEN --repo "$GITHUB_REPOSITORY" < "$f" && echo "IG_TOKEN actualizat"; else echo "Nimic de actualizat"; fi
+          rm -f "$f"
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add data/instagram.json public/media/instagram
+          git diff --cached --quiet && { echo "Nicio postare nouă"; exit 0; }
+          git commit -m "Instagram: postări actualizate"
+          git pull --rebase origin main
+          git push origin HEAD:main

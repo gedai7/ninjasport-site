@@ -9,6 +9,11 @@ const ZILE = ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri', 'Sâmbătă', 'Dumi
 sched.events = sched.events.map((e) => ({ ...e, day: typeof e.day === 'number' ? e.day : ZILE.indexOf(e.zi), time: e.time || `${e.from}–${e.to}` }));
 const playlist = fs.existsSync('data/playlist.json') ? R('data/playlist.json') : { title: 'Playlist', songs: [] };
 const coaches = R('data/coaches.json'), events = R('data/events.json'), gallery = R('data/gallery.json');
+// album Instagram (actualizat zilnic de .github/workflows/instagram.yml), pus după primul album
+{
+  const ig = fs.existsSync('data/instagram.json') ? R('data/instagram.json') : [];
+  if (ig.length) gallery.splice(1, 0, { title: 'Instagram', slug: 'instagram', items: ig.map((p) => ({ type: 'image', src: p.src, thumb: p.thumb, link: p.permalink, video: p.video, alt: p.caption })) });
+}
 const content = (f) => fs.readFileSync(path.join('content', f), 'utf8').replace(/https:\/\/ninjasport\.ro\/wp-content\/uploads\/[^"'\s)]+/g, (u) => media(u));
 const OUT = 'dist';
 // versiune în URL (?v=hash) ca browserele să ia mereu fișierul nou după o modificare
@@ -201,7 +206,7 @@ pages['gallery/index.html'] = layout({
     const src = it.type === 'youtube' ? `https://www.youtube-nocookie.com/embed/${it.id}?autoplay=1&rel=0` : media(it.src);
     const poster = it.type === 'video' && src.startsWith('/media/video/') ? src.replace(/\.mp4$/, '.jpg') : '';
     const thumb = it.type === 'youtube' ? `https://i.ytimg.com/vi/${it.id}/hqdefault.jpg` : (media(it.thumb || '') || poster);
-    return `<a class="gal-item" href="${src}" data-album="${a.slug}"${a !== gallery[0] ? ' hidden' : ''} data-type="${it.type === 'image' ? 'image' : it.type === 'video' ? 'video' : 'embed'}" data-src="${src}">${thumb ? `<img src="${thumb}" alt="${esc(a.title)}" loading="lazy" decoding="async">` : '<span class="gal-vph">VIDEO</span>'}${it.type !== 'image' ? '<span class="gal-play"></span>' : ''}</a>`;
+    return `<a class="gal-item" href="${src}" data-album="${a.slug}"${a !== gallery[0] ? ' hidden' : ''} data-type="${it.type === 'image' ? 'image' : it.type === 'video' ? 'video' : 'embed'}" data-src="${src}"${it.link ? ` data-link="${esc(it.link)}"` : ''}>${thumb ? `<img src="${thumb}" alt="${esc(it.alt || a.title)}" loading="lazy" decoding="async">` : '<span class="gal-vph">VIDEO</span>'}${it.type !== 'image' || it.video ? '<span class="gal-play"></span>' : ''}</a>`;
   })).join('')}</div></div>` });
 
 /* ---------- scriere ---------- */
