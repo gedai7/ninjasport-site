@@ -253,7 +253,7 @@ section{margin:0 0 32px}
 /* coaches */
 .coaches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .coach{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--red)}
-.coach img{width:100%;aspect-ratio:740/680;object-fit:cover;background:#1c1c1c}
+.coach img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#1c1c1c}
 .coach .b{padding:14px 16px}
 .coach h3{margin:0;text-transform:uppercase;font-size:1.2em}
 .coach .role{color:var(--red);margin:2px 0 10px;font-size:.9em}
