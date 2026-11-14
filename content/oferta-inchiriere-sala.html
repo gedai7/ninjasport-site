@@ -1,0 +1,59 @@
+<form class="prose narrow oferta" id="oferta" autocomplete="on">
+<p class="lead oferta-sub">Ninja Sport – Sala de Sport cu Obstacole, Splaiul Unirii 160, București</p>
+
+<h3>1. Date eveniment</h3>
+<table class="of-tbl kv">
+<tr><th><label for="of-scoala">Școala / Clasa / Organizator</label></th><td><input id="of-scoala" name="Organizator"></td></tr>
+<tr><th><label for="of-contact">Persoană de contact</label></th><td><input id="of-contact" name="Persoană de contact" autocomplete="name"></td></tr>
+<tr><th><label for="of-tel">Telefon / E-mail</label></th><td><input id="of-tel" name="Telefon / E-mail"></td></tr>
+<tr><th><label for="of-copii">Număr copii</label></th><td><input id="of-copii" name="Număr copii" type="number" min="15" inputmode="numeric" placeholder="minim 15 copii"></td></tr>
+<tr><th><label for="of-tip">Tip eveniment</label></th><td><input id="of-tip" name="Tip eveniment" placeholder="Open Gym, Școala Altfel etc."></td></tr>
+</table>
+
+<h3>2. Programare</h3>
+<table class="of-tbl kv">
+<tr><th>Data</th><td class="opts date">
+  <label>Anul <select name="Anul" id="of-an"><option value="">–</option><option>2026</option><option>2027</option></select></label>
+  <label>Luna <select name="Luna" id="of-luna"><option value="">–</option><option>Ianuarie</option><option>Februarie</option><option>Martie</option><option>Aprilie</option><option>Mai</option><option>Iunie</option><option>Iulie</option><option>August</option><option>Septembrie</option><option>Octombrie</option><option>Noiembrie</option><option>Decembrie</option></select></label>
+  <label>Ziua <input name="Ziua" id="of-zi" type="number" min="1" max="31" inputmode="numeric" class="short"></label>
+</td></tr>
+<tr><th>Interval orar<small>1 oră sau 2 ore consecutive</small></th><td>
+  <div class="slots" id="of-slots">
+    <label><input type="checkbox" value="10"> 10:00 – 11:00</label>
+    <label><input type="checkbox" value="11"> 11:00 – 12:00</label>
+    <label><input type="checkbox" value="12"> 12:00 – 13:00</label>
+    <label><input type="checkbox" value="13"> 13:00 – 14:00</label>
+    <label><input type="checkbox" value="14"> 14:00 – 15:00</label>
+    <label><input type="checkbox" value="15"> 15:00 – 16:00</label>
+  </div>
+  <p class="slot-out">Interval ales: <output id="of-interval">–</output></p>
+</td></tr>
+</table>
+
+<h3>3. Preț <span class="h-ex">(exemplu: 25 copii = 15 × 150 lei + 10 × 50 lei = 2.750 lei)</span></h3>
+<table class="of-tbl grid price">
+<thead><tr><th>Descriere</th><th>Calcul</th><th class="r">Total (lei)</th></tr></thead>
+<tbody>
+<tr><td>Pachet Standard (primii 15 copii)</td><td>15 × 150 lei</td><td class="r">2.250</td></tr>
+<tr><td>Copii extra (peste 15)</td><td><output id="of-extra-n">0</output> × 50 lei</td><td class="r"><output id="of-extra">0</output></td></tr>
+<tr class="tot"><td>TOTAL (<output id="of-n">15</output> copii)</td><td></td><td class="r"><output id="of-total">2.250</output></td></tr>
+</tbody>
+</table>
+
+<h3>4. Confirmare și plată</h3>
+<table class="of-tbl kv">
+<tr><th>Confirmat</th><td class="opts"><label><input type="radio" name="Confirmat" value="Da"> Da</label><label><input type="radio" name="Confirmat" value="Nu"> Nu</label><label><input type="radio" name="Confirmat" value="În așteptare"> În așteptare</label></td></tr>
+<tr><th>Pachet ales</th><td class="opts"><label><input type="radio" name="Pachet" value="Standard" checked> Standard</label><label><input type="radio" name="Pachet" value="Altul"> Altul: <input id="of-altul" name="Pachet altul (lei)" type="number" min="0" inputmode="numeric" class="short wide" placeholder="sumă (lei)" aria-label="Sumă pachet altul"></label></td></tr>
+<tr><th><label for="of-avans">Contribuție anticipată (avans)</label></th><td><input id="of-avans" name="Avans (lei)" type="number" min="0" inputmode="numeric" class="short"> lei</td></tr>
+<tr><th>Rest rămas de plată</th><td><b><output id="of-rest">–</output> lei</b></td></tr>
+</table>
+
+<h3>5. Alte mențiuni</h3>
+<textarea name="Alte mențiuni" rows="4" aria-label="Alte mențiuni"></textarea>
+
+<div class="of-actions">
+<button type="button" class="btn" id="of-wa">Trimite pe WhatsApp</button>
+<button type="button" class="btn btn-dark" id="of-print">Printează / Salvează PDF</button>
+</div>
+<p class="note">Sau sunați-ne la <a href="tel:+40721012130">0721.012.130</a>.</p>
+</form>
