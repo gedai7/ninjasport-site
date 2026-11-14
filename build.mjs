@@ -153,10 +153,10 @@ ${events.length ? '<div class="sep" aria-hidden="true"><span></span><img src="/a
 <section class="prose" style="max-width:none">
   <h2>Beneficii<span class="en">Benefits</span></h2>
   <div class="quick">
-    <a href="/ninja-kids/">Conștientizare spațială<span>Deplasare sigură și eficientă printre obstacole</span></a>
-    <a href="/ninja-kids/">Agilitate<span>Schimbări rapide de direcție, mai puține accidentări</span></a>
-    <a href="/ninja-kids/">Echilibru<span>Stabilitate și încredere în mișcare</span></a>
-    <a href="/ninja-kids/">Școala căderii<span>Învățăm să cădem în siguranță</span></a>
+    <a href="/ninja-classes/">Conștientizare spațială<span>Deplasare sigură și eficientă printre obstacole</span></a>
+    <a href="/ninja-classes/">Agilitate<span>Schimbări rapide de direcție, mai puține accidentări</span></a>
+    <a href="/ninja-classes/">Echilibru<span>Stabilitate și încredere în mișcare</span></a>
+    <a href="/ninja-classes/">Școala căderii<span>Învățăm să cădem în siguranță</span></a>
   </div>
 </section>
 <div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
@@ -187,8 +187,22 @@ ${scheduleHTML()}
 ${appBox()}` });
 
 pages['party/index.html'] = layout({ title: 'Party', active: '/party/', scripts: ['/assets/party.js'], desc: 'Petreceri aniversare la Ninja Sport: 3 ore de distracție ninja pe obstacole, pachet pentru 15 invitați, rezervare online.', body: title2('Birthday Party', 'Petreceri aniversare la Ninja Sport') + content('party.html').replace('<form class="party-form" id="party-form" novalidate>', `<form class="party-form" id="party-form" novalidate data-key="${esc(site.form_key || '')}">`) });
-pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-kids/', body: title2('Ninja Kids', 'Kids classes & parties') + content('ninja-kids.html') });
-pages['scoala-altfel-saptamana-verde/index.html'] = layout({ title: 'Școala Altfel & Săptămâna Verde', active: '/ninja-kids/', body: title2('Școala Altfel & Săptămâna Verde', 'School groups') + content('scoala-altfel.html') });
+{
+  // clasele, generate din programul standard (fără Birthday Party)
+  const ord = ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri', 'Sâmbătă', 'Duminică'];
+  const groups = [];
+  for (const e of sched.events) {
+    if (e.party) continue;
+    const k = e.name + '|' + (e.sub || '');
+    let g = groups.find((x) => x.k === k); if (!g) groups.push(g = { k, name: e.name, sub: e.sub || '', rows: [] });
+    g.rows.push([e.day, e.time]);
+  }
+  const card = (g) => { const byTime = {}; for (const [d, t] of g.rows.sort((a, b) => a[0] - b[0])) (byTime[t] = byTime[t] || []).push(ord[d]);
+    return `<div class="class-card"><h3>${esc(g.name)}${g.sub ? ` <span>${esc(g.sub)}</span>` : ''}</h3><ul>${Object.entries(byTime).map(([t, ds]) => `<li><b>${ds.join(', ')}</b> · ${esc(t)}</li>`).join('')}</ul></div>`; };
+  pages['ninja-classes/index.html'] = layout({ title: 'Ninja Classes', active: '/ninja-classes/', desc: 'Clase Ninja Sport pentru copii, adolescenți și adulți: obstacole, bouldering, antrenori certificați. Splaiul Unirii 160, București.', body: title2('Ninja Classes', 'Clase pentru copii, adolescenți și adulți') + content('ninja-classes.html').replace('%%CLASSES%%', `<div class="class-grid">${groups.map(card).join('')}</div>`) });
+}
+pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-classes/', noindex: true, body: title2('Ninja Kids', 'Kids classes & parties') + content('ninja-kids.html') });
+pages['scoala-altfel-saptamana-verde/index.html'] = layout({ title: 'Școala Altfel & Săptămâna Verde', active: '/ninja-classes/', body: title2('Școala Altfel & Săptămâna Verde', 'School groups') + content('scoala-altfel.html') });
 const CONTRACT = fs.existsSync('public/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx') ? '/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx' : 'https://ninjasport.ro/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx';
 pages['sponsorizare/index.html'] = layout({ title: 'Sponsorizare', active: '/sponsorizare/', desc: 'Sponsorizează ACS Ninja Sport cu până la 20% din impozitul pe profit, fără cost pentru firma ta: plată directă sau Formularul 177.', body: title2('Sponsorizează Ninja Sport', 'Fără cost pentru firma ta · Company sponsorship') + content('sponsorizare.html').replaceAll('%%CONTRACT%%', CONTRACT) });
 pages['waiver/index.html'] = layout({
@@ -197,7 +211,8 @@ pages['waiver/index.html'] = layout({
 
 pages['coaches/index.html'] = layout({
   title: 'Antrenori', active: '/coaches/', body: title2('Antrenori', 'Our coaches') + `<div class="coaches">${coaches.map((c) => `
-<article class="coach"><img src="${media(c.photo)}" alt="${esc(c.name)}" loading="lazy"><div class="b"><h3>${esc(c.name)}</h3><div class="role">${esc(c.role)}</div><ul>${c.bio.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>${c.text ? `<p>${esc(c.text)}</p>` : ''}${(c.competitii || []).length ? `<h4 class="comp-h">Competiții</h4><ul class="shuriken">${c.competitii.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div></article>`).join('')}</div>` });
+<article class="coach"><img src="${media(c.photo)}" alt="${esc(c.name)}" loading="lazy"><div class="b"><h3>${esc(c.name)}</h3><div class="role">${esc(c.role)}</div><ul>${c.bio.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>${c.text ? `<p>${esc(c.text)}</p>` : ''}${(c.competitii || []).length ? (() => { const L = c.competitii, n = Math.max(0, L.findIndex((x) => /anaheim/i.test(x))) + 1, li = (xs) => xs.map((x) => `<li>${esc(x)}</li>`).join('');
+  return `<h4 class="comp-h">Competiții</h4><ul class="shuriken">${li(L.slice(0, n))}</ul>${L.length > n ? `<details class="more"><summary><span class="o">Citește mai mult</span><span class="c">Mai puțin</span></summary><ul class="shuriken">${li(L.slice(n))}</ul></details>` : ''}`; })() : ''}</div></article>`).join('')}</div>` });
 
 pages['gallery/index.html'] = layout({
   title: 'Galerie', active: '/gallery/', scripts: ['/assets/gallery.js'], body: title2('Galerie', 'Gallery') + `<div class="gal">
@@ -274,6 +289,6 @@ ExpiresByType font/ttf "access plus 1 year"
 // sitemap.xml + robots.txt
 const today = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  Object.keys(pages).filter((f) => f !== '404.html' && !f.startsWith('playlist-') && !f.startsWith('oferta-') && !f.startsWith('acasa-simulare')).map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
+  Object.keys(pages).filter((f) => f !== '404.html' && !f.startsWith('playlist-') && !f.startsWith('oferta-') && !f.startsWith('acasa-simulare') && !f.startsWith('ninja-kids/')).map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, '.assetsignore'), '.htaccess\n');

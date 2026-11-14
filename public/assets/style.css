@@ -435,3 +435,22 @@ section{margin:0 0 32px}
 .coach ul.shuriken{list-style:none;padding-left:0}
 .coach ul.shuriken li{position:relative;padding-left:22px;margin-bottom:4px}
 .coach ul.shuriken li::before{content:"";position:absolute;left:0;top:.28em;width:14px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e30613' d='M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z'/%3E%3Ccircle cx='12' cy='12' r='2.2' fill='%23111'/%3E%3C/svg%3E") center/contain no-repeat}
+/* Ninja Classes */
+.class-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:10px 0 18px}
+.class-card{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--red);padding:14px 16px}
+.class-card h3{margin:0 0 8px;text-transform:uppercase;font-size:1.05em}
+.class-card h3 span{color:var(--red)}
+.class-card ul{list-style:none;margin:0;padding:0;font-size:.95em}
+.class-card li{padding:3px 0;border-bottom:1px solid var(--line)}.class-card li:last-child{border:0}
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.photo-pair img{width:100%;aspect-ratio:9/16;object-fit:cover;border:1px solid var(--line);border-radius:4px}
+h2.center,.center{text-align:center}
+@media (max-width:860px){.class-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.class-grid{grid-template-columns:1fr}}
+/* citește mai mult */
+.coach details.more summary{cursor:pointer;color:var(--red);font-weight:700;list-style:none;margin:2px 0 6px}
+.coach details.more summary::-webkit-details-marker{display:none}
+.coach details.more .c,.coach details.more[open] .o{display:none}
+.coach details.more[open] .c{display:inline}
+.coach details.more[open] summary{order:2}
+.coach details.more{display:flex;flex-direction:column}
