@@ -17,14 +17,11 @@
   <label>Luna <select name="Luna" id="of-luna"><option value="">–</option><option>Ianuarie</option><option>Februarie</option><option>Martie</option><option>Aprilie</option><option>Mai</option><option>Iunie</option><option>Iulie</option><option>August</option><option>Septembrie</option><option>Octombrie</option><option>Noiembrie</option><option>Decembrie</option></select></label>
   <label>Ziua <input name="Ziua" id="of-zi" type="number" min="1" max="31" inputmode="numeric" class="short"></label>
 </td></tr>
-<tr><th>Interval orar<small>1 oră sau 2 ore consecutive</small></th><td>
+<tr><th>Interval orar<small>1 oră sau 2 ore din același grup</small></th><td>
   <div class="slots" id="of-slots">
-    <label><input type="checkbox" value="10"> 10:00 – 11:00</label>
-    <label><input type="checkbox" value="11"> 11:00 – 12:00</label>
-    <label><input type="checkbox" value="12"> 12:00 – 13:00</label>
-    <label><input type="checkbox" value="13"> 13:00 – 14:00</label>
-    <label><input type="checkbox" value="14"> 14:00 – 15:00</label>
-    <label><input type="checkbox" value="15"> 15:00 – 16:00</label>
+    <div class="slot-group"><label><input type="checkbox" value="10"> 10:00 – 11:00</label><label><input type="checkbox" value="11"> 11:00 – 12:00</label></div>
+    <div class="slot-group"><label><input type="checkbox" value="12"> 12:00 – 13:00</label><label><input type="checkbox" value="13"> 13:00 – 14:00</label></div>
+    <div class="slot-group"><label><input type="checkbox" value="14"> 14:00 – 15:00</label><label><input type="checkbox" value="15"> 15:00 – 16:00</label></div>
   </div>
   <p class="slot-out">Interval ales: <output id="of-interval">–</output></p>
 </td></tr>
@@ -43,8 +40,8 @@
 <h3>4. Confirmare și plată</h3>
 <table class="of-tbl kv">
 <tr><th>Confirmat</th><td class="opts"><label><input type="radio" name="Confirmat" value="Da"> Da</label><label><input type="radio" name="Confirmat" value="Nu"> Nu</label><label><input type="radio" name="Confirmat" value="În așteptare"> În așteptare</label></td></tr>
-<tr><th>Pachet ales</th><td class="opts"><label><input type="radio" name="Pachet" value="Standard" checked> Standard</label><label><input type="radio" name="Pachet" value="Altul"> Altul: <input id="of-altul" name="Pachet altul (lei)" type="number" min="0" inputmode="numeric" class="short wide" placeholder="sumă (lei)" aria-label="Sumă pachet altul"></label></td></tr>
-<tr><th><label for="of-avans">Contribuție anticipată (avans)</label></th><td><input id="of-avans" name="Avans (lei)" type="number" min="0" inputmode="numeric" class="short"> lei</td></tr>
+<tr><th>Pachet ales</th><td class="opts"><label><input type="radio" name="Pachet" value="Standard" checked> Standard</label><label><input type="radio" name="Pachet" value="Altul"> Altul: <input id="of-altul" name="Pachet altul (lei)" type="number" min="0" inputmode="numeric" class="short wide" placeholder="suma" aria-label="Sumă pachet altul"></label></td></tr>
+<tr><th>Contribuție anticipată (avans)</th><td class="opts"><label><input type="radio" name="Avans" value="700" checked> Minim 700 lei</label><label><input type="radio" name="Avans" value="alta"> Altă sumă: <input id="of-avans" name="Avans altă sumă (lei)" type="number" min="700" inputmode="numeric" class="short wide" placeholder="suma" aria-label="Altă sumă avans"> lei</label></td></tr>
 <tr><th>Rest rămas de plată</th><td><b><output id="of-rest">–</output> lei</b></td></tr>
 </table>
 

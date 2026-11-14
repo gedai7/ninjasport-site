@@ -6,14 +6,15 @@
   const $ = (id) => document.getElementById(id);
   const fmt = (n) => n.toLocaleString('ro-RO');
   const BASE_KIDS = 15, BASE_PRICE = 150, EXTRA_PRICE = 50;
+  const grp = (cb) => Math.floor((+cb.value - 10) / 2);
   const slots = [...$('of-slots').querySelectorAll('input[type=checkbox]')];
 
-  // Interval orar: maximum 2 ore, și doar consecutive.
+  // Interval orar: 1 oră sau 2 ore din același grup.
   slots.forEach((cb) => cb.addEventListener('change', () => {
     if (cb.checked) {
       const on = slots.filter((s) => s.checked && s !== cb);
-      let kept = false; // păstrează doar o oră vecină cu cea nou bifată
-      on.forEach((s) => { if (!kept && Math.abs(+s.value - +cb.value) === 1) kept = true; else s.checked = false; });
+      let kept = false; // 2 ore doar din același grup (10–12, 12–14, 14–16)
+      on.forEach((s) => { if (!kept && grp(s) === grp(cb)) kept = true; else s.checked = false; });
 
     }
     upd();
@@ -38,12 +39,14 @@
     $('of-interval').textContent = interval() || '–';
     const altul = f.querySelector('input[name="Pachet"]:checked')?.value === 'Altul';
     const t = altul ? +$('of-altul').value : sum;
-    rest = altul && !$('of-altul').value ? null : Math.max(t - (+$('of-avans').value || 0), 0);
+    rest = altul && !$('of-altul').value ? null : Math.max(t - avans(), 0);
     $('of-rest').textContent = rest == null ? '–' : fmt(rest);
   }
   let rest = null;
+  function avans() { return f.querySelector('input[name="Avans"]:checked')?.value === 'alta' ? (+$('of-avans').value || 0) : 700; }
   f.addEventListener('input', upd);
   f.addEventListener('change', upd);
+  $('of-avans').addEventListener('focus', () => { f.querySelector('input[name="Avans"][value="alta"]').checked = true; upd(); });
   $('of-altul').addEventListener('focus', () => { f.querySelector('input[name="Pachet"][value="Altul"]').checked = true; upd(); });
   upd();
 
@@ -60,7 +63,7 @@
     L.push(`Total pachet Standard (${n} copii): ${fmt(sum)} lei`);
     if (radio('Confirmat')) L.push(`Confirmat: ${radio('Confirmat')}`);
     L.push(`Pachet ales: ${radio('Pachet')}${radio('Pachet') === 'Altul' && v('Pachet altul (lei)') ? ` – ${v('Pachet altul (lei)')} lei` : ''}`);
-    if (v('Avans (lei)')) L.push(`Avans: ${v('Avans (lei)')} lei`);
+    L.push(`Avans: ${fmt(avans())} lei`);
     if (rest != null) L.push(`Rest de plată: ${fmt(rest)} lei`);
     if (v('Alte mențiuni')) L.push(`Mențiuni: ${v('Alte mențiuni')}`);
     window.open('https://wa.me/40721012130?text=' + encodeURIComponent(L.join('\n')), '_blank', 'noopener');
