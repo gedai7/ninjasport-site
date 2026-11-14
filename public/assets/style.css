@@ -430,3 +430,8 @@ section{margin:0 0 32px}
 }
 .lb .stage{flex-direction:column}
 .lb-ig{display:inline-block;margin-top:12px;padding:8px 16px;background:var(--btn);color:#fff;text-decoration:none;font-weight:700;border-radius:4px}
+/* competiții antrenori – bullet shuriken */
+.coach .comp-h{margin:12px 0 6px;color:var(--red);text-transform:uppercase;font-size:.95em}
+.coach ul.shuriken{list-style:none;padding-left:0}
+.coach ul.shuriken li{position:relative;padding-left:22px;margin-bottom:4px}
+.coach ul.shuriken li::before{content:"";position:absolute;left:0;top:.28em;width:14px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e30613' d='M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z'/%3E%3Ccircle cx='12' cy='12' r='2.2' fill='%23111'/%3E%3C/svg%3E") center/contain no-repeat}

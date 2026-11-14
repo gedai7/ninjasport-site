@@ -1,5 +1,16 @@
 [
   {
+    "name": "George Tudor",
+    "role": "Certified Ninja Coach Level 2",
+    "photo": "/media/2015/12/Gedai-740x680.png",
+    "bio": [
+      "Nidan Nihon JuJutsu",
+      "Ninja Sport Coach Master",
+      "Military self defence instructor"
+    ],
+    "text": "George este pasionat de orice formă de mișcare. Încă de la o vârstă fragedă a practicat ski, gimnastică, atletism. La 10 ani a început antrenamentele în artele marțiale Jujutsu. Începând cu 2014 a dezvoltat fenomenul ninja warrior în România prin construirea unor obstacole specifice și închegarea unei comunități."
+  },
+  {
     "name": "Lavinia Filip",
     "role": "Certified Ninja Coach Level 2",
     "photo": "/media/2015/12/Lavinia-740x680.png",
@@ -13,24 +24,26 @@
     "text": "Obsessed with growth. Available for NINJA & KARATE privates. Building athletes to perform at their best while shaping them through discipline, strength, muscle function, technique, coordination, reaction, and character development."
   },
   {
-    "name": "George Tudor",
-    "role": "Certified Ninja Coach Level 2",
-    "photo": "/media/2015/12/Gedai-740x680.png",
-    "bio": [
-      "Nidan Nihon JuJutsu",
-      "Ninja Sport Coach Master",
-      "Military self defence instructor"
-    ],
-    "text": "George este pasionat de orice formă de mișcare. Încă de la o vârstă fragedă a practicat ski, gimnastică, atletism. La 10 ani a început antrenamentele în artele marțiale Jujutsu. Începând cu 2014 a dezvoltat fenomenul ninja warrior în România prin construirea unor obstacole specifice și închegarea unei comunități."
-  },
-  {
     "name": "Dacian Tudor",
     "role": "Certified Ninja Coach Level 1",
-    "photo": "/media/2026/02/Dacian-740x680.png",
+    "photo": "/media/antrenori/dacian.jpg",
     "bio": [
       "Athlete & Coach",
-      "Coach Mini Ninja Kids (4-6y)"
+      "Coach Mini Ninja Kids (4-6y)",
+      "Coach Advanced Skills",
+      "Locul 3 Campionat European 400m Mantova, Italy"
     ],
-    "text": "Competiții: OCR EC 2022 – 100m · Spartan Race EC Hvar, CR – 100m · OCR EC 2025 Jamor, Portugal – 100m · Ninja EC 2025 Krakow, Poland"
+    "text": "",
+    "competitii": [
+      "2022 – OCR EC 100m",
+      "martie 2023 – Jungle Ninja European Championship, Plock, Polonia",
+      "iulie 2023 – Campionat Mondial Ninja, Anaheim, SUA",
+      "septembrie 2023 – World Cup OCR 100m, Montagnana, Italia",
+      "octombrie 2023 – Spartan Race EC 100m, Hvar, Croația",
+      "mai 2024 – Ninja World Cup, Swiecie, Polonia",
+      "2025 – OCR EC 100m, Jamor, Portugalia",
+      "2025 – Ninja EC, Krakow, Polonia",
+      "2026 – OCR EC 400m, Mantova, Italia – locul 3"
+    ]
   }
 ]

@@ -119,6 +119,7 @@ content:
       - { name: photo, label: Fotografie, type: image, options: { path: public/media/antrenori } }
       - { name: bio, label: Puncte (realizări), type: string, list: true }
       - { name: text, label: Descriere, type: text }
+      - { name: competitii, label: Competiții (bullet shuriken), type: string, list: true }
 
   # ---------------- Galerie ----------------
   - name: galerie

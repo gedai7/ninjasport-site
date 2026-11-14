@@ -197,7 +197,7 @@ pages['waiver/index.html'] = layout({
 
 pages['coaches/index.html'] = layout({
   title: 'Antrenori', active: '/coaches/', body: title2('Antrenori', 'Our coaches') + `<div class="coaches">${coaches.map((c) => `
-<article class="coach"><img src="${media(c.photo)}" alt="${esc(c.name)}" loading="lazy"><div class="b"><h3>${esc(c.name)}</h3><div class="role">${esc(c.role)}</div><ul>${c.bio.map((b) => `<li>${esc(b)}</li>`).join('')}</ul><p>${esc(c.text)}</p></div></article>`).join('')}</div>` });
+<article class="coach"><img src="${media(c.photo)}" alt="${esc(c.name)}" loading="lazy"><div class="b"><h3>${esc(c.name)}</h3><div class="role">${esc(c.role)}</div><ul>${c.bio.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>${c.text ? `<p>${esc(c.text)}</p>` : ''}${(c.competitii || []).length ? `<h4 class="comp-h">Competiții</h4><ul class="shuriken">${c.competitii.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div></article>`).join('')}</div>` });
 
 pages['gallery/index.html'] = layout({
   title: 'Galerie', active: '/gallery/', scripts: ['/assets/gallery.js'], body: title2('Galerie', 'Gallery') + `<div class="gal">
