@@ -157,11 +157,6 @@
       },
       {
         "type": "image",
-        "src": "/media/galerie/irun-2026/irun-18.jpg",
-        "thumb": "/media/galerie/irun-2026/irun-18-thumb.jpg"
-      },
-      {
-        "type": "image",
         "src": "/media/galerie/irun-2026/irun-03.jpg",
         "thumb": "/media/galerie/irun-2026/irun-03-thumb.jpg"
       },
@@ -234,6 +229,41 @@
         "type": "image",
         "src": "/media/galerie/irun-2026/irun-17.jpg",
         "thumb": "/media/galerie/irun-2026/irun-17-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-18.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-18-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-19.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-19-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-20.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-20-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-21.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-21-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-22.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-22-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-23.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-23-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/irun-2026/irun-24.jpg",
+        "thumb": "/media/galerie/irun-2026/irun-24-thumb.jpg"
       }
     ]
   },
