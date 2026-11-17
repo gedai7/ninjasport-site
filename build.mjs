@@ -214,6 +214,16 @@ pages['coaches/index.html'] = layout({
 <article class="coach"><img src="${media(c.photo)}" alt="${esc(c.name)}" loading="lazy"><div class="b"><h3>${esc(c.name)}</h3><div class="role">${esc(c.role)}</div><ul>${c.bio.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>${c.text ? `<p>${esc(c.text)}</p>` : ''}${(c.competitii || []).length ? (() => { const L = c.competitii, n = Math.max(0, L.findIndex((x) => /anaheim/i.test(x))) + 1, li = (xs) => xs.map((x) => `<li>${esc(x)}</li>`).join('');
   return `<h4 class="comp-h">Competiții</h4><ul class="shuriken">${li(L.slice(0, n))}</ul>${L.length > n ? `<details class="more"><summary><span class="o">Citește mai mult</span><span class="c">Mai puțin</span></summary><ul class="shuriken">${li(L.slice(n))}</ul></details>` : ''}`; })() : ''}</div></article>`).join('')}</div>` });
 
+pages['admin-galerie/index.html'] = layout({ title: 'Aranjare galerie', noindex: true, scripts: ['/assets/admin-galerie.js'], body: title2('Aranjare galerie', 'Trage pozele ca să le ordonezi') + `<div class="ag">
+<details class="ag-key"${''}><summary>Cheia GitHub (o singură dată pe acest dispozitiv)</summary>
+<div class="ag-row"><input id="ag-token" type="password" placeholder="github_pat_…" autocomplete="off"><button type="button" class="btn" id="ag-connect">Conectează</button></div>
+<p class="ag-help">Pe telefon: ține apăsat pe o poză o clipă, apoi trage-o. Cheia rămâne doar în acest browser. Se creează pe github.com → Settings → Developer settings → Fine-grained tokens, doar pentru repo-ul <b>ninjasport-site</b>, cu permisiunea <b>Contents: Read and write</b>.</p></details>
+<p id="ag-msg" class="ag-msg"></p>
+<div id="ag-tabs" class="gal-filters"></div>
+<ul id="ag-grid" class="ag-grid"></ul>
+<div class="ag-bar"><button type="button" class="btn" id="ag-save">Salvează</button></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>` });
 pages['gallery/index.html'] = layout({
   title: 'Galerie', active: '/gallery/', scripts: ['/assets/gallery.js'], body: title2('Galerie', 'Gallery') + `<div class="gal">
 <div class="gal-filters">${gallery.map((a, i) => `<button data-f="${a.slug}"${i === 0 ? ' class="on"' : ''}>${esc(a.title)}</button>`).join('')}</div>
@@ -289,6 +299,6 @@ ExpiresByType font/ttf "access plus 1 year"
 // sitemap.xml + robots.txt
 const today = new Date().toISOString().slice(0, 10);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  Object.keys(pages).filter((f) => f !== '404.html' && !f.startsWith('playlist-') && !f.startsWith('oferta-') && !f.startsWith('acasa-simulare') && !f.startsWith('ninja-kids/')).map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
+  Object.keys(pages).filter((f) => f !== '404.html' && !f.startsWith('playlist-') && !f.startsWith('oferta-') && !f.startsWith('acasa-simulare') && !f.startsWith('ninja-kids/') && !f.startsWith('admin-')).map((f) => `  <url><loc>${site.url}${pathOf(f)}</loc><lastmod>${today}</lastmod></url>`).join('\n') + '\n</urlset>\n');
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, '.assetsignore'), '.htaccess\n');
