@@ -513,11 +513,6 @@
     "title": "Halloween Party Ninja 2026",
     "items": [
       {
-        "type": "video",
-        "src": "/media/video/copy_C27E2904-0324-487C-9973-902187035744.mp4",
-        "thumb": "/media/video/copy_C27E2904-0324-487C-9973-902187035744.jpg"
-      },
-      {
         "type": "image",
         "src": "/media/2026/11/image00001-2-scaled.jpeg",
         "thumb": "/media/2026/11/image00001-2-768x1024.jpeg"
@@ -763,16 +758,6 @@
         "type": "image",
         "src": "/media/2026/11/image00027.jpeg",
         "thumb": "/media/2026/11/image00027-768x1356.jpeg"
-      },
-      {
-        "type": "video",
-        "src": "/media/video/copy_A48323A3-6F40-4600-8F35-F58959649EDC.mp4",
-        "thumb": "/media/video/copy_A48323A3-6F40-4600-8F35-F58959649EDC.jpg"
-      },
-      {
-        "type": "video",
-        "src": "/media/video/copy_ADCEA2FA-1126-4189-9FB2-CA971CA84ACF.mp4",
-        "thumb": "/media/video/copy_ADCEA2FA-1126-4189-9FB2-CA971CA84ACF.jpg"
       },
       {
         "type": "image",
