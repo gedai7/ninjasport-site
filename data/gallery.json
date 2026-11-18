@@ -5,23 +5,13 @@
     "items": [
       {
         "type": "image",
+        "src": "/media/galerie/antrenamente/antr-13.jpg",
+        "thumb": "/media/galerie/antrenamente/antr-13-thumb.jpg"
+      },
+      {
+        "type": "image",
         "src": "/media/site/lavinia-copii-obstacole.jpg",
         "thumb": "/media/site/lavinia-copii-obstacole-thumb.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/media/site/traseu-copii.jpg",
-        "thumb": "/media/site/traseu-copii-thumb.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/media/site/bouldering-copii.jpg",
-        "thumb": "/media/site/bouldering-copii-thumb.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/media/site/grup-copii.jpg",
-        "thumb": "/media/site/grup-copii-thumb.jpg"
       },
       {
         "type": "image",
@@ -30,18 +20,28 @@
       },
       {
         "type": "image",
+        "src": "/media/site/grup-copii.jpg",
+        "thumb": "/media/site/grup-copii-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/antrenamente/antr-15.jpg",
+        "thumb": "/media/galerie/antrenamente/antr-15-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/site/bouldering-copii.jpg",
+        "thumb": "/media/site/bouldering-copii-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/site/traseu-copii.jpg",
+        "thumb": "/media/site/traseu-copii-thumb.jpg"
+      },
+      {
+        "type": "image",
         "src": "/media/galerie/antrenamente/antr-02.jpg",
         "thumb": "/media/galerie/antrenamente/antr-02-thumb.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/media/galerie/antrenamente/antr-03.jpg",
-        "thumb": "/media/galerie/antrenamente/antr-03-thumb.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/media/galerie/antrenamente/antr-04.jpg",
-        "thumb": "/media/galerie/antrenamente/antr-04-thumb.jpg"
       },
       {
         "type": "image",
@@ -55,8 +55,18 @@
       },
       {
         "type": "image",
-        "src": "/media/galerie/antrenamente/antr-07.jpg",
-        "thumb": "/media/galerie/antrenamente/antr-07-thumb.jpg"
+        "src": "/media/galerie/antrenamente/antr-14.jpg",
+        "thumb": "/media/galerie/antrenamente/antr-14-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/antrenamente/antr-12.jpg",
+        "thumb": "/media/galerie/antrenamente/antr-12-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/antrenamente/antr-04.jpg",
+        "thumb": "/media/galerie/antrenamente/antr-04-thumb.jpg"
       },
       {
         "type": "image",
@@ -70,33 +80,23 @@
       },
       {
         "type": "image",
-        "src": "/media/galerie/antrenamente/antr-10.jpg",
-        "thumb": "/media/galerie/antrenamente/antr-10-thumb.jpg"
-      },
-      {
-        "type": "image",
         "src": "/media/galerie/antrenamente/antr-11.jpg",
         "thumb": "/media/galerie/antrenamente/antr-11-thumb.jpg"
       },
       {
         "type": "image",
-        "src": "/media/galerie/antrenamente/antr-12.jpg",
-        "thumb": "/media/galerie/antrenamente/antr-12-thumb.jpg"
+        "src": "/media/galerie/antrenamente/antr-07.jpg",
+        "thumb": "/media/galerie/antrenamente/antr-07-thumb.jpg"
       },
       {
         "type": "image",
-        "src": "/media/galerie/antrenamente/antr-13.jpg",
-        "thumb": "/media/galerie/antrenamente/antr-13-thumb.jpg"
+        "src": "/media/galerie/antrenamente/antr-03.jpg",
+        "thumb": "/media/galerie/antrenamente/antr-03-thumb.jpg"
       },
       {
         "type": "image",
-        "src": "/media/galerie/antrenamente/antr-14.jpg",
-        "thumb": "/media/galerie/antrenamente/antr-14-thumb.jpg"
-      },
-      {
-        "type": "image",
-        "src": "/media/galerie/antrenamente/antr-15.jpg",
-        "thumb": "/media/galerie/antrenamente/antr-15-thumb.jpg"
+        "src": "/media/galerie/antrenamente/antr-10.jpg",
+        "thumb": "/media/galerie/antrenamente/antr-10-thumb.jpg"
       },
       {
         "type": "image",
