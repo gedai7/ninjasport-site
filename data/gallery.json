@@ -353,13 +353,13 @@
     "items": [
       {
         "type": "image",
-        "src": "/media/galerie/mantova-2026/mantova-13.jpg",
-        "thumb": "/media/galerie/mantova-2026/mantova-13-thumb.jpg"
+        "src": "/media/galerie/mantova-2026/mantova-05.jpg",
+        "thumb": "/media/galerie/mantova-2026/mantova-05-thumb.jpg"
       },
       {
         "type": "image",
-        "src": "/media/galerie/mantova-2026/mantova-14.jpg",
-        "thumb": "/media/galerie/mantova-2026/mantova-14-thumb.jpg"
+        "src": "/media/galerie/mantova-2026/mantova-02.jpg",
+        "thumb": "/media/galerie/mantova-2026/mantova-02-thumb.jpg"
       },
       {
         "type": "image",
@@ -368,13 +368,18 @@
       },
       {
         "type": "image",
-        "src": "/media/galerie/mantova-2026/mantova-16.jpg",
-        "thumb": "/media/galerie/mantova-2026/mantova-16-thumb.jpg"
+        "src": "/media/galerie/mantova-2026/mantova-17.jpg",
+        "thumb": "/media/galerie/mantova-2026/mantova-17-thumb.jpg"
       },
       {
         "type": "image",
-        "src": "/media/galerie/mantova-2026/mantova-17.jpg",
-        "thumb": "/media/galerie/mantova-2026/mantova-17-thumb.jpg"
+        "src": "/media/galerie/mantova-2026/mantova-01.jpg",
+        "thumb": "/media/galerie/mantova-2026/mantova-01-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/mantova-2026/mantova-14.jpg",
+        "thumb": "/media/galerie/mantova-2026/mantova-14-thumb.jpg"
       },
       {
         "type": "image",
@@ -383,8 +388,13 @@
       },
       {
         "type": "image",
-        "src": "/media/galerie/mantova-2026/mantova-02.jpg",
-        "thumb": "/media/galerie/mantova-2026/mantova-02-thumb.jpg"
+        "src": "/media/2026/11/image00002-3.jpeg",
+        "thumb": "/media/2026/11/image00002-3-768x1489.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/mantova-2026/mantova-16.jpg",
+        "thumb": "/media/galerie/mantova-2026/mantova-16-thumb.jpg"
       },
       {
         "type": "image",
@@ -398,13 +408,13 @@
       },
       {
         "type": "image",
-        "src": "/media/galerie/mantova-2026/mantova-05.jpg",
-        "thumb": "/media/galerie/mantova-2026/mantova-05-thumb.jpg"
+        "src": "/media/galerie/mantova-2026/mantova-06.jpg",
+        "thumb": "/media/galerie/mantova-2026/mantova-06-thumb.jpg"
       },
       {
         "type": "image",
-        "src": "/media/galerie/mantova-2026/mantova-06.jpg",
-        "thumb": "/media/galerie/mantova-2026/mantova-06-thumb.jpg"
+        "src": "/media/2026/11/image00010-3-scaled.jpeg",
+        "thumb": "/media/2026/11/image00010-3-768x1669.jpeg"
       },
       {
         "type": "image",
@@ -415,6 +425,11 @@
         "type": "image",
         "src": "/media/galerie/mantova-2026/mantova-08.jpg",
         "thumb": "/media/galerie/mantova-2026/mantova-08-thumb.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/mantova-2026/mantova-13.jpg",
+        "thumb": "/media/galerie/mantova-2026/mantova-13-thumb.jpg"
       },
       {
         "type": "image",
@@ -433,8 +448,8 @@
       },
       {
         "type": "image",
-        "src": "/media/galerie/mantova-2026/mantova-12.jpg",
-        "thumb": "/media/galerie/mantova-2026/mantova-12-thumb.jpg"
+        "src": "/media/2026/11/image00013-3-scaled.jpeg",
+        "thumb": "/media/2026/11/image00013-3-768x1586.jpeg"
       },
       {
         "type": "image",
@@ -443,13 +458,18 @@
       },
       {
         "type": "image",
-        "src": "/media/2026/11/image00002-3.jpeg",
-        "thumb": "/media/2026/11/image00002-3-768x1489.jpeg"
+        "src": "/media/2026/11/image00009-3.jpeg",
+        "thumb": "/media/2026/11/image00009-3-768x1417.jpeg"
       },
       {
         "type": "image",
         "src": "/media/2026/11/image00003-3.jpeg",
         "thumb": "/media/2026/11/image00003-3-768x1374.jpeg"
+      },
+      {
+        "type": "image",
+        "src": "/media/galerie/mantova-2026/mantova-12.jpg",
+        "thumb": "/media/galerie/mantova-2026/mantova-12-thumb.jpg"
       },
       {
         "type": "image",
@@ -478,16 +498,6 @@
       },
       {
         "type": "image",
-        "src": "/media/2026/11/image00009-3.jpeg",
-        "thumb": "/media/2026/11/image00009-3-768x1417.jpeg"
-      },
-      {
-        "type": "image",
-        "src": "/media/2026/11/image00010-3-scaled.jpeg",
-        "thumb": "/media/2026/11/image00010-3-768x1669.jpeg"
-      },
-      {
-        "type": "image",
         "src": "/media/2026/11/image00011-3-scaled.jpeg",
         "thumb": "/media/2026/11/image00011-3-768x1562.jpeg"
       },
@@ -495,16 +505,6 @@
         "type": "image",
         "src": "/media/2026/11/image00012-3-scaled.jpeg",
         "thumb": "/media/2026/11/image00012-3-768x1669.jpeg"
-      },
-      {
-        "type": "image",
-        "src": "/media/2026/11/image00013-3-scaled.jpeg",
-        "thumb": "/media/2026/11/image00013-3-768x1586.jpeg"
-      },
-      {
-        "type": "image",
-        "src": "/media/galerie/mantova-2026/mantova-01.jpg",
-        "thumb": "/media/galerie/mantova-2026/mantova-01-thumb.jpg"
       }
     ]
   },
