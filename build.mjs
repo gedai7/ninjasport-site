@@ -83,7 +83,8 @@ ${body}
     <div><h4>Contact</h4><p>${esc(site.address)}</p><p><a href="${site.phone_href}">${esc(site.phone)}</a></p><p><a href="mailto:${site.email}">${esc(site.email)}</a></p></div>
     <div><h4>Social</h4><div class="head-social">${soc}</div></div>
   </div>
-  <p class="copy">© ${new Date().getFullYear()} ACS Ninja Sport</p>
+  <div class="foot-legal"><a href="/termeni-si-conditii/">Termeni și condiții</a><a href="/confidentialitate/">Confidențialitate și cookie-uri</a><a href="/informatii-legale/">Informații legale</a><a class="anpc" href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener"><b>ANPC</b><span>SAL · Soluționarea alternativă<br>a litigiilor</span></a></div>
+  <p class="copy">© ${new Date().getFullYear()} Asociația Club Sportiv Ninja Sport · CUI 44811993 · Otopeni, str. 1 Mai nr. 66A, jud. Ilfov</p>
 </div></footer>
 <a class="float-wa" href="${site.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">${ICON.whatsapp}</a>
 ${scripts.map((s) => `<script src="${ver(s)}" defer></script>`).join('\n')}
@@ -168,7 +169,8 @@ ${['2024/04/frnpm_logo_square.png', '2024/04/UNAA-sm-e1712915222600.png', '2024/
 <div class="sep" aria-hidden="true"><span></span><img src="/assets/sep-head.png" alt="" width="34" height="31"><span></span></div>
 <section><h2 class="page-title">Cum ajungi la Ninja Sport?<span class="en">How to get here</span></h2>
 <p style="font-weight:400">${esc(site.address)} · <a href="${site.phone_href}">${esc(site.phone)}</a></p>
-<iframe class="map" src="${site.map}" loading="lazy" title="Hartă Ninja Sport"></iframe></section>`;
+<div class="map-card"><div class="map-pin" aria-hidden="true"><svg viewBox="0 0 24 24" width="46" height="46"><path fill="#e30613" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div><div><b>Ninja Sport – Sala de Sport cu Obstacole</b><br>Splaiul Unirii 160, București</div>
+<div class="map-btns"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Ninja+Sport+Rom%C3%A2nia%2C+Splaiul+Unirii+160%2C+Bucure%C8%99ti" target="_blank" rel="noopener">Deschide în Google Maps</a><a class="btn btn-dark" href="https://waze.com/ul?q=Splaiul%20Unirii%20160%20Bucuresti&navigate=yes" target="_blank" rel="noopener">Navighează cu Waze</a></div></div></section>`;
 pages['index.html'] = layout({ title: '', active: '/', scripts: ['/assets/carousel.js'], body: homeBody });
 // SIMULARE (pagină ascunsă): Acasă cu secțiunile noi din content/acasa-simulare.html în locul „Ce este Ninja Sport?” + „Beneficii”
 {
@@ -186,7 +188,7 @@ pages['schedule/index.html'] = layout({
 ${scheduleHTML()}
 ${appBox()}` });
 
-pages['party/index.html'] = layout({ title: 'Party', active: '/party/', scripts: ['/assets/party.js'], desc: 'Petreceri aniversare la Ninja Sport: 3 ore de distracție ninja pe obstacole, pachet pentru 15 invitați, rezervare online.', body: title2('Birthday Party', 'Petreceri aniversare la Ninja Sport') + content('party.html').replace('<form class="party-form" id="party-form" novalidate>', `<form class="party-form" id="party-form" novalidate data-key="${esc(site.form_key || '')}">`) });
+pages['party/index.html'] = layout({ title: 'Party', active: '/party/', scripts: ['/assets/party.js', '/assets/legal-pop.js'], desc: 'Petreceri aniversare la Ninja Sport: 3 ore de distracție ninja pe obstacole, pachet pentru 15 invitați, rezervare online.', body: title2('Birthday Party', 'Petreceri aniversare la Ninja Sport') + content('party.html').replace('<form class="party-form" id="party-form" novalidate>', `<form class="party-form" id="party-form" novalidate data-key="${esc(site.form_key || '')}">`) });
 {
   // clasele, generate din programul standard (fără Birthday Party)
   const ord = ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri', 'Sâmbătă', 'Duminică'];
@@ -205,6 +207,9 @@ pages['ninja-kids/index.html'] = layout({ title: 'Ninja Kids', active: '/ninja-c
 pages['scoala-altfel-saptamana-verde/index.html'] = layout({ title: 'Școala Altfel & Săptămâna Verde', active: '/ninja-classes/', body: title2('Școala Altfel & Săptămâna Verde', 'School groups') + content('scoala-altfel.html') });
 const CONTRACT = fs.existsSync('public/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx') ? '/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx' : 'https://ninjasport.ro/documente/Contract_Sponsorizare_NINJA_SPORT_2026.docx';
 pages['sponsorizare/index.html'] = layout({ title: 'Sponsorizare', active: '/sponsorizare/', desc: 'Sponsorizează ACS Ninja Sport cu până la 20% din impozitul pe profit, fără cost pentru firma ta: plată directă sau Formularul 177.', body: title2('Sponsorizează Ninja Sport', 'Fără cost pentru firma ta · Company sponsorship') + content('sponsorizare.html').replaceAll('%%CONTRACT%%', CONTRACT) });
+pages['informatii-legale/index.html'] = layout({ title: 'Informații legale', desc: 'Datele de identificare ale Asociației Club Sportiv Ninja Sport, documente și protecția consumatorilor.', body: title2('Informații legale', 'Legal information') + content('informatii-legale.html') });
+pages['termeni-si-conditii/index.html'] = layout({ title: 'Termeni și condiții', desc: 'Regulamentul sălii Ninja Sport și condițiile de rezervare a petrecerilor.', body: title2('Termeni și condiții', 'Regulament · Terms & conditions') + content('termeni-si-conditii.html') });
+pages['confidentialitate/index.html'] = layout({ title: 'Politica de confidențialitate', desc: 'Cum folosește ACS Ninja Sport datele personale. Saitul nu folosește cookie-uri.', body: title2('Politica de confidențialitate', 'și cookie-uri · Privacy & cookies') + content('confidentialitate.html') });
 pages['waiver/index.html'] = layout({
   title: 'Waiver', active: '/waiver/', body: content('waiver.html').replace('<!--WAIVER_BUTTON-->',
     site.waiver_form_url ? `<a class="btn" href="${site.waiver_form_url}" target="_blank" rel="noopener">Completează online</a>` : '<span class="btn btn-dark" style="opacity:.6;cursor:default">Formular online – în curând</span>') });
